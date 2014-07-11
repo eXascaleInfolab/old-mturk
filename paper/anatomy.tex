@@ -1,0 +1,95 @@
+\documentclass{sig-alternate}
+
+\begin{document}
+%
+% --\item Author Metadata here ---
+\conferenceinfo{WWW}{'15}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden \item IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden \item IF NEED BE.
+% --\item End of Author Metadata ---
+
+\title{Anatomy of a Micro-task Crowdsourcing Platform}
+\subtitle{Research Plan}
+
+
+
+\numberofauthors{1}
+\author{}
+
+\maketitle
+\begin{abstract}
+Micro-task crowdsourcing is gaining popularity within different research domains with the goal of leveraging Human Computation to build
+hybrid human-machine information systems that leverage at the same time the scalability of machine-based algorithms and the effectiveness of human intelligence.
+
+This paper analyses the behavior of the main actors in micro-task crowdsourcing: workers, requesters, HITs, and platform. Moreover, an additional contribution would be to propose a model to understand which is the best time for a requester to publish a HIT batch on the platform.
+\end{abstract}
+
+% A category with the (minimum) three required fields
+% \category{H.4}{Information Systems Applications}{Miscellaneous}
+% %A category including the fourth, optional field follows...
+% \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+%
+% \terms{Theory}
+%
+% \keywords{ACM proceedings, \LaTeX, text tagging}
+
+
+\section{Datasets}
+\begin{itemize}
+	\item Data from Mechanical Turk Tracker (TR)
+	\item Data about requester reputation from Turkopticon (TO)
+	\item Data from OpenTurk (this is a Chrome extension we have developed, see bit.ly/openturk-extension) about which HITs and requesters workers like (OT)
+	\item Data from forums (e.g., mturkforum.com) about shared HITs. (FO)
+	\item Data from surveys run on MTurk asking about worker experience and preferred tools (SU)
+\end{itemize}
+
+
+\section{Research Questions}
+
+Possible research questions we want to answer and common assumptions we want to validate in a data-driven manner are:
+\paragraph{Requesters}
+\begin{itemize}
+	\item How a good requester reputation affect the latency of HIT completion as compared to other requesters? For example, is the common assumption that generous requesters obtain lower latency correct at large scale? (TO, TR)
+	\item How do requesters republish HITs or extend HIT lifetime to attract additional workforce?
+\end{itemize}
+
+
+\paragraph{Workers}
+\begin{itemize}
+	\item How much time do workers spend to search/find the next HIT batch to work on? (OT)
+	\item Does share activity on worker social media trigger an increased throughput (measured in HIT/min) of the HIT batch? (FO, OT, TR)
+	\item Do the number of followers correlate with requester reputation? (TO,OT)
+\end{itemize}
+
+
+\paragraph{Platform}
+\begin{itemize}
+	\item How has the requester set size evolved over time? (TR)
+	\item How HITs from top requesters affect rewards and latency of other batches concurrently running on the platform? (TO,OT,TR)
+\end{itemize}
+
+\paragraph{HITs}
+\begin{itemize}
+	\item Which are the different categories of HITs published on MTurk? We plan to define a taxonomy of common HITs including classification, survey, translation, typing, etc.
+	\item Using the taxonomy, how does reward and completion time vary with HIT type? (TR, OT)
+	\item How has the average reward evolved over time for each HIT type? (TR)
+	\item How has the average throughput (measured in HIT/min) evolved over time for each HIT type? (TR)
+\end{itemize}
+
+Additionally, as a result of the previous analysis, we would like to propose a formal model of the throughput obtained by a certain requester publishing a HIT batch in certain conditions taking into consideration aspects like: requester reputation (TO), HIT social media visibility (FR,OT), task type (taxonomy), reward (TR).
+
+All this could sound ambitious, but we have already started putting hands on the data. For example, the attached Figure 1 shows HIT batch throughput as compared to HIT batch size over 3 months of TR data and Figure 2 shows the correlation of a requester followers on OT with requester reputation on TO.
+
+%\begin{figure}[htbp]
+%	\centering
+%		\includegraphics[scale=1]{fig1}
+%	\caption{HIT batch throughput as compared to HIT batch size over 3 months of TR data.}
+%	\label{fig:figure1}
+%\end{figure}\begin{figure}[htbp]
+%	\centering
+%		\includegraphics[scale=1]{fig2}
+%	\caption{Correlation of a requester followers on OT with requester reputation on TO.}
+%	\label{fig:figure2}
+%\end{figure}
+
+\end{document}
