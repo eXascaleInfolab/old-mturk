@@ -57,6 +57,25 @@ top keywords per country (over time)
 
 \section{Large-Scale HIT Type Analysis}
 
+\subsection{HIT Types}
+
+\subsection{Classification of HITs}
+\begin{itemize}
+
+	\item sample of 5000 HITs with type labelled by means of crowdsourcing. We asked workers on MTurk to assign a HIT to one of the defined classes by presenting them with the title, description, keywords, reward, allotted time for the HIT. The instructions contained a definition and examples for each task type.
+
+	\item After assigning each HIT to three different workers in the crowd, a consensus on the task type was reached in 89\% of the cases (551 cases with no clear majority).
+
+%evaluation
+	\item Using the labelled data we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-folds cross validation over the labelled dataset. Overall, the classifier obtained Precision of 0.895, Recall of 0.899, and F-Measure of 0.895. Most classifier errors (i.e., 66 instances) were performed by incorrectly classifying IA instances as CC.
+
+	\item Using a classifier trained over the entire labelled data, we performed a large scale classification of the 2.5M HITs in our collection. This allow us to study the evolution of task type on the market.
+
+\end{itemize}
+
+
+
+
 
 
 \section{Predicting the Platform Throughput}
