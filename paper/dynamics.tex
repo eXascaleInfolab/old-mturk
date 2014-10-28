@@ -1,5 +1,9 @@
 \documentclass{sig-alternate}
 \usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+
+\newcommand{\pcm}[1]{\textcolor{magenta}{PCM: #1}}
+\newcommand{\gd}[1]{\textcolor{ForestGreen}{GD: #1}}
 
 \begin{document}
 %
@@ -9,12 +13,13 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden \item IF NEED BE.
 % --\item End of Author Metadata ---
 
-\title{The Evolution of Micro-task Crowdsourcing}
+\title{The Evolution of Micro-task Crowdsourcing Markets}
 \subtitle{The Case of Amazon Mechanical Turk}
 % \title{The Dynamics of Micro-task Crowdsourcing -- The Case of MTurk}
 % anatomy of a Micro-task Crowdsourcing platform
 % unravelling micro-task crowdsourcing dynamics/processes
 % the evolution of micro-task crowdsourcing
+
 
 
 %\numberofauthors{1}
@@ -93,16 +98,7 @@ top keywords per country (over time)
 
 
 
-\section{Predicting the Platform Throughput}
-\begin{itemize}
-
-	\item ML tasks: classification and regression
-
-	\item ML results: accuracy and error
-
-	\item Best features
-
-\end{itemize}
+\input{sections/throughput}
 
 \section{Conclusions}
 
