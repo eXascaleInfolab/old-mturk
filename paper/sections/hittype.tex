@@ -1,0 +1,42 @@
+%!TEX root = ../dynamics.tex
+\section{Large-Scale HIT Type Analysis}\label{sec:type}
+In this section we present the results of a large-scale analysis of the evolution of HIT types published on the Amazon MTurk platform.
+For such analysis we use the classification of HIT types proposed by \cite{Gadiraju:2014:TMW:2631775.2631819} in which authors perform an extensive study involving 1000 crowd workers to understand their working behavior. 
+
+\subsection{A Classification of HIT Types}
+Next, we describe the six top-level classes introduced by \cite{Gadiraju:2014:TMW:2631775.2631819}.
+
+\begin{itemize}
+
+	\item Information Finding (IF): 
+	
+	\item Verification and Validation (VV):
+
+	\item Interpretation and Analysis (IA):
+	
+	\item Content Creation (CC):
+
+	\item Surveys (SU)
+	
+	\item Content Access (CA):
+
+\end{itemize}
+
+\subsection{Supervised HIT Type Classification}
+Using the classification of HIT types described above, we trained a supervised machine learning model to classify HIT type based on their metadata. The features we used to train a Support Vector Machine (SVM) model are title, description, keywords, reward, date, allocated time, batch size.
+
+% labelling setup
+To train the supervised model we first created labelled data. We uniformly sampled 5000 HITs over the entire dataset and labelled their type by means of crowdsourcing. In detail, we asked workers on MTurk to assign each HIT to one of the predefined classes by presenting them with the title, description, keywords, reward, date, allocated time, batch size for the HIT. The instructions also contained a definition and examples for each task type. Workers could label tasks as `Others' when unsure or when the HIT did not fit in any of the available options.
+
+% labelled data
+After assigning each labelling HIT to three different workers in the crowd, a consensus on the task type was reached in $89\%$ of the cases (i.e., 551 cases with no clear majority). A consensus was reached when at least two out of three workers agreed on a HIT type label. The other cases, that is, when the workers provided different labels or when they where not sure about the label are not included in our labelled dataset.
+
+% classification evaluation
+Using the labelled dataset we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-folds cross validation over the labelled dataset. Overall, the trained classifier obtained Precision of $0.895$, Recall of $0.899$, and F-Measure of $0.895$. Most of the classifier errors (i.e., 66 cases) were done by incorrectly classifying IA instances as CC.
+
+% classification at scale
+Using the classifier trained over the entire labelled dataset, we then performed a large scale classification of the type for 2.5M HITs in our collection. This allows us to study the evolution over time of task types on the Amazon MTurk platform which we present next.
+
+\subsection{Which Task Types Were Popular Over Time?}
+\gd{add results}
+
