@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dynamics.aux
 The style file: abbrv.bst
 Database file #1: crowd.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "crowdjoins"
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            515 strings with 4306 characters,
-and the built_in function-call counts, 1215 in all, are:
-= -- 127
-> -- 61
-< -- 2
-+ -- 26
-- -- 22
-* -- 88
-:= -- 186
-add.period$ -- 8
-call.type$ -- 2
-change.case$ -- 17
+            596 strings with 6980 characters,
+and the built_in function-call counts, 6690 in all, are:
+= -- 708
+> -- 296
+< -- 10
++ -- 118
+- -- 102
+* -- 468
+:= -- 1016
+add.period$ -- 51
+call.type$ -- 14
+change.case$ -- 93
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 48
-empty$ -- 82
-format.name$ -- 22
-if$ -- 268
+cite$ -- 14
+duplicate$ -- 277
+empty$ -- 504
+format.name$ -- 102
+if$ -- 1486
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 17
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 28
+pop$ -- 94
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 79
 quote$ -- 0
-skip$ -- 41
+skip$ -- 221
 stack$ -- 0
-substring$ -- 84
-swap$ -- 22
-text.length$ -- 2
+substring$ -- 473
+swap$ -- 106
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 56
 warning$ -- 0
-while$ -- 10
-width$ -- 3
-write$ -- 30
+while$ -- 64
+width$ -- 16
+write$ -- 182
+(There was 1 warning)

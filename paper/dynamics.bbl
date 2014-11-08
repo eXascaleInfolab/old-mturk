@@ -1,4 +1,23 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{mizzaroalonso}
+O.~Alonso and S.~Mizzaro.
+\newblock Using crowdsourcing for {TREC} relevance assessment.
+\newblock {\em Inf. Process. Manage.}, 48(6):1053--1066, 2012.
+
+\bibitem{zencrowd}
+G.~Demartini, D.~E. Difallah, and P.~Cudr{\'e}-Mauroux.
+\newblock Zencrowd: Leveraging probabilistic reasoning and crowdsourcing
+  techniques for large-scale entity linking.
+\newblock In {\em Proceedings of the 21st International Conference on World
+  Wide Web}, WWW '12, pages 469--478, New York, NY, USA, 2012. ACM.
+
+\bibitem{crowddb}
+M.~J. Franklin, D.~Kossmann, T.~Kraska, S.~Ramesh, and R.~Xin.
+\newblock {CrowdDB: Answering Queries with Crowdsourcing}.
+\newblock In {\em Proceedings of the 2011 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '11, pages 61--72, New York, NY, USA, 2011.
+  ACM.
 
 \bibitem{Gadiraju:2014:TMW:2631775.2631819}
 U.~Gadiraju, R.~Kawase, and S.~Dietze.
@@ -6,11 +25,68 @@ U.~Gadiraju, R.~Kawase, and S.~Dietze.
 \newblock In {\em Proceedings of the 25th ACM Conference on Hypertext and
   Social Media}, HT '14, pages 218--223, New York, NY, USA, 2014. ACM.
 
+\bibitem{Hosseini:2012:ALM:2260641.2260661}
+M.~Hosseini, I.~J. Cox, N.~Mili\'{c}-Frayling, G.~Kazai, and V.~Vinay.
+\newblock On aggregating labels from multiple crowd workers to infer relevance
+  of documents.
+\newblock In {\em Proceedings of the 34th European Conference on Advances in
+  Information Retrieval}, ECIR'12, pages 182--194, Berlin, Heidelberg, 2012.
+  Springer-Verlag.
+
+\bibitem{mturk}
+P.~G. Ipeirotis.
+\newblock Analyzing the amazon mechanical turk marketplace.
+\newblock {\em XRDS}, 17(2):16--21, Dec. 2010.
+
+\bibitem{turkopticon}
+L.~C. Irani and M.~S. Silberman.
+\newblock {Turkopticon: Interrupting Worker Invisibility in Amazon Mechanical
+  Turk}.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '13, pages 611--620, New York, NY, USA, 2013. ACM.
+
 \bibitem{Kittur:2013:FCW:2441776.2441923}
 A.~Kittur, J.~V. Nickerson, M.~Bernstein, E.~Gerber, A.~Shaw, J.~Zimmerman,
   M.~Lease, and J.~Horton.
 \newblock The future of crowd work.
 \newblock In {\em Proceedings of the 2013 Conference on Computer Supported
   Cooperative Work}, CSCW '13, pages 1301--1318, New York, NY, USA, 2013. ACM.
+
+\bibitem{Kucherbaev:2014:TET:2598153.2602249}
+P.~Kucherbaev, F.~Daniel, M.~Marchese, F.~Casati, and B.~Reavey.
+\newblock Toward effective tasks navigation in crowdsourcing.
+\newblock In {\em Proceedings of the 2014 International Working Conference on
+  Advanced Visual Interfaces}, AVI '14, pages 401--404, New York, NY, USA,
+  2014. ACM.
+
+\bibitem{bioonto}
+J.~Mortensen, M.~A. Musen, and N.~F. Noy.
+\newblock Crowdsourcing the verification of relationships in biomedical
+  ontologies.
+\newblock In {\em AMIA}, 2013.
+
+\bibitem{crowdmap}
+C.~Sarasua, E.~Simperl, and N.~F. Noy.
+\newblock Crowdmap: Crowdsourcing ontology alignment with microtasks.
+\newblock In {\em Proceedings of the 11th International Conference on The
+  Semantic Web - Volume Part I}, ISWC'12, pages 525--541, Berlin, Heidelberg,
+  2012. Springer-Verlag.
+
+\bibitem{square}
+A.~Sheshadri and M.~Lease.
+\newblock {SQUARE: A Benchmark for Research on Computing Crowd Consensus}.
+\newblock In {\em {Proceedings of the 1st AAAI Conference on Human Computation
+  (HCOMP)}}, pages 156--164, 2013.
+
+\bibitem{Venanzi:2014:CBA:2566486.2567989}
+M.~Venanzi, J.~Guiver, G.~Kazai, P.~Kohli, and M.~Shokouhi.
+\newblock Community-based bayesian aggregation models for crowdsourcing.
+\newblock In {\em Proceedings of the 23rd International Conference on World
+  Wide Web}, WWW '14, pages 155--164, New York, NY, USA, 2014. ACM.
+
+\bibitem{crowder}
+J.~Wang, T.~Kraska, M.~J. Franklin, and J.~Feng.
+\newblock {CrowdER: Crowdsourcing Entity Resolution}.
+\newblock {\em Proc. VLDB Endow.}, 5(11):1483--1494, July 2012.
 
 \end{thebibliography}
