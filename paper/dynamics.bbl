@@ -112,6 +112,12 @@ P.~Kucherbaev, S.~Tranquillini, F.~Daniel, F.~Casati, M.~Marchese,
   Management Workshops}, volume 132 of {\em Lecture Notes in Business
   Information Processing}, pages 256--267. Springer Berlin Heidelberg, 2013.
 
+\bibitem{workflows}
+A.~Kulkarni, M.~Can, and B.~Hartmann.
+\newblock Collaboratively crowdsourcing workflows with turkomatic.
+\newblock In {\em Proceedings of the ACM 2012 Conference on Computer Supported
+  Cooperative Work}, CSCW '12, pages 1003--1012, New York, NY, USA, 2012. ACM.
+
 \bibitem{bioonto}
 J.~Mortensen, M.~A. Musen, and N.~F. Noy.
 \newblock Crowdsourcing the verification of relationships in biomedical
@@ -128,6 +134,12 @@ A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
 \newblock Human-assisted graph search: It's okay to ask questions.
 \newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
 
+\bibitem{biomedical}
+J.~P{\"o}schko, M.~Strohmaier, T.~Tudorache, N.~F. Noy, and M.~A. Musen.
+\newblock Pragmatic analysis of crowd-based knowledge production systems with
+  icat analytics: Visualizing changes to the icd-11 ontology.
+\newblock In {\em AAAI Spring Symposium: Wisdom of the Crowd}, 2012.
+
 \bibitem{crowdmap}
 C.~Sarasua, E.~Simperl, and N.~F. Noy.
 \newblock Crowdmap: Crowdsourcing ontology alignment with microtasks.
@@ -141,25 +153,28 @@ A.~Sheshadri and M.~Lease.
 \newblock In {\em {Proceedings of the 1st AAAI Conference on Human Computation
   (HCOMP)}}, pages 156--164, 2013.
 
+\bibitem{TOreputation}
+M.~S. Silberman, L.~Irani, and J.~Ross.
+\newblock Ethics and tactics of professional crowdwork.
+\newblock {\em XRDS}, 17(2):39--43, Dec. 2010.
+
 \bibitem{Venanzi:2014:CBA:2566486.2567989}
 M.~Venanzi, J.~Guiver, G.~Kazai, P.~Kohli, and M.~Shokouhi.
 \newblock Community-based bayesian aggregation models for crowdsourcing.
 \newblock In {\em Proceedings of the 23rd International Conference on World
   Wide Web}, WWW '14, pages 155--164, New York, NY, USA, 2014. ACM.
 
+\bibitem{platforms}
+M.~Vukovic.
+\newblock Crowdsourcing for enterprises.
+\newblock In {\em Services-I, 2009 World Conference on}, pages 686--692. IEEE,
+  2009.
+
 \bibitem{enterprisecrowdsourcing}
 M.~Vukovic and A.~Natarajan.
 \newblock {Operational Excellence in IT Services Using Enterprise
   Crowdsourcing}.
 \newblock In {\em IEEE SCC}, pages 494--501, 2013.
-
-\bibitem{biomedical}
-S.~Walk, P.~Singer, and M.~Strohmaier.
-\newblock {Sequential Action Patterns in Collaborative Ontology-Engineering
-  Projects: A Case-Study in the Biomedical Domain}.
-\newblock In {\em Proceedings of the 23rd ACM International Conference on
-  Conference on Information and Knowledge Management}, CIKM '14, pages
-  1349--1358, New York, NY, USA, 2014. ACM.
 
 \bibitem{crowder}
 J.~Wang, T.~Kraska, M.~J. Franklin, and J.~Feng.

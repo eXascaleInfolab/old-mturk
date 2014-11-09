@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dynamics.aux
 The style file: abbrv.bst
 Database file #1: crowd.bib
-You've used 27 entries,
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            667 strings with 9819 characters,
-and the built_in function-call counts, 12429 in all, are:
-= -- 1277
-> -- 588
-< -- 18
-+ -- 231
-- -- 202
-* -- 870
-:= -- 1907
-add.period$ -- 95
-call.type$ -- 27
-change.case$ -- 181
+            683 strings with 10240 characters,
+and the built_in function-call counts, 13571 in all, are:
+= -- 1390
+> -- 641
+< -- 19
++ -- 252
+- -- 220
+* -- 948
+:= -- 2087
+add.period$ -- 105
+call.type$ -- 30
+change.case$ -- 199
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 514
-empty$ -- 942
-format.name$ -- 202
-if$ -- 2744
+cite$ -- 30
+duplicate$ -- 562
+empty$ -- 1036
+format.name$ -- 220
+if$ -- 2991
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 27
-newline$ -- 138
-num.names$ -- 56
-pop$ -- 196
+int.to.str$ -- 30
+missing$ -- 30
+newline$ -- 153
+num.names$ -- 62
+pop$ -- 219
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 169
 quote$ -- 0
-skip$ -- 401
+skip$ -- 433
 stack$ -- 0
-substring$ -- 810
-swap$ -- 189
-text.length$ -- 18
+substring$ -- 876
+swap$ -- 203
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
+type$ -- 120
 warning$ -- 0
-while$ -- 114
-width$ -- 29
-write$ -- 336
+while$ -- 125
+width$ -- 32
+write$ -- 369
