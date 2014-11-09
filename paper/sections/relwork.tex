@@ -11,7 +11,7 @@ Workers share experiences about HITs and requesters within web forums and ad-hoc
 \subsection{Human Computation}
 Micro-task crowdsourcing is used to improve the quality of purely machine-based systems in order to combine both the scalability of machines over large amounts of data as well as the quality of human intelligence to process and understand data.
 Many examples of such hybrid approaches exist.
-Crowd-powered databases \cite{crowddb} leverage crowdsourcing to deal with incomplete data, complex data integration problems, and joins \cite{crowder,crowdjoins}.
+Crowd-powered databases \cite{crowddb} leverage crowdsourcing to deal with incomplete data, complex data integration problems, graph search, and joins \cite{crowder,graphsearch,crowdjoins}.
 Semantic Web systems leverage the crowd for schema matching \cite{crowdmap}, entity linking \cite{zencrowd}, and ontology engineering \cite{bioonto}.
 Information Retrieval systems use crowdsourcing for evaluation purposes \cite{mizzaroalonso}.
 
@@ -25,11 +25,15 @@ A very important dimension for crowdsourcing effectiveness is \emph{answer aggre
 A recent approach which results in effective aggregation is \cite{Venanzi:2014:CBA:2566486.2567989} where authors detect communities of workers with similar answering patterns to re-weight their answers even when little evidence of individual worker quality is available (i.e., just few HITs have been completed).
 
 
+More than aggregation, identifying the best worker in the crowd is another mean to obtain quality answers from the crowd \cite{pickacrowd,bozzon}.
+
+More recently, \cite{Jung14-hcomp} aims at predicting work quality looking at worker activities over time.
+
 \subsection{Crowdsourcing Efficiency}
 
 In \cite{Kittur:2013:FCW:2441776.2441923} authors provide their view on how the crowdsourcing market should adapt specifically focusing on how to  support full-time crowd workers. On the other hand, in this work we perform a data-driven analysis of the evolution of micro-task crowdsourcing over the past five years using the findings of such analysis as features to support requesters while publishing HITs on these platforms in an effective way.
 
-
+\cite{finishthem,scaleup}
 
 To improve human computation efficiency, it is key to support worker in being more efficient while working on HITs. For example, workers spend way too much time in searching for HITs to work on \cite{Kucherbaev:2014:TET:2598153.2602249}.
 
