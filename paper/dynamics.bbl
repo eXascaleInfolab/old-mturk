@@ -5,12 +5,33 @@ O.~Alonso and S.~Mizzaro.
 \newblock Using crowdsourcing for {TREC} relevance assessment.
 \newblock {\em Inf. Process. Manage.}, 48(6):1053--1066, 2012.
 
+\bibitem{bozzon}
+A.~Bozzon, M.~Brambilla, S.~Ceri, M.~Silvestri, and G.~Vesci.
+\newblock Choosing the right crowd: Expert finding in social networks.
+\newblock In {\em Proceedings of the 16th International Conference on Extending
+  Database Technology}, EDBT '13, pages 637--648, New York, NY, USA, 2013. ACM.
+
 \bibitem{zencrowd}
 G.~Demartini, D.~E. Difallah, and P.~Cudr{\'e}-Mauroux.
 \newblock Zencrowd: Leveraging probabilistic reasoning and crowdsourcing
   techniques for large-scale entity linking.
 \newblock In {\em Proceedings of the 21st International Conference on World
   Wide Web}, WWW '12, pages 469--478, New York, NY, USA, 2012. ACM.
+
+\bibitem{scaleup}
+D.~E. Difallah, M.~Catasta, G.~Demartini, and P.~Cudr{\'e}-Mauroux.
+\newblock {Scaling-up the Crowd: Micro-Task Pricing Schemes for Worker
+  Retention and Latency Improvement}.
+\newblock In {\em Second AAAI Conference on Human Computation and
+  Crowdsourcing}, 2014.
+
+\bibitem{pickacrowd}
+D.~E. Difallah, G.~Demartini, and P.~Cudr{\'e}-Mauroux.
+\newblock Pick-a-crowd: Tell me what you like, and i'll tell you what to do.
+\newblock In {\em Proceedings of the 22Nd International Conference on World
+  Wide Web}, WWW '13, pages 367--374, Republic and Canton of Geneva,
+  Switzerland, 2013. International World Wide Web Conferences Steering
+  Committee.
 
 \bibitem{crowddb}
 M.~J. Franklin, D.~Kossmann, T.~Kraska, S.~Ramesh, and R.~Xin.
@@ -24,6 +45,18 @@ U.~Gadiraju, R.~Kawase, and S.~Dietze.
 \newblock A taxonomy of microtasks on the web.
 \newblock In {\em Proceedings of the 25th ACM Conference on Hypertext and
   Social Media}, HT '14, pages 218--223, New York, NY, USA, 2014. ACM.
+
+\bibitem{finishthem}
+Y.~Gao and A.~G. Parameswaran.
+\newblock Finish them!: Pricing algorithms for human computation.
+\newblock {\em {PVLDB}}, 7(14):1965--1976, 2014.
+
+\bibitem{goel2014mechanism}
+G.~Goel, A.~Nikzad, and A.~Singla.
+\newblock {Mechanism Design for Crowdsourcing Markets with Heterogeneous
+  Tasks}.
+\newblock In {\em {Proceedings of the 2nd AAAI Conference on Human Computation
+  (HCOMP)}}, 2014.
 
 \bibitem{Hosseini:2012:ALM:2260641.2260661}
 M.~Hosseini, I.~J. Cox, N.~Mili\'{c}-Frayling, G.~Kazai, and V.~Vinay.
@@ -45,6 +78,18 @@ L.~C. Irani and M.~S. Silberman.
 \newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}, CHI '13, pages 611--620, New York, NY, USA, 2013. ACM.
 
+\bibitem{Jung14-hcomp}
+H.~J. Jung, Y.~Park, and M.~Lease.
+\newblock {Predicting Next Label Quality: A Time-Series Model of Crowdwork}.
+\newblock In {\em {Proceedings of the 2nd AAAI Conference on Human Computation
+  (HCOMP)}}, pages 87--95, 2014.
+
+\bibitem{collusion}
+A.~R. KhudaBukhsh, J.~G. Carbonell, and P.~J. Jansen.
+\newblock {Detecting Non-Adversarial Collusion in Crowdsourcing}.
+\newblock In {\em {Proceedings of the 2nd AAAI Conference on Human Computation
+  (HCOMP)}}, 2014.
+
 \bibitem{Kittur:2013:FCW:2441776.2441923}
 A.~Kittur, J.~V. Nickerson, M.~Bernstein, E.~Gerber, A.~Shaw, J.~Zimmerman,
   M.~Lease, and J.~Horton.
@@ -59,11 +104,29 @@ P.~Kucherbaev, F.~Daniel, M.~Marchese, F.~Casati, and B.~Reavey.
   Advanced Visual Interfaces}, AVI '14, pages 401--404, New York, NY, USA,
   2014. ACM.
 
+\bibitem{crowdcomputer}
+P.~Kucherbaev, S.~Tranquillini, F.~Daniel, F.~Casati, M.~Marchese,
+  M.~Brambilla, and P.~Fraternali.
+\newblock Business processes for the crowd computer.
+\newblock In M.~La~Rosa and P.~Soffer, editors, {\em Business Process
+  Management Workshops}, volume 132 of {\em Lecture Notes in Business
+  Information Processing}, pages 256--267. Springer Berlin Heidelberg, 2013.
+
 \bibitem{bioonto}
 J.~Mortensen, M.~A. Musen, and N.~F. Noy.
 \newblock Crowdsourcing the verification of relationships in biomedical
   ontologies.
 \newblock In {\em AMIA}, 2013.
+
+\bibitem{crowdstar}
+B.~Nushi, O.~Alonso, M.~Hentschel, and V.~Kandylas.
+\newblock Crowdstar: {A} social task routing framework for online communities.
+\newblock {\em CoRR}, abs/1407.6714, 2014.
+
+\bibitem{graphsearch}
+A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
+\newblock Human-assisted graph search: It's okay to ask questions.
+\newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
 
 \bibitem{crowdmap}
 C.~Sarasua, E.~Simperl, and N.~F. Noy.
@@ -84,9 +147,30 @@ M.~Venanzi, J.~Guiver, G.~Kazai, P.~Kohli, and M.~Shokouhi.
 \newblock In {\em Proceedings of the 23rd International Conference on World
   Wide Web}, WWW '14, pages 155--164, New York, NY, USA, 2014. ACM.
 
+\bibitem{enterprisecrowdsourcing}
+M.~Vukovic and A.~Natarajan.
+\newblock {Operational Excellence in IT Services Using Enterprise
+  Crowdsourcing}.
+\newblock In {\em IEEE SCC}, pages 494--501, 2013.
+
+\bibitem{biomedical}
+S.~Walk, P.~Singer, and M.~Strohmaier.
+\newblock {Sequential Action Patterns in Collaborative Ontology-Engineering
+  Projects: A Case-Study in the Biomedical Domain}.
+\newblock In {\em Proceedings of the 23rd ACM International Conference on
+  Conference on Information and Knowledge Management}, CIKM '14, pages
+  1349--1358, New York, NY, USA, 2014. ACM.
+
 \bibitem{crowder}
 J.~Wang, T.~Kraska, M.~J. Franklin, and J.~Feng.
 \newblock {CrowdER: Crowdsourcing Entity Resolution}.
 \newblock {\em Proc. VLDB Endow.}, 5(11):1483--1494, July 2012.
+
+\bibitem{crowdjoins}
+J.~Wang, G.~Li, T.~Kraska, M.~J. Franklin, and J.~Feng.
+\newblock Leveraging transitive relations for crowdsourced joins.
+\newblock In {\em Proceedings of the 2013 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '13, pages 229--240, New York, NY, USA, 2013.
+  ACM.
 
 \end{thebibliography}
