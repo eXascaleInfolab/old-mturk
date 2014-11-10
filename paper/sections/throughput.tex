@@ -25,7 +25,7 @@ Note that the score is relatively low especially for batches with few HITs. The 
 \end{figure}
 
 In order to understand  changes in throughput prediction we  look at  feature importance that we computed during   the training phase. Figure \ref{fig:importances} shows the  contribution of each feature and how it varied along when we increased the training time frame.
-The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work \gd{add reference}, larger batches tend to attract more workers. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts: This means that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are.
+The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \gd{add citation}. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts: This means that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are.
 
 \begin{figure}[tb]
 	\centering
