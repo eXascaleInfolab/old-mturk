@@ -17,6 +17,11 @@ A.~Bozzon, M.~Brambilla, S.~Ceri, M.~Silvestri, and G.~Vesci.
 \newblock In {\em Proceedings of the 16th International Conference on Extending
   Database Technology}, EDBT '13, pages 637--648, New York, NY, USA, 2013. ACM.
 
+\bibitem{cleveland1992local}
+W.~S. Cleveland, E.~Grosse, and W.~M. Shyu.
+\newblock Local regression models.
+\newblock {\em Statistical models in S}, pages 309--376, 1992.
+
 \bibitem{zencrowd}
 G.~Demartini, D.~E. Difallah, and P.~Cudr{\'e}-Mauroux.
 \newblock Zencrowd: Leveraging probabilistic reasoning and crowdsourcing
@@ -139,6 +144,13 @@ B.~Nushi, O.~Alonso, M.~Hentschel, and V.~Kandylas.
 A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
 \newblock Human-assisted graph search: It's okay to ask questions.
 \newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
+
+\bibitem{sklearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em J. Mach. Learn. Res.}, 12:2825--2830, Nov. 2011.
 
 \bibitem{biomedical}
 J.~P{\"o}schko, M.~Strohmaier, T.~Tudorache, N.~F. Noy, and M.~A. Musen.
