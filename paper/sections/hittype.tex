@@ -34,8 +34,10 @@ After assigning each labelling HIT to three different workers in the crowd, a co
 % classification evaluation
 Using the labelled dataset we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-folds cross validation over the labelled dataset. Overall, the trained classifier obtained Precision of $0.895$, Recall of $0.899$, and F-Measure of $0.895$. Most of the classifier errors (i.e., 66 cases) were done by incorrectly classifying IA instances as CC.
 
-\gd{add top features}
-
+% top features
+Performing feature selection for the HIT type classification problem we observed that the best features according to information gain are the HIT allotted time and reward: This indicates that HITs of different types are associated with different levels of reward as well as different task duration (i.e., longer and better paid tasks versus shorter and paid worse). 
+Most distinctive keywords for identifying HIT type are `transcribe', `audio', and `survey' which clearly identify CC and SU HITs.
+ 
 % classification at scale
 Using the classifier trained over the entire labelled dataset, we then performed a large scale classification of the type for all 2.5M HITs in our collection. This allows us to study the evolution over time of task types on the \amt{} platform which we present next.
 
