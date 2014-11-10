@@ -1,3 +1,22 @@
 %!TEX root = ../dynamics.tex
 \section{Conclusions}\label{sec:conc}
 
+In this paper we have presented an analysis of the evolution of micro-task crowdsourcing over the past five years.
+We have studied data collected from a popular micro-task crowdsourcing platform: \amt{}.
+We analyzed dimensions like: topic, task type, reward, platform throughput, supply and demand of work.
+The main findings of our analysis are the following:
+\begin{itemize}
+	\item Tasks related to audio transcription are the most popular in the last two years on \amt{}.
+	\item Surveys are the most popular type of HITs for US-based workers.
+	\item While most HITs do not require country-specific workers, most of such HITs require US-based workers.
+	\item HITs exclusively for workers based in India have strongly decreased over time.
+	\item Most frequent HIT reward value has increased and it is now at \$0.05.
+	\item New requesters constantly join \amt{} making the total number of active workers and the available reward increase over time.
+	\item Average HIT batch size is constant over time, but very large batches recently started to appear in the platform.
+	\item Content Access HIT popularity has decreased over time. Surveys are becoming more popular.
+	\item Throughput of HIT batches can be predicted based on the number of HITs available   and its publishing time.
+	\item New HITs attract new workers to the platform.
+	\item New workers arriving to the platform complete both fresh and old HITs.
+\end{itemize}
+
+The results of our analysis can serve as starting point for improving existing crowdsourcing platforms and the overall efficiency and effectiveness of human computation systems. The presented evidence clearly indicate how requesters should use crowdsourcing platforms to obtain the best out of them: Engage with workers and publish large volumes of HITs at once at specific points in time. For this purpose we created a system that can support requesters in publishing their HITs optimizing for throughput\footnote{\url{http://xi-lab.github.io/mturk-mrkt/}}.
