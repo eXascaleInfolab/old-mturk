@@ -3,6 +3,15 @@
 \label{sec:market}
 Finally, we study the demand vs supply on Amazon MTurk market place.
 In this case, $Demand$ is defined as the number of new tasks posted on the platform by the requesters, in addition we compute the average reward of the posted tasks. Conversely, $Supply$ is defined as the workforce that the crowd is providing concretized as the number of tasks that got completed in a given time window, again we computed the average reward of the completed tasks.
+An initial observation that we make that the strong weekly periodicity that the demand (requesters) exhibit reflected by the autocorrelation that we computed on the number of available HITs as reported by Amazon Mturk (See Figure \ref{fig:autocorrelation1}.
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.5\textwidth]{figures/autocorrelation_plot}
+	\caption{There is a significant memory for the market, as the autocorrelation of the 
+number of HITS available (as reported by Amazon) lasts for approximately 7-10 days.}
+	\label{fig:autocorrelation1}
+\end{figure}
+
 \subsection{Effect of New Tasks}
 \begin{figure}[htbp]
 	\centering
@@ -23,26 +32,17 @@ Along the same lines, the results detailed in Figure\ref{fig:perc_hits_completed
 This clearly indicates that the arrival of new work also attracts new workers
 in the market, who also seem to spillover to other tasks.
 
+\subsection{Weekly Periodicity}
+We computed the weekly moving average convergence/divergence (MACD) in Figure\ref{fig:mac} then we proceeded to run an autocorrelation to check whether there is some periodicity in the time series. Figure\ref{fig:autocorrelation2} shows that there is a strong weekly periodicity.
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/mac}
-	\caption{MAC}
+	\caption{Weekly Moving Average Convergence/Divergence (MACD) of the rewards completed.}
 	\label{fig:mac}
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=0.5\textwidth]{figures/autocorrelation_plot}
-	\caption{Autocorrelation  1}
-	\label{fig:autocorrelation1}
-\end{figure}
-(Panos) It seems that there is significant memory for the market, as the autocorrelation of the 
-HITS available (as reported by Amazon) lasts for approximately 7-10 days
-
-\begin{figure}[htbp]
-	\centering
 		\includegraphics[width=0.5\textwidth]{figures/autocorrelation2}
-	\caption{Autocorrelation 2}
+	\caption{Autocorrelation computed on the weekly MACD.}
 	\label{fig:autocorrelation2}
 \end{figure}
-
-@Panos: The plot shows a strong weekly periodicity
