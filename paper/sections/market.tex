@@ -8,7 +8,7 @@ Conversely, $Supply$ is defined as the workforce that the crowd is providing con
 Again, we compute the average reward of the completed tasks.
 
 An initial behavior  that we observe is  the strong weekly periodicity that the demand (requesters) exhibits reflected by the autocorrelation that we compute on the number of available HITs as reported by Amazon Mturk (See Figure \ref{fig:autocorrelation1}).
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/autocorrelation_plot}
 	\caption{There is a significant memory for the market, as the autocorrelation of the 
@@ -17,13 +17,13 @@ number of HITS available (as reported by Amazon) lasts for approximately 7-10 da
 \end{figure}
 
 \subsection{New Tasks Attract New Workers}
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/scattermatrix}
 	\caption{Scatter matrix comparing the different parameters in the demand and supply.}
 	\label{fig:scatter_matrix}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/supply_demand}
 	\caption{Demand and supply versus price.}
@@ -37,7 +37,7 @@ This supplements our finding in Section \ref{sec:throughput} where we showed tha
 Figure \ref{fig:dsup}(a) shows a the expected relationship between demand and price: The larger the demand the lower the price becomes. On the other hand Figure \ref{fig:dsup}(b)  does not match the typical supply curve (higher prices drive higher supply). Instead, the demand seems to be tied to  the supply (i.e., the number of new HITs posted). A possible explanation to this effect is the lack of biding \gd{biding?} mechanisms that the workers can leverage to drive prices up.
 
 \subsection{New Workers Complete More Tasks}
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/percHitsCompleted}
 	\caption{The effect of new arrived HITs on the work  supplied.}
@@ -49,13 +49,13 @@ to the market, who also seem to spillover to other tasks (i.e., not just working
 
 \subsection{Weekly Periodicity}
 Finally, we computed the weekly moving average convergence/divergence (MACD) which is shown in Figure \ref{fig:mac}. We then run an autocorrelation to check whether there is some seasonality in the time series. Figure \ref{fig:autocorrelation2} shows that there is a strong weekly seasonality effect.
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/mac}
 	\caption{Weekly Moving Average Convergence/Divergence (MACD) of the rewards for completed HITs.}
 	\label{fig:mac}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/autocorrelation2}
 	\caption{Autocorrelation computed on the weekly MACD.}
