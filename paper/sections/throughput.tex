@@ -1,8 +1,9 @@
 %!TEX root = ../dynamics.tex
-\section{Analyzing the Features Affecting Batch Throughput}\label{sec:throughput}
+\section{Analyzing the Features Affecting Batch Throughput}
+\label{sec:throughput}
 Next we turn our attention to analyzing the factors that influence the fast progress (or completion) of a batch, how they change, interplay, and their scope overtime.
 \subsection{A Machine Learning Approach}
-In order to conduct this analysis, we define the task of batch throughput prediction as a regression problem.  Some of the   29  features we use for this task were used in the previous section to classify HIT type.  We describe the remaining ones in Table \ref{tab:featThroughput} in the appendix. The value  we want to predict (i.e.,   $DIFF\_HIT$) is the batch \emph{throughput}, that is, numbers of HITs that  a given batch would have completed within the next time frame of 1 hour.
+In order to conduct this analysis, we define the task of batch throughput prediction as a regression problem.  Some of the  29  features we use for this task were used in the previous section to classify HIT type.  We describe the remaining ones in appendix A. The value  we want to predict (i.e.,   $DIFF\_HIT$) is the batch \emph{throughput}, that is, numbers of HITs that  a given batch would have completed within the next time frame of 1 hour.
 
 In detail, to predict the throughput of a batch at time $T$, we a train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is a time window that we are   considering  for predicting batch throughput at time $T$. In this process we compute the coefficient of determination  $R^2$ score \cite{sklearn,sklearnweb} and the mean average error (MAE).
 In this experiment we considered  data from June-October 2014 and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. Finally, for each time point we considered a training time frame $\delta$ ranging from 1 hour to 24 hours. 
@@ -13,14 +14,14 @@ Note that the score is relatively low especially for batches with few HITs. The 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/ML_accuracy}
-	\caption{Accuracy of the throughput prediction when considering larger training sets for the prediction.}
+	\caption{Score ($R^2$) of the throughput prediction when considering larger time spans as training sets. The red dots are average values, while the boxes represents the median, first and third quartiles.}
 	\label{fig:accuracy}
 \end{figure}
 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/predictions_3}
-	\caption{Prediction vs actual throughput values. Prediction works best for larger batches.}
+	\caption{Prediction vs actual throughput values. Prediction is more accurate for larger throughput values. This suggests that the throughput will remain high until the batch gets smaller.}
 	\label{fig:pred}
 \end{figure}
 
@@ -30,6 +31,6 @@ The most important feature is $HIT\_Available$, that is, the current size of the
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
-	\caption{Feature importance when considering larger training sets for the prediction.}
+	\caption{Computed feature importance when considering larger training sets for the prediction.}
 	\label{fig:importances}
 \end{figure}

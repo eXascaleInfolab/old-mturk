@@ -11,8 +11,8 @@ An initial behavior  that we observe is  the strong weekly periodicity that the 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/autocorrelation_plot}
-	\caption{There is a significant memory for the market, as the autocorrelation of the 
-number of HITS available (as reported by Amazon) lasts for approximately 7-10 days.}
+	\caption{Autocorrelation of the number of HITs available on MTurk time series.
+There is a significant correlation that lasts 7-10 days (see left part of the graph 0-250 Hours).}
 	\label{fig:autocorrelation1}
 \end{figure}
 
@@ -39,7 +39,7 @@ Figure \ref{fig:dsup}(a) shows a the expected relationship between demand and pr
 \subsection{New Workers Complete More Tasks}
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.5\textwidth]{figures/percHitsCompleted}
+		\includegraphics[width=0.48\textwidth]{figures/percHitsCompleted}
 	\caption{The effect of new arrived HITs on the work  supplied.}
 	\label{fig:perc_hits_completed}
 \end{figure}
@@ -51,13 +51,13 @@ to the market, who also seem to spillover to other tasks (i.e., not just working
 Finally, we computed the weekly moving average convergence/divergence (MACD) which is shown in Figure \ref{fig:mac}. We then run an autocorrelation to check whether there is some seasonality in the time series. Figure \ref{fig:autocorrelation2} shows that there is a strong weekly seasonality effect.
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.5\textwidth]{figures/mac}
+		\includegraphics[width=0.48\textwidth]{figures/mac}
 	\caption{Weekly Moving Average Convergence/Divergence (MACD) of the rewards for completed HITs.}
 	\label{fig:mac}
 \end{figure}
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.5\textwidth]{figures/autocorrelation2}
-	\caption{Autocorrelation computed on the weekly MACD.}
+		\includegraphics[width=0.48\textwidth]{figures/autocorrelation2}
+	\caption{Autocorrelation computed on the weekly MACD. Again we see a weekly periodicity (0-250 Hours).}
 	\label{fig:autocorrelation2}
 \end{figure}
