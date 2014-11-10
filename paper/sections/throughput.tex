@@ -1,42 +1,13 @@
 %!TEX root = ../dynamics.tex
-\section{Predicting the Platform Throughput}\label{sec:throughput}
-\begin{itemize}
+\section{Analyzing the Features Affecting Batch Throughput}\label{sec:throughput}
+Now we turn our attention to analyzing the factors that influence the fast progress (or completion) of a batch, how they change, interplay, and their scope overtime.\\
 
-	\item ML tasks: classification and regression
+In order to conduct this analysis, we define the task of batch throughput prediction as a machine learning problem with 29 features, some of these features were studied in the previous section while we describe the remaining ones in appendix. The target feature $DIFF\_HIT$ is the numbers of hits that the a given batch would have completed within the next time frame of 1 hour.\\
 
-	\item ML results: accuracy and error
+In practice, to predict the throughput of a batches at time $T$, we a train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is a time window that we are willing to consider for predicting the next outcome. In this process we computed the score\footnote{The used score is the coefficient $R^2$ \cite{sklearn}.} and the mean average error (MAE).
+In this experiment we considered the data from June-October 2014 and hourly observations (see section \ref{tracker}), from which we uniformly sampled 50 time points. Finally, for each time point we considered a training time frame $\delta$ ranging from 1hour to 24hours. \\
 
-	\item Best features
-
-\end{itemize}
-
-
-% DED: push this in an appendix ..
-
-% Feature ranking:
-% ('1. feature 19 (0.650847)', 'prev')
-% ('2. feature 3 (0.177595)', 'requester_id')
-% ('3. feature 13 (0.062621)', 'ageminutes')
-% ('4. feature 14 (0.053523)', 'leftminutes')
-% ('5. feature 11 (0.037016)', 'titlelength')
-% ('6. feature 12 (0.004375)', 'desclength')
-% ('7. feature 0 (0.004106)', 'time')
-% ('8. feature 15 (0.003591)', 'time_alloted')
-% ('9. feature 1 (0.002787)', 'hour')
-% ('10. feature 18 (0.002238)', 'reward')
-% ('11. feature 7 (0.000434)', 'master')
-% ('12. feature 8 (0.000228)', 'qualification')
-% ('13. feature 5 (0.000188)', 'totalapproved')
-% ('14. feature 17 (0.000160)', 'totalhis')
-% ('15. feature 16 (0.000159)', 'totalbatchs')
-% ('16. feature 4 (0.000128)', 'location')
-% ('17. feature 9 (0.000003)', 'bonus')
-% ('18. feature 10 (0.000001)', 'invite')
-% ('19. feature 6 (0.000000)', 'approvalrate')
-% ('20. feature 2 (0.000000)', 'weekday')
-
-
-
+In figure \ref{fig:accuracy} we see the the computed score reaches its highest values when using the latest 4 hours as a training set, then decreasing when we increase the time frame, to finally again increasing and stabilizing when we used up to 24 hours last hours.\\
 
 \begin{figure}[htbp]
 	\centering
@@ -45,9 +16,12 @@
 	\label{fig:accuracy}
 \end{figure}
 
+In order to understand these changes in our prediction we have to look at the features importances that we computed for each training that we run. Figure \ref{fig:importances} shows the percent contribution of each feature and how it varied along when we increased the time frame.
+The strongest feature is: $HIT\_Available$, indeed and as observed by many reports, larger batches tend to attract more people, this feature becomes less important when we consider longer periods, partly because of the noise, but most importantly because other features like $Start\_time$ and $left\_minutes$ start encoding additional facts, that is: the crowd is sensible the newly posted hits, or how fresh the hits are.
+
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Feature importance when considering larger training sets for the prediction.}
-	\label{fig:falsepred}
+	\label{fig:importances}
 \end{figure}

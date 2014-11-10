@@ -1,0 +1,32 @@
+\appendix
+
+\section{Features Used in the Machine Learning}
+I
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Field} & \textbf{Datatype} & \textbf{Details}\\ \hline\hline
+Time     &  DateTime & The time bucket of the Crawling\\ \hline
+Hour      & Int    &  Hour of the day   \\ \hline
+Weekday      & Int   &  Day of the week (Monday=0)  \\ \hline
+requester\_id     & String &   ID of the requester       \\ \hline
+location      & String &  The requested worker's Location (e.g. US)       \\ \hline
+totalapproved    & Int &  \#total approved HITs      \\ \hline
+approvalrate      & Int&   \%of worker's approvals       \\ \hline
+master     &  Boolean    &  Worker is a master  \\ \hline
+qualification    &Boolean  &   Requested qualification test       \\ \hline
+bonus      &Boolean    &  Title/Description mentioning a Bonus    \\ \hline
+Invite      & Boolean     &    Title/Description mentioning a specific worker\\ \hline
+titlelength      & Int&   String size of the the title       \\ \hline
+desclength    & Int &  String size of the description      \\ \hline
+keywords      & String & Keywords (space separated)        \\ \hline
+ageminutes      &  Int  &  Age since the Batch was posted (minutes)   \\ \hline
+leftminutes      & Int  & Time left before expiration (minutes) \\ \hline
+time\_alloted    & Int &  Time allotted per task   \\ \hline
+totalbatchs      & Int  & Total number of concurrent Batches      \\ \hline
+totalhis      & Int    &  Total number of HITs on mturk   \\ \hline
+reward    & Double      & HIT Reward in USD  \\ \hline
+prev      & Int     &  Number of available HITs in the previous Bucket  \\ \hline
+\textbf{Diff}      & Int &   \textbf{Target Class}: Number of HITs completed from last Time \\ \hline
+\end{tabular}
+\end{table}
