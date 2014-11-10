@@ -8,17 +8,18 @@ Over the past five years, we have periodically collected data about HITs being p
 Real-time data that we collect about the platform is available at \url{http://mturk-tracker.com/}. In this work we consider hourly aggregated data that includes the available HIT batches and their metadata (tittle, description, rewards, required qualifications, etc.), in addition to their progress overtime, that is, the temporal variation of HITs available. In fact, one of the main metrics that we investigate (see Section \ref{sec:throughput}) is the throughput of a batch, i.e.,  how many HITs  get completed between two observations. Note that our data collection system acts  as a periodic observer and does not reflect fine grained information (e.g., variations at each second). We believe however that the data captures enough information to perform long term trend analysis to understand the dynamics and interactions within crowdsourcing platforms.\\
 
 \subsection{A Data-driven Analysis of Platform Evolution}
-First, we try to identify some trends obtained from aggregated information over years, keywords or countries.  Each of the following analyses is available as an interactive visualization of the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
-\paragraph{Popular Topics  Over Time}
+First, we identify some trends obtained from aggregated information over time, keywords or countries associated with published HITs.  Each of the following analyses is also available as an interactive visualization over the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
+\paragraph{Topics  Over Time}
 First we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
-In order to do such analysis we look at the tags associated with published HITs. We observe the evolution of tag popularity and associated reward on \amt{}. 
+In order to do such analysis we look at the keywords associated with published HITs. We observe the evolution of keyword popularity and associated reward on \amt{}. 
 %plot explanation
-Figure \ref{fig:tagEvolution} shows such behavior. Each point in the plot represent a tag associated to HITs with its frequency (i.e., number of HITs with such tag) on the x asis, its average reward of HITs with this tag on the y axis in a certain year. The path connecting data points indicates the time evolution, starting in 2009, with one point representing the tag usage over one year.
+Figure \ref{fig:tagEvolution} shows such behavior. Each point in the plot represents a keyword associated to HITs with its frequency (i.e., number of HITs with such keyword) on the x-axis, the average reward in a certain year of HITs with this keyword on the y-axis. The path connecting data points indicates the time evolution, starting in 2009, with one point representing the keyword usage over one year.
+
 % observations
-We can observe that `audio' and `transcription' tags (i.e., blue and red path from left to right) have substantially increased in frequency over time being among the most popular tags in the last two years and are paid more than \$1 on average.
-HITs with the `video' tag has also increased in number with a reward that has reached a peak in 2012 and decreased after that.
-HITs tagged as `categorization' have been paid constantly in the range \$0.10-\$0.30 on average, except in 2009 where they were rewarded less than \$0.1.
-HITs tagged as `tweet' have not increased in number but have been paid more over years reaching \$0.9 in 2014: This can be explained by more complex tasks being requested to workers: for example, from sentiment classification to writing a tweet.
+We can observe that the `audio' and `transcription' keywords (i.e., blue and red paths from left to right) have substantially increased in frequency over time being among the most popular keywords in the last two years and are paid more than \$1 on average.
+HITs with the `video' tag have also increased in number with a reward that has reached a peak in 2012 and decreased after that.
+HITs tagged as `categorization' have been paid constantly in the range of \$0.10-\$0.30 on average, except in 2009 where they were rewarded less than \$0.10 each.
+HITs tagged as `tweet' have not increased in number but have been paid more over years reaching \$0.9 on average in 2014: This can be explained by more complex tasks being requested to workers: for example, from sentiment classification to writing a new tweet.
 
 \begin{figure}[htbp]
 	\centering
@@ -27,15 +28,16 @@ HITs tagged as `tweet' have not increased in number but have been paid more over
 	\label{fig:tagEvolution}
 \end{figure}
 
-\paragraph{Country Preference by Requesters Over Time}
+\paragraph{Preferred Countries by Requesters Over Time}
 Figure \ref{fig:country} shows the requirements of requesters with respect to which countries they need workers from. The left part of Figure \ref{fig:country} shows that most HITs are to be completed exclusively by workers located in US, India, or Canada. The right part of Figure \ref{fig:country} shows the evolution over time of the country requirement phenomena.
-The plot shows the number of HITs with a certain country requirement (on the y axis) and its time evolution (on the x axis) with yearly steps. The size of the data point indicates the total reward associated to those HITs.
+The plot shows the number of HITs with a certain country requirement (on the y-axis) and its time evolution (on the x-axis) with yearly steps. The size of the data point indicates the total reward associated to those HITs.
+
 We can see that US-only HITs dominate both in terms of number as well as of reward associated to them. 
-Interestingly, we notice how over time HITs uniquely for workers based in India have been decreasing. 
-While HITs for workers based in Canada have been increasing over time being in 2014 more than those for workers based in India, we see that the reward associated to them is less as compared to the budget for Indian-only HITs.
+Interestingly, we notice how over time HITs for workers based in India have been decreasing. This can be explained by \amt restrictions on accepting new workers on the platform.
+On the other hand, HITs for workers based in Canada have been increasing over time becoming in 2014 more than those exclusively available to workers based in India.  We also see that the reward associated to them is less as compared to the budget for India-only HITs.
 As of 2014, both HITs for workers based in Canada or UK are more numerous that those for workers based in India.
-Overall, 88.5\% of the batches that were posted in the considered time period didn't require any specific worker location, and 86\% of those who did requested US based workers.
-\begin{figure*}[htbp]
+Overall, 88.5\% of the HIT batches that were posted in the considered time period did not require any specific worker location, and 86\% of those who did requested US based workers.
+\begin{figure*}[ht]
 	\centering
 		\includegraphics[width=0.43\textwidth]{figures/map}
 		\includegraphics[width=0.43\textwidth]{figures/countriesTime}
@@ -44,7 +46,7 @@ Overall, 88.5\% of the batches that were posted in the considered time period di
 \end{figure*}
 
 Figure \ref{fig:keyword_loc} shows the top keywords attached to HITs restricted to specific locations.
-\begin{figure}[htbp]
+\begin{figure}[ht]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/keywords_location}
 	\caption{Keywords for HITs restricted to specific countries.}
