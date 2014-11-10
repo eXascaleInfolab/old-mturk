@@ -1,15 +1,17 @@
 %!TEX root = ../dynamics.tex
 \section{The Evolution of Amazon MTurk: 2009 to 2014}\label{sec:stats}
 
+
 \subsection{Crowdsourcing Platform Dataset}
 \label{sec:tracker}
 Over the past five years, we have periodically collected data about HITs being published on \amt\ .
 and is available at \url{http://mturk-tracker.com/}. In this work we consider hourly aggregated data that includes the available batches and their metadata (tittle, description, rewards, required qualifications etc), in addition to their progress overtime, that is the temporal variation of HITs available. In fact one of the main metrics that we investigate, especially in section \ref{sec:throughput}, is the throughput of a batch, or how many hits it gets completed between two observations. Note that the tracker acts only as a periodic observer and do not reflect fine grained information that only \amt\ might possess. We believe however that it captures enough information to perform long term trend analysis.\\
+
 \subsection{A Data-driven Analysis of Platform Evolution}
 First, we try to identify some trends obtained from aggregated information over years, keywords or countries.  Each of the following analyses is available as an interactive visualization of the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
 \paragraph{Popular Topics  Over Time}
 First we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
-In order to do such analysis we look at the tags associated with published HITs. We observe the evolution of tag popularity and associated reward on \amt\ . 
+In order to do such analysis we look at the tags associated with published HITs. We observe the evolution of tag popularity and associated reward on \amt{}\ . 
 %plot explanation
 Figure \ref{fig:tagEvolution} shows such behavior. Each point in the plot represent a tag associated to HITs with its frequency (i.e., number of HITs with such tag) on the x asis, its average reward of HITs with this tag on the y axis in a certain year. The path connecting data points indicates the time evolution, starting in 2009, with one point representing the tag usage over one year.
 % observations
@@ -54,7 +56,7 @@ We can see that the most popular keywords (i.e., `audio' and `transcription') do
 % \subsection{Does reputation Improve Throughput?}
 
 \paragraph{HIT Reward Analysis}
-Figure \ref{fig:reward_year} shows most frequent rewards assigned to HITs over time\footnote{Data for 2014 has been omitted as not comparable with other year values.}. We can see that while in 2011 the most popular reward was \$0.01, more recently HITs paid \$0.05 are more frequent. This can be explained by both how workers search for HITs on \amt\ and by the \amt fee scheme. Requesters now prefer to publish more complex HITs possibly with multiple questions in it and grant an higher reward: This attracts also those workers who are not willing to complete a HIT for a little pay and reduces the fee paid to \amt which are based on the number of HITs published on the platform.
+Figure \ref{fig:reward_year} shows most frequent rewards assigned to HITs over time\footnote{Data for 2014 has been omitted as not comparable with other year values.}. We can see that while in 2011 the most popular reward was \$0.01, more recently HITs paid \$0.05 are more frequent. This can be explained by both how workers search for HITs on \amt{}\ and by the \amt{} fee scheme. Requesters now prefer to publish more complex HITs possibly with multiple questions in it and grant an higher reward: This attracts also those workers who are not willing to complete a HIT for a little pay and reduces the fee paid to \amt{} which are based on the number of HITs published on the platform.
 
 \begin{figure}[htbp]
 	\centering
@@ -66,7 +68,7 @@ Figure \ref{fig:reward_year} shows most frequent rewards assigned to HITs over t
 
 
 \paragraph{Requester Analysis}
-In order to be sustainable, a crowdsourcing platform needs to retain requesters over time or get new requesters to replace those who do not publish HITs anymore. Figure \ref{fig:requesters_reward} shows the number of new requesters who used \amt and the overall number of active requesters at a certain point in time. We can observe an increasing number of active requesters over time and a constant number of new requesters who join the platform (at a rate of 1000/month over the last two years).
+In order to be sustainable, a crowdsourcing platform needs to retain requesters over time or get new requesters to replace those who do not publish HITs anymore. Figure \ref{fig:requesters_reward} shows the number of new requesters who used \amt{} and the overall number of active requesters at a certain point in time. We can observe an increasing number of active requesters over time and a constant number of new requesters who join the platform (at a rate of 1000/month over the last two years).
 
 \begin{figure}[htbp]
 	\centering
@@ -80,7 +82,7 @@ To understand the financial health of the crowdsourcing platform is also interes
 
 \paragraph{HIT Batch Size Analysis}
 When a lot of data needs to be crowdsourced (e.g., many images to tag), multiple similar HITs can be published together. We define a batch of HITs as such set of HITs published by a requester at a certain point in time. Figure \ref{fig:batch_size} shows how over time batch size has changed.
-We can see that while on average batches have been getting smaller, in 2014 very large batches have appeared on \amt indicating a clear business interest and scalability demand from micro-task crowdsourcing.
+We can see that while on average batches have been getting smaller, in 2014 very large batches have appeared on \amt{} indicating a clear business interest and scalability demand from micro-task crowdsourcing.
 s
 \begin{figure}[htbp]
 	\centering
