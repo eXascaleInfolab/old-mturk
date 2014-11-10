@@ -1,32 +1,43 @@
 \appendix
 
-\section{Features Used in the Machine Learning}
+\section{Features Used in the \\ Machine Learning}
 DJELLEL: I NEED TO UPDATE THIS LIST..
 \begin{table}[ht]
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Field} & \textbf{Datatype} & \textbf{Details}\\ \hline\hline
-Time     &  DateTime & The time bucket of the Crawling\\ \hline
-Hour      & Int    &  Hour of the day   \\ \hline
-Weekday      & Int   &  Day of the week (Monday=0)  \\ \hline
-requester\_id     & String &   ID of the requester       \\ \hline
-location      & String &  The requested worker's Location (e.g. US)       \\ \hline
-totalapproved    & Int &  \#total approved HITs      \\ \hline
-approvalrate      & Int&   \%of worker's approvals       \\ \hline
-master     &  Boolean    &  Worker is a master  \\ \hline
-qualification    &Boolean  &   Requested qualification test       \\ \hline
-bonus      &Boolean    &  Title/Description mentioning a Bonus    \\ \hline
-Invite      & Boolean     &    Title/Description mentioning a specific worker\\ \hline
-titlelength      & Int&   String size of the the title       \\ \hline
-desclength    & Int &  String size of the description      \\ \hline
+hits\_available      & Int     &  Number of available HITs in the batch \\ \hline
+start\_time     &  DateTime & The time bucket of the Crawling\\ \hline
+reward    & Double      & HIT Reward in USD  \\ \hline
+description    & Int &  String length of the batch's description \\ \hline
+title      & Int&   String size of the batch's title       \\ \hline
 keywords      & String & Keywords (space separated)        \\ \hline
+requester\_id     & String &   ID of the requester       \\ \hline
+time\_alloted    & Int &  Time allotted per task   \\ \hline
+tasktype    & Int &  Task class (as per our classification in \ref{sec:type}) \\ \hline
 ageminutes      &  Int  &  Age since the Batch was posted (minutes)   \\ \hline
 leftminutes      & Int  & Time left before expiration (minutes) \\ \hline
-time\_alloted    & Int &  Time allotted per task   \\ \hline
-totalbatchs      & Int  & Total number of concurrent Batches      \\ \hline
-totalhis      & Int    &  Total number of HITs on mturk   \\ \hline
-reward    & Double      & HIT Reward in USD  \\ \hline
-prev      & Int     &  Number of available HITs in the previous Bucket  \\ \hline
-\textbf{Diff}      & Int &   \textbf{Target Class}: Number of HITs completed from last Time \\ \hline
+location      & String &  The requested worker's Location (e.g. US)       \\ \hline
+totalapproved    & Int & Batch requirement on \#total approved HITs      \\ \hline
+approvalrate      & Int& Batch requirement on the \%of worker's approvals       \\ \hline
+master     &  Boolean    &  Worker is a master  \\ \hline
+
+hitGroupsAvailableUI      & Int& Number of batches as reported on Mturk dashboard \\ \hline
+hitsAvailableUI      & Int& Number of HITs available as reported on Mturk dashboard \\ \hline
+
+hitsArrived      & Int& Number of new hits arrived \\ \hline
+hitsCompleted      & Int& Number of hits completed \\ \hline
+rewardsArrived      & Int& Sum of rewards associated with the HITs arrived \\ \hline
+rewardsCompleted      & Int& Sum of rewards associated with the HITs completed  \\ \hline
+percHitsCompleted      & Int& Ratio of HITs completed and total hits available\\ \hline
+percHitsPosted      & Int & Ratio of new HITs arrived and total hits available\\ \hline
+diffHits      & Int & hitsCompleted-hitsArrived \\ \hline
+diffHitsUI      & Int & Difference in HITs observed from Mturk dashboard \\ \hline
+
+diffGroups     & Int & Computed difference in number of completed and arrived batches \\ \hline
+diffGroupsUI      & Int & Difference in number of completed and arrived batches observed from Mturk dashboard \\ \hline
+diffRewards      & Int & Difference in rewards = (rewardsArrived-rewardsCompleted) \\ \hline
+
+\textbf{DIFF\_HIT}      & Int &   \textbf{Target Class}: Number of HITs completed for a given batch\\ \hline
 \end{tabular}
 \end{table}

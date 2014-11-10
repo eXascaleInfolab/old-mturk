@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{sklearn}
+{Scikit Learn: Random Forest Regressor}.
+\newblock
+  \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html}.
+\newblock Accessed: 2014-11-10.
+
 \bibitem{mizzaroalonso}
 O.~Alonso and S.~Mizzaro.
 \newblock Using crowdsourcing for {TREC} relevance assessment.
