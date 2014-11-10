@@ -10,14 +10,14 @@ In this experiment we considered  data from June-October 2014 and hourly observa
 In Figure \ref{fig:accuracy} we see how the computed evaluation score reaches its highest values when using the latest 4 hours as a training time frame, then decreases when we increase the time frame, to finally again increase and stabilize when we use up to 24 hours training evidence.
 Note that the score is relatively low especially for batches with few HITs. The prediction works best for larger batches as Figure \ref{fig:pred} suggests.
 
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/ML_accuracy}
 	\caption{Accuracy of the throughput prediction when considering larger training sets for the prediction.}
 	\label{fig:accuracy}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/predictions_3}
 	\caption{Prediction vs actual throughput values. Prediction works best for larger batches.}
@@ -27,7 +27,7 @@ Note that the score is relatively low especially for batches with few HITs. The 
 In order to understand  changes in throughput prediction we  look at  feature importance that we computed during   the training phase. Figure \ref{fig:importances} shows the  contribution of each feature and how it varied along when we increased the training time frame.
 The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work \gd{add reference}, larger batches tend to attract more workers. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts: This means that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are.
 
-\begin{figure}[ht]
+\begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Feature importance when considering larger training sets for the prediction.}
