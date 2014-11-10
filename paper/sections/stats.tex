@@ -1,6 +1,8 @@
 %!TEX root = ../dynamics.tex
-\section{The Evolution of Amazon MTurk: 2009 to 2014}\label{sec:stats}
+\section{The Evolution of Amazon MTurk\\ From 2009 to 2014}
+\label{sec:stats}
 
+We start by describing our datasets and extract some key information that will be used in the rest of the paper.
 
 \subsection{Crowdsourcing Platform Dataset}
 \label{sec:tracker}
@@ -8,7 +10,7 @@ Over the past five years, we have periodically collected data about HITs being p
 Real-time data that we collect about the platform is available at \url{http://mturk-tracker.com/}. In this work we consider hourly aggregated data that includes the available HIT batches and their metadata (tittle, description, rewards, required qualifications, etc.), in addition to their progress overtime, that is, the temporal variation of HITs available. In fact, one of the main metrics that we investigate (see Section \ref{sec:throughput}) is the throughput of a batch, how many HITs  get completed between two observations, here our initial intuition, backed by figure \ref{fig:motiv}, is that the throughput of a batch is heavily tied to the number of HITs that are available to workers.\\
 Note that our data collection system acts  as a periodic observer and does not reflect fine grained information (e.g., variations at each second). We believe however that the data captures enough information to perform long term trend analysis to understand the dynamics and interactions within crowdsourcing platforms.\\
 
-In total, the datasets in question covers 2'668'897 batches containing 132'101'659 HITs.
+In total, the datasets in question covers more than 25M different batches which made available more than 130M HITs.
 
 \begin{figure}[tb]
 	\centering
@@ -75,7 +77,7 @@ Figure \ref{fig:reward_year} shows most frequent rewards assigned to HITs over t
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/reward_year}
-	\caption{Popularity of HIT reward values over time. \gd{can we add 0.10?}}
+	\caption{Popularity of HIT reward values over time.}
 	\label{fig:reward_year}
 \end{figure}
 
