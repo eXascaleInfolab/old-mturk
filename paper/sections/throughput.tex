@@ -2,30 +2,32 @@
 \section{Analyzing the Features Affecting Batch Throughput}\label{sec:throughput}
 Next we turn our attention to analyzing the factors that influence the fast progress (or completion) of a batch, how they change, interplay, and their scope overtime.
 \subsection{A Machine Learning Approach}
-In order to conduct this analysis, we define the task of batch throughput prediction as a machine learning problem with 29 features, some of these features were studied in the previous section while we describe the remaining ones in appendix. The target feature $DIFF\_HIT$ is the numbers of hits that the a given batch would have completed within the next time frame of 1 hour.\\
-In practice, to predict the throughput of a batches at time $T$, we a train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is a time window that we are willing to consider for predicting the next outcome. In this process we computed the score\footnote{The used score is the coefficient $R^2$ \cite{sklearn}.} and the mean average error (MAE).
-In this experiment we considered the data from June-October 2014 and hourly observations (see section \ref{sec:tracker}), from which we uniformly sampled 50 time points. Finally, for each time point we considered a training time frame $\delta$ ranging from 1hour to 24hours. \\
+In order to conduct this analysis, we define the task of batch throughput prediction as a regression problem.  Some of the   29  features we use for this task were used in the previous section to classify HIT type.  We describe the remaining ones in the appendix. The value  we want to predict (i.e.,   $DIFF\_HIT$) is the batch \emph{throughput}, that is, numbers of HITs that  a given batch would have completed within the next time frame of 1 hour.
 
-In figure \ref{fig:accuracy} we see the the computed score reaches its highest values when using the latest 4 hours as a training set, then decreasing when we increase the time frame, to finally again increasing and stabilizing when we used up to 24 hours last hours. Note that the score is relatively low especially for batches with few hits, the prediction works best for larger batches as figure\ref{fig:pred} suggests.\\
+In detail, to predict the throughput of a batch at time $T$, we a train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is a time window that we are   considering  for predicting batch throughput at time $T$. In this process we compute the coefficient of determination  $R^2$ score \cite{sklearn} and the mean average error (MAE).
+In this experiment we considered  data from June-October 2014 and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. Finally, for each time point we considered a training time frame $\delta$ ranging from 1 hour to 24 hours. 
 
-\begin{figure}[htbp]
+In Figure \ref{fig:accuracy} we see how the computed evaluation score reaches its highest values when using the latest 4 hours as a training time frame, then decreases when we increase the time frame, to finally again increase and stabilize when we use up to 24 hours training evidence.
+Note that the score is relatively low especially for batches with few HITs. The prediction works best for larger batches as Figure \ref{fig:pred} suggests.
+
+\begin{figure}[ht]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/ML_accuracy}
 	\caption{Accuracy of the throughput prediction when considering larger training sets for the prediction.}
 	\label{fig:accuracy}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[ht]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/predictions_3}
 	\caption{Prediction vs actual throughput values. Prediction works best for larger batches.}
 	\label{fig:pred}
 \end{figure}
 
-In order to understand these changes in our prediction we have to look at the features importances that we computed for each training that we run. Figure \ref{fig:importances} shows the percent contribution of each feature and how it varied along when we increased the time frame.
-The strongest feature is: $HIT\_Available$, indeed and as observed by many reports, larger batches tend to attract more people, this feature becomes less important when we consider longer periods, partly because of the noise, but most importantly because other features like $Start\_time$ and $left\_minutes$ start encoding additional facts, that is: the crowd is sensible the newly posted hits, or how fresh the hits are.
+In order to understand  changes in throughput prediction we  look at  feature importance that we computed during   the training phase. Figure \ref{fig:importances} shows the  contribution of each feature and how it varied along when we increased the training time frame.
+The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work \gd{add reference}, larger batches tend to attract more workers. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts: This means that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are.
 
-\begin{figure}[htbp]
+\begin{figure}[ht]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Feature importance when considering larger training sets for the prediction.}
