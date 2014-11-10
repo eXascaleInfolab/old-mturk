@@ -1,14 +1,12 @@
 %!TEX root = ../dynamics.tex
 \section{The Evolution of Amazon MTurk: 2009 to 2014}\label{sec:stats}
 
-\subsection{Crowdsourcing Platform Dataset}\label{sec:tracker}
+\subsection{Crowdsourcing Platform Dataset}
+\label{sec:tracker}
 Over the past five years, we have periodically collected data about HITs being published on \amt\ .
-Real-time data collected from the crowdsourcing platform is available at \url{http://mturk-tracker.com/}.
-Interactive visualizations of the historical data are available at \url{http://xi-lab.github.io/mturk-mrkt/}.
-
-\gd{add basic data stats, like number of hits, requesters, avg, median, min, max reward, etc}
-
+and is available at \url{http://mturk-tracker.com/}. In this work we consider hourly aggregated data that includes the available batches and their metadata (tittle, description, rewards, required qualifications etc), in addition to their progress overtime, that is the temporal variation of HITs available. In fact one of the main metrics that we investigate, especially in section \ref{sec:throughput}, is the throughput of a batch, or how many hits it gets completed between two observations. Note that the tracker acts only as a periodic observer and do not reflect fine grained information that only \amt\ might possess. We believe however that it captures enough information to perform long term trend analysis.\\
 \subsection{A Data-driven Analysis of Platform Evolution}
+First, we try to identify some trends obtained from aggregated information over years, keywords or countries.  Each of the following analyses is available as an interactive visualization of the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
 \paragraph{Popular Topics  Over Time}
 First we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
 In order to do such analysis we look at the tags associated with published HITs. We observe the evolution of tag popularity and associated reward on \amt\ . 
@@ -34,9 +32,7 @@ We can see that US-only HITs dominate both in terms of number as well as of rewa
 Interestingly, we notice how over time HITs uniquely for workers based in India have been decreasing. 
 While HITs for workers based in Canada have been increasing over time being in 2014 more than those for workers based in India, we see that the reward associated to them is less as compared to the budget for Indian-only HITs.
 As of 2014, both HITs for workers based in Canada or UK are more numerous that those for workers based in India.
-
-\gd{how many HITs have country filters and how many have no country filter in percentage?} 
-
+Overall, 88.5\% of the batches that were posted in the considered time period didn't require any specific worker location, and 86\% of those who did requested US based workers.
 \begin{figure*}[htbp]
 	\centering
 		\includegraphics[width=0.43\textwidth]{figures/map}
