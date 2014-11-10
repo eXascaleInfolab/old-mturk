@@ -16,10 +16,17 @@ number of HITS available (as reported by Amazon) lasts for approximately 7-10 da
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/scattermatrix}
-	\caption{Supply and demand relationship}
+	\caption{Scatter matrix comparing the different parameters in the demand and supply.}
 	\label{fig:scatter_matrix}
 \end{figure}
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.5\textwidth]{figures/supply_demand}
+	\caption{Demand and supply versus price.}
+	\label{fig:dsup}
+\end{figure}
 In figure\ref{fig:scatter_matrix} we compare all the variables \{hitsArrived, avgRewardsArrived, hitsCompleted,avgRewardsCompleted\}. Among the observations that can be made is the correlation between the rewards completed and those arrived, and also the correlation between hits completed and those arrived. This suggests that the workers are sensitive to newly posted tasks, and that they are monitoring for new and fresh tasks, this supplements our finding in section\ref{sec:throughput} that $Start\_time$ is an important feature contributing to the throughput of a batch.
+Figure \ref{fig:dsup}(a) shows a the usual relationship between demand and price, that is, the larger the demand the lower the price becomes. On the other hand Figure \ref{fig:dsup}(b) the supply doesn't match the typical supply curve (higher prices drive higher supply) instead the demand seems to be tied to the the supply (the number of new HITs posted), a possible explanation to that is the lack of biding mechanisms that the workers can leverage to drive prices up.
 
 \subsection{Effect of New Workers}
 \begin{figure}[htbp]
