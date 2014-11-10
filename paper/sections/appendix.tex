@@ -1,46 +1,35 @@
 %!TEX root = ../dynamics.tex
 \appendix
-
 \section{Features Used in the \\ Machine Learning}
-DJELLEL: I NEED TO UPDATE THIS LIST..
-\begin{table*}[tb]
-	\caption{Features used to predict HIT batch throughput.}
-	\label{tab:featThroughput}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Field} & \textbf{Datatype} & \textbf{Details}\\ \hline\hline
-hits\_available      & Int     &  Number of available HITs in the batch \\ \hline
-start\_time     &  DateTime & The time bucket of the Crawling\\ \hline
-reward    & Double      & HIT Reward in USD  \\ \hline
-description    & Int &  String length of the batch's description \\ \hline
-title      & Int&   String size of the batch's title       \\ \hline
-keywords      & String & Keywords (space separated)        \\ \hline
-requester\_id     & String &   ID of the requester       \\ \hline
-time\_alloted    & Int &  Time allotted per task   \\ \hline
-tasktype    & Int &  Task class (as per our classification in \ref{sec:type}) \\ \hline
-ageminutes      &  Int  &  Age since the Batch was posted (minutes)   \\ \hline
-leftminutes      & Int  & Time left before expiration (minutes) \\ \hline
-location      & String &  The requested worker's Location (e.g. US)       \\ \hline
-totalapproved    & Int & Batch requirement on \#total approved HITs      \\ \hline
-approvalrate      & Int& Batch requirement on the \%of worker's approvals       \\ \hline
-master     &  Boolean    &  Worker is a master  \\ \hline
-
-hitGroupsAvailableUI      & Int& Number of batches as reported on Mturk dashboard \\ \hline
-hitsAvailableUI      & Int& Number of HITs available as reported on Mturk dashboard \\ \hline
-
-hitsArrived      & Int& Number of new hits arrived \\ \hline
-hitsCompleted      & Int& Number of hits completed \\ \hline
-rewardsArrived      & Int& Sum of rewards associated with the HITs arrived \\ \hline
-rewardsCompleted      & Int& Sum of rewards associated with the HITs completed  \\ \hline
-percHitsCompleted      & Int& Ratio of HITs completed and total hits available\\ \hline
-percHitsPosted      & Int & Ratio of new HITs arrived and total hits available\\ \hline
-diffHits      & Int & hitsCompleted-hitsArrived \\ \hline
-diffHitsUI      & Int & Difference in HITs observed from Mturk dashboard \\ \hline
-
-diffGroups     & Int & Computed difference in number of completed and arrived batches \\ \hline
-diffGroupsUI      & Int & Difference in number of completed and arrived batches observed from Mturk dashboard \\ \hline
-diffRewards      & Int & Difference in rewards = (rewardsArrived-rewardsCompleted) \\ \hline
-
-\textbf{DIFF\_HIT}      & Int &   \textbf{Target Class}: Number of HITs completed for a given batch\\ \hline
-\end{tabular}
-\end{table*}
+The following is the list features that we used in our machine learning (see section \ref{sec:throughput}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item hits\_available:  Number of available HITs in the batch.
+\item start\_time:  The time bucket of the Crawling.
+\item reward: HIT Reward in USD.
+\item description:  String length of the batch's description.
+\item title: String size of the batch's title.
+\item keywords : Keywords (space separated).
+\item requester\_id:   ID of the requester.
+\item time\_alloted : Time allotted per task.
+\item tasktype : Task class (as per our classification in \ref{sec:type}).
+\item ageminutes : Age since the Batch was posted (minutes).
+\item leftminutes: Time left before expiration (minutes).
+\item location: The requested worker's Location (e.g. US).
+\item totalapproved: Batch requirement on \#total approved HITs.
+\item approvalrate : Batch requirement on the \%of worker's approvals.
+\item master : Worker is a master.
+\item hitGroupsAvailableUI: Number of batches as reported on Mturk dashboard.
+\item hitsAvailableUI : Number of HITs available as reported on Mturk dashboard.
+\item hitsArrived : Number of new hits arrived.
+\item hitsCompleted : Number of hits completed.
+\item rewardsArrived : Sum of rewards associated with the HITs arrived.
+\item rewardsCompleted : Sum of rewards associated with the HITs completed.
+\item percHitsCompleted : Ratio of HITs completed and total hits available.
+\item percHitsPosted : Ratio of new HITs arrived and total hits available.
+\item diffHits : hitsCompleted-hitsArrived.
+\item diffHitsUI : Difference in HITs observed from Mturk dashboard.
+\item diffGroups  : Computed difference in number of completed and arrived batches.
+\item diffGroupsUI : Difference in number of completed and arrived batches observed from Mturk dashboard.
+\item diffRewards : Difference in rewards = (rewardsArrived-rewardsCompleted).
+\item \textbf{DIFF\_HIT}  :  \textbf{Target Class}: Number of HITs completed for a given batch.
+\end{itemize}
