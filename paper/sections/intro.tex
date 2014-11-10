@@ -1,16 +1,17 @@
 %!TEX root = ../dynamics.tex
 \section{Introduction}\label{sec:intro}
-The micro-task crowdsourcing market has seen a rapid growth in the last five years. This is also explained by the fact that more data is available to enterprises and that they see data as an asset within business processes.
 % 
-While data  availability increases, its quality is not always good and manual data pre-processing is often necessary before using it to create value or to support decision.
+While data  availability increases, its quality is not necessarily good and manual data pre-processing is often necessary before using it to create value or to support decisions.
 % 
-To this end, outsourcing  data processing tasks  like, for example, image tagging, audio transcription, translation, etc. to a large crowd of individuals has become more popular over time.
+To this end, outsourcing  data processing tasks  like, for example, image tagging, audio transcription, translation, etc. to a large crowd of individuals on the Web has become more popular over time.
 
 %micro-task Crowdsourcing platform
-To perform such Human Intelligence Tasks (HITs) crowdsourcing platforms have been developed. Such platforms serve as place where the crowd (i.e., people willing to perform small tasks (so called \emph{micro-tasks}) in exchange of a small monetary reward, also know as \emph{workers}) and work providers (i.e., also known as \emph{requesters}) meet. 
+To perform such Human Intelligence Tasks (HITs) crowdsourcing platforms have been developed. Such platforms serve as place where the crowd (i.e., people, also know as \emph{workers}) willing to perform small tasks (so called \emph{micro-tasks}) in exchange of a small monetary reward and work providers (also known as \emph{requesters}) meet. 
+
+The micro-task crowdsourcing market has seen a rapid growth in the last five years. This is also explained by the fact that more data is available to enterprises and that they see data as an asset within business processes.
 
 % crowdsourcing process of publishing tasks, completing task, getting results, rewarding}
-The common micro-task crowdsourcing process works as follows. First requester design the HIT based on their data and required task. Next, they publish batches of HITs onto the crowdsourcing platform specifying requirements and the monetary amount rewarded to workers among completion of the HIT. Next, those workers willing to perform the published HIT complete the task and submit their results back to the requester who will obtain the desired data and pay workers accordingly.
+The  micro-task crowdsourcing process works as follows. First the requester designs the HIT based on their data and required task. Next, they publish batches of HITs onto the crowdsourcing platform specifying their requirements and the monetary amount rewarded to workers among completion of each HIT. Next, those workers willing to perform the published HITs complete the tasks and submit their results back to the requester who will obtain the desired data and pay workers accordingly.
 
 %s
 In this paper we analyze the evolution of a very popular micro-task crowdsourcing platform (i.e., \amt\ \footnote{\url{http://mturk.com}}) over  five-years time span and, based on our findings, propose techniques to support requesters in posting HITs to the market in an effective way.
@@ -18,10 +19,10 @@ In this paper we analyze the evolution of a very popular micro-task crowdsourcin
 Using features derived from a large-scale analysis of platform logs, we propose methods to predict the throughput of the crowdsourcing platform for a batch of HITs published by a certain requester at a certain point in time. This prediction is based on different features including current platform load, requester reputation, popular task types, etc.
 
 % summarize main findings}
-The main findings of our analysis are: 1) the type of tasks published on the platform has changed over time with content creation HITs being the most popular; 2) the HIT pricing approach evolved towards larger and better paid HITs to attract workers; 3) geographical restriction are applied to certain task types (e.g., surveys for US workers); 4) we observed an organic growth in the number of new requesters who use the platform; 
+The main findings of our analysis are: 1) the type of tasks published on the platform has changed over time with content creation HITs being the most popular; 2) the HIT pricing approach evolved towards larger and better paid HITs to better attract workers in a competitive market; 3) geographical restriction are applied to certain task types (e.g., surveys for US workers); 4) we observed an organic growth in the number of new requesters who use the platform which is a sign of a healthy market.
 
 
-In summary, the main contributions of this paper are:
+In summary, the main contributions of this paper are \gd{revisit these}:
 \begin{itemize}
 
 	\item An analysis of the evolution of a popular micro-task crowdsourcing platform looking at dimensions like topics, reward, worker location, task types, and platform throughput.
