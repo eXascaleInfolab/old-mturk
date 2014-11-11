@@ -111,7 +111,7 @@ A.~Kittur, J.~V. Nickerson, M.~Bernstein, E.~Gerber, A.~Shaw, J.~Zimmerman,
   M.~Lease, and J.~Horton.
 \newblock The future of crowd work.
 \newblock In {\em Proceedings of the 2013 Conference on Computer Supported
-  Cooperative Work}, CSCW '13, pages 1301--1318, New York, NY, USA, 2013. ACM.
+  Cooperative Work}, CSCW '13, pages 1301--1318, New York, NY, USA, 2013.
 
 \bibitem{Kucherbaev:2014:TET:2598153.2602249}
 P.~Kucherbaev, F.~Daniel, M.~Marchese, F.~Casati, and B.~Reavey.
@@ -149,6 +149,13 @@ B.~Nushi, O.~Alonso, M.~Hentschel, and V.~Kandylas.
 A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
 \newblock Human-assisted graph search: It's okay to ask questions.
 \newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
+
+\bibitem{sklearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em J. Mach. Learn. Res.}, 12:2825--2830, Nov. 2011.
 
 \bibitem{biomedical}
 J.~P{\"o}schko, M.~Strohmaier, T.~Tudorache, N.~F. Noy, and M.~A. Musen.
