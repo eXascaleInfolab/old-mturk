@@ -27,12 +27,14 @@ Note that the score is relatively low especially for batches with low throughput
 	\label{fig:pred}
 \end{figure}
 
-In order to understand  changes in throughput prediction we  look at  feature importance that we computed during   the training phase. Figure \ref{fig:importances} shows the  contribution of each feature and how it varied along when we increased the training time frame.
-The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers\cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts and suggests that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are. To better understand this phenomena, in the next section we conduct an analysis on what attracts the workforce to the the platform.
-
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Computed feature importance when considering larger training sets for the prediction.}
 	\label{fig:importances}
 \end{figure}
+
+
+In order to understand  changes in throughput prediction we  look at  feature importance that we computed during   the training phase. Figure \ref{fig:importances} shows the  contribution of each feature and how it varied along when we increased the training time frame.
+The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers\cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of  noise, but, most importantly, because of other features like $Start\_time$ and $left\_minutes$ starting to encode additional facts and suggests that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are. To better understand this phenomena, in the next section we conduct an analysis on what attracts the workforce to the the platform.
+
