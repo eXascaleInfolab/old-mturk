@@ -150,13 +150,6 @@ A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
 \newblock Human-assisted graph search: It's okay to ask questions.
 \newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
 
-\bibitem{sklearn}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
-\newblock Scikit-learn: Machine learning in python.
-\newblock {\em J. Mach. Learn. Res.}, 12:2825--2830, Nov. 2011.
-
 \bibitem{biomedical}
 J.~P{\"o}schko, M.~Strohmaier, T.~Tudorache, N.~F. Noy, and M.~A. Musen.
 \newblock Pragmatic analysis of crowd-based knowledge production systems with
