@@ -22,7 +22,7 @@ In order to conduct this analysis, we model the task of batch throughput predict
 
 In detail, to predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are   considering directly prior to time $T$. The rational behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
 The research question we tackle in this context is: ``How much historical data dow one need to consider to predict the throughput effectively?". To answer this, we proceed by varying $\delta$.
-To evaluate the effectiveness of $\delta$ values, we compute the coefficient of determination  $R^2$ \cite{sklearnweb}.
+To evaluate the effectiveness of $\delta$ values, we compute the coefficient of determination  $R^2$ \cite{sklearnweb, sklearn}.
 In this experiment, we considered  data from June to October 2014 and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. Finally, for each time point we considered a training time frame $\delta$ ranging from 1 hour to 24 hours. 
 
 In Figure \ref{fig:accuracy}, we observe that the computed evaluation score reaches its highest values when using the latest 4 hours as training time-frame, then decreases when we increase the training time-frame, to finally again increase and stabilize when we use up to 24 hours training data.
