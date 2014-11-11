@@ -7,7 +7,7 @@ We start by describing our datasets and extract some key information that will b
 \subsection{Crowdsourcing Platform Dataset}
 \label{sec:tracker}
 Over the past five years, we have periodically collected data about HITs being published on \amt{}.
-Real-time data that we collected from the platform is available at \url{http://mturk-tracker.com/}. In this work, we consider hourly aggregated data that includes the available HIT batches and their metadata (tittle, description, rewards, required qualifications, etc.), in addition to their progress over time, that is, the temporal variation of the set of HITs available. In fact, one of the main metrics that we leverage (see Section \ref{sec:throughput}) is the throughput of a batch, i.e., how many HITs  get completed between two successive observations; Our initial intuition in this context, backed by figure \ref{fig:motiv}, is that the throughput of a batch is heavily tied to its number of HITs that are currently available to workers.\\
+Real-time data that we collected from the platform is available at \url{http://mturk-tracker.com/}. In this work, we consider hourly aggregated data that includes the available HIT batches and their metadata (tittle, description, rewards, required qualifications, etc.), in addition to their progress over time, that is, the temporal variation of the set of HITs available. In fact, one of the main metrics that we leverage (see Section \ref{sec:throughput}) is the throughput of a batch, i.e., how many HITs  get completed between two successive observations; Our initial intuition in this context, backed by Figure \ref{fig:motiv}, is that the throughput of a batch is heavily tied to its number of HITs that are currently available to workers.\\
 In total, our dataset covers more than 2.5M different batches with over 130M HITs.
 We note that the tracker reports data periodically only and does not reflect fine-grained information (e.g., variations at each second). We believe however that it captures enough information to perform meaningful, long-term trend analyses and to understand the dynamics and interactions within the crowdsourcing platform.\\
 
@@ -16,6 +16,12 @@ We note that the tracker reports data periodically only and does not reflect fin
 		\includegraphics[width=0.48\textwidth]{figures/motiv_mturk}
 	\caption{Batch throughput versus the number of HITs available in the batch. The red line corresponds to the maximum throughput we could have observed due to the tracker periodicity constraints.\protect\footnotemark}
 	\label{fig:motiv}
+\end{figure}
+\begin{figure}[tb]
+	\centering
+		\includegraphics[width=0.5\textwidth]{figures/tagEvolution}
+	\caption{The use of keywords to annotate HITs. $frequency$ corresponds to how many times a keyword was used, and $reward\_avg$ corresponds to the average monetary reward of batches that listed the keyword.}
+	\label{fig:tagEvolution}
 \end{figure}
 
 \subsection{A Data-driven Analysis of Platform Evolution}
@@ -32,12 +38,7 @@ HITs with the `video' tag have also increased in number with a reward that has r
 HITs tagged as `categorization' have been paid consistently in the range of \$0.10-\$0.30 on average, except in 2009 where they were rewarded less than \$0.10 each.
 HITs tagged as `tweet' have not increased in number but have been paid more over the years, reaching \$0.9 on average in 2014: This can be explained by more complex tasks being offered to workers, such as sentiment classification or writing tweets.
 
-\begin{figure}[tb]
-	\centering
-		\includegraphics[width=0.5\textwidth]{figures/tagEvolution}
-	\caption{The use of keywords to annotate HITs. $frequency$ corresponds to how many times a keyword was used, and $reward\_avg$ corresponds to the average monetary reward of batches that listed the keyword.}
-	\label{fig:tagEvolution}
-\end{figure}
+
 
 \footnotetext{For readability, this graph represents a subset of 3 months.}
 
