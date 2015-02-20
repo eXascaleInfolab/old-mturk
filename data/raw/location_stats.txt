@@ -1,0 +1,245 @@
+Country	Frequency	cum_reward	cum_hits
+Canada 	4449 	3270.58 	1457566
+Sao Tome and Principe 	5 	0.32 	5
+Guernsey 	6 	0.57 	6
+Montenegro 	3 	0.3 	3
+Lithuania 	13 	321.75 	1467
+Saint Pierre and Miquelon 	5 	0.32 	5
+Saint Helena, Ascension and Tristan da Cunha 	5 	0.32 	5
+Ethiopia 	30 	6.91 	3204
+Aruba 	16 	3.07 	17
+Swaziland 	7 	11.82 	7
+Argentina 	107 	131.99 	1574
+Cameroon 	13 	6.82 	17
+Burkina Faso 	8 	0.54 	8
+Turkmenistan 	6 	0.42 	6
+Bahrain 	18 	2.37 	167
+Saudi Arabia 	87 	99.24 	451
+Rwanda 	7 	0.72 	7
+Togo 	10 	3.07 	10
+American Samoa 	14 	0.91 	826
+Montserrat 	9 	0.6 	9
+United States Minor Outlying Islands 	218 	159.5 	27001
+Northern Mariana Islands 	5 	0.32 	5
+Slovenia 	30 	24.71 	9380
+Guatemala 	16 	18.3 	438
+Bosnia and Herzegovina 	20 	23.83 	1688
+Kuwait 	16 	8.08 	16
+Russian Federation 	381 	547.04 	208163
+Germany 	859 	844.74 	204780
+Virgin Islands, British 	10 	2.12 	10
+Spain 	480 	334.3 	35050
+Liberia 	9 	3.33 	9
+Netherlands 	202 	125.07 	142050
+Paraguay 	18 	10.57 	52
+Jamaica 	22 	20.2 	22
+Oman 	12 	1.93 	36
+Greenland 	7 	15.33 	7
+Gabon 	7 	0.58 	7
+Cambodia 	67 	11.79 	23246
+Finland 	40 	40.78 	3120
+Monaco 	6 	0.33 	6
+Bahamas 	25 	13.58 	27
+Wallis and Futuna 	4 	0.31 	4
+New Zealand 	164 	112.87 	2765
+Yemen 	16 	4.62 	16
+Jersey 	3 	0.3 	3
+Pakistan 	1652 	774.82 	637245
+Albania 	45 	49.65 	53315
+Samoa 	5 	0.32 	5
+Equatorial Guinea 	7 	0.58 	7
+Norfolk Island 	5 	0.32 	5
+United Arab Emirates 	65 	38.08 	472
+Côte d'Ivoire 	11 	3.04 	11
+India 	17776 	15695.95 	3422552
+Svalbard and Jan Mayen 	4 	0.31 	4
+Madagascar 	9 	0.73 	10
+Lesotho 	7 	0.38 	1903
+Saint Vincent and the Grenadines 	5 	0.32 	5
+Kenya 	55 	40.13 	5621
+Tajikistan 	12 	1.92 	2148
+Guam 	3 	0.3 	3
+Pitcairn 	5 	0.32 	5
+Micronesia, Federated States of 	9 	26.32 	9
+Turkey 	287 	144.1 	293256
+Afghanistan 	34 	43.1 	1720
+Bangladesh 	46 	24.31 	1814
+Mauritania 	6 	0.33 	6
+Solomon Islands 	5 	0.32 	5
+Viet Nam 	1170 	919.68 	546674
+Saint Lucia 	5 	0.32 	5
+Hungary 	27 	34.36 	1223
+San Marino 	5 	0.32 	5
+French Polynesia 	6 	0.33 	6
+Taiwan, Province of China 	128 	103.59 	35020
+Syrian Arab Republic 	61 	22.24 	133
+Bermuda 	7 	0.34 	8
+Slovakia 	22 	34.37 	1330
+Somalia 	9 	8.59 	151
+Peru 	153 	45.66 	162348
+Vanuatu 	5 	0.32 	5
+Nauru 	6 	0.33 	6
+Seychelles 	5 	0.32 	5
+Norway 	62 	102.01 	2470
+Malawi 	8 	0.68 	8
+Cook Islands 	6 	0.33 	7
+Benin 	7 	0.34 	7
+Réunion 	5 	0.32 	5
+Western Sahara 	7 	0.58 	7
+Singapore 	213 	226.04 	24691
+Iran, Islamic Republic of 	52 	67.55 	2195
+Falkland Islands (Malvinas) 	6 	0.33 	6
+Mayotte 	6 	0.33 	6
+Heard Island and McDonald Islands 	8 	0.35 	8
+China 	569 	364.88 	32159
+Armenia 	15 	0.79 	2561
+Timor-Leste 	4 	0.31 	4
+Dominican Republic 	12 	13.55 	12
+Azerbaijan 	12 	1.42 	2352
+Ukraine 	27 	31.58 	2226
+Ghana 	24 	14.64 	24
+Tonga 	6 	0.33 	6
+Cayman Islands 	9 	0.41 	9
+Libya 	11 	2.03 	14
+Indonesia 	95 	60.78 	32260
+Central African Republic 	9 	0.46 	9
+United States 	241141 	284794.78 	21927455
+Sweden 	103 	84.54 	5345
+Belarus 	18 	26.26 	1303
+Mali 	8 	2.33 	12
+Cape Verde 	7 	0.34 	7
+Bulgaria 	29 	29.85 	2166
+Palestine, State of 	15 	3.74 	337
+Mauritius 	6 	0.33 	6
+Romania 	172 	73.17 	81392
+Angola 	13 	3.4 	13
+French Southern Territories 	2 	0.03 	2
+Portugal 	35 	22.67 	9396
+South Africa 	110 	105.88 	3170
+Tokelau 	5 	0.32 	5
+Cyprus 	10 	16.5 	10
+South Georgia and the South Sandwich Islands 	5 	0.32 	5
+Liechtenstein 	10 	0.55 	10
+Venezuela, Bolivarian Republic of 	41 	26.89 	2778
+Malaysia 	87 	47.12 	15933
+Senegal 	8 	1.42 	8
+Mozambique 	7 	0.58 	7
+Uganda 	14 	6.17 	510
+Åland Islands 	52 	33.27 	11890
+Japan 	441 	393.79 	39473
+Niger 	6 	0.33 	6
+Isle of Man 	3 	0.3 	3
+Brazil 	230 	221.13 	14370
+Saint Martin (French part) 	3 	0.3 	3
+Faroe Islands 	6 	0.33 	6
+Guinea 	7 	0.54 	7
+Panama 	6 	1.67 	6
+Korea, Republic of 	204 	153.75 	11530
+Costa Rica 	21 	21.24 	119
+Luxembourg 	46 	14.81 	11439
+Virgin Islands, U.S. 	20 	8.4 	21
+Andorra 	22 	6.23 	4239
+Gibraltar 	6 	0.33 	6
+Ireland 	181 	143.76 	8851
+Palau 	7 	0.38 	7
+Nigeria 	72 	71.22 	7376
+Ecuador 	17 	5.62 	17
+Czech Republic 	51 	51.25 	3194
+Macedonia, Republic of 	40 	30.71 	2950
+Cocos (Keeling) Islands 	8 	0.4 	9
+Australia 	1249 	1012.46 	41162
+Algeria 	18 	15.39 	18
+El Salvador 	13 	20.31 	5728
+Tuvalu 	7 	0.57 	3386
+Gambia 	5 	0.32 	5
+Congo 	5 	0.32 	5
+Marshall Islands 	57 	16.73 	551
+Chile 	45 	47.76 	45
+Puerto Rico 	51 	37.82 	52
+Belgium 	97 	61.95 	33417
+Kiribati 	7 	0.41 	7
+Haiti 	9 	4.64 	218
+Iraq 	28 	44.24 	197
+Hong Kong 	135 	68.57 	821
+Sierra Leone 	5 	0.32 	5
+Georgia 	13 	8.63 	13
+Lao People's Democratic Republic 	8 	0.58 	17
+Denmark 	78 	47.6 	9939
+Philippines 	496 	407.5 	269549
+French Guiana 	5 	0.32 	5
+Morocco 	37 	18.25 	60
+Namibia 	35 	23.68 	35
+Mongolia 	17 	5.84 	2147
+Guinea-Bissau 	6 	0.33 	6
+Thailand 	99 	47.06 	49290
+Switzerland 	76 	66.33 	6858
+Grenada 	12 	5.59 	12
+France 	529 	541.97 	127666
+Belize 	9 	2.75 	12
+Tanzania, United Republic of 	12 	3.87 	12
+Chad 	7 	0.53 	34
+Estonia 	13 	2.8 	1333
+Uruguay 	25 	22.94 	437
+Bouvet Island 	7 	0.34 	8
+Lebanon 	39 	25.83 	792
+Uzbekistan 	8 	8.42 	952
+Tunisia 	15 	7.99 	109
+Djibouti 	7 	0.43 	7
+Holy See (Vatican City State) 	7 	0.34 	7
+Antigua and Barbuda 	8 	0.59 	8
+Dominica 	6 	0.33 	6
+Colombia 	43 	32.76 	388
+Burundi 	9 	0.69 	9
+Turks and Caicos Islands 	6 	0.57 	6
+Barbados 	8 	4.34 	8
+Qatar 	20 	9.74 	147
+Italy 	513 	396.93 	49280
+Bhutan 	9 	0.44 	9
+Sudan 	18 	37.22 	18
+Bolivia, Plurinational State of 	16 	12.56 	16
+Nepal 	17 	3.12 	26
+Malta 	8 	0.61 	47
+Brunei Darussalam 	13 	30.84 	22
+Maldives 	6 	0.33 	6
+Suriname 	6 	0.57 	6
+Anguilla 	7 	0.38 	23
+Israel 	107 	79.16 	4218
+Iceland 	15 	1.36 	2201
+Zambia 	12 	2.58 	12
+Austria 	74 	75.92 	8860
+Papua New Guinea 	5 	0.32 	5
+Saint Kitts and Nevis 	5 	0.32 	5
+Zimbabwe 	40 	10.26 	9651
+Jordan 	46 	39.52 	67
+Martinique 	5 	0.56 	5
+Kazakhstan 	14 	24.36 	14
+Poland 	67 	68.16 	4809
+Moldova, Republic of 	7 	0.48 	7
+Eritrea 	9 	0.51 	110
+Kyrgyzstan 	6 	0.33 	6
+Congo, The Democratic Republic of the 	7 	0.82 	7
+British Indian Ocean Territory 	9 	0.4 	830
+Korea, Democratic People's Republic of 	54 	65.04 	1301
+New Caledonia 	6 	0.33 	6
+Trinidad and Tobago 	11 	3.62 	11
+Macao 	6 	0.33 	6
+Latvia 	16 	17.11 	1698
+Guyana 	8 	0.44 	8
+Croatia 	23 	43.81 	1494
+Guadeloupe 	10 	1.06 	10
+Honduras 	15 	9.88 	16
+Myanmar 	7 	0.66 	16
+Mexico 	255 	309.58 	23710
+Egypt 	120 	113.7 	3377
+Nicaragua 	8 	1.93 	8
+Cuba 	10 	1.23 	10
+Serbia 	18 	2.38 	3855
+Comoros 	5 	0.32 	5
+United Kingdom 	3002 	2439.53 	309511
+Antarctica 	8 	0.74 	1219
+Christmas Island 	7 	0.34 	8
+Greece 	60 	79.55 	4258
+Sri Lanka 	33 	8.26 	1255
+Fiji 	8 	0.36 	8
+Botswana 	11 	3.66 	30
+Niue 	5 	0.32 	5
