@@ -9,9 +9,10 @@ In order to conduct this analysis, we model the task of batch throughput predict
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/ML_accuracy}
-	\caption{Score ($R^2$) of the throughput prediction when considering larger time spans as training sets. The red dots are average values, while the boxes represents the median, first and third quartiles.}
+	\caption{Score ($R^2$) of the throughput prediction when considering larger time spans as training sets. The red dots are average values, while the boxes represents the median, first and third quartiles. N.B., the implementation of the score function\footnotemark~used in our experiments allows for negative values.}
 	\label{fig:accuracy}
 \end{figure}
+\footnotetext{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}
 
 \begin{figure}[tb]
 	\centering
