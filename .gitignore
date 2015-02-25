@@ -17,3 +17,7 @@
 *.blg
 
 *.bbl
+
+*.lb
+*.fls
+*.fdb_latexmk
