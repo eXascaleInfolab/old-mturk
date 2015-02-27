@@ -1,13 +1,8 @@
 %!TEX root = ../dynamics.tex
 \section{Market Analysis}
 \label{sec:market}
-Finally, we study the evolution of \emph{demand vs supply} on the Amazon MTurk marketplace.
-In this case, $Demand$ is defined as the number of new tasks \emph{published} on the platform by the requesters.
-In addition, we compute the average reward of the tasks that were posted.
-Conversely, $Supply$ is defined as the workforce that the crowd is providing concretized as the number of tasks that got \emph{completed} in a given time window by the workers.
-Again, we compute the average reward of the completed tasks.
+Finally, we study the evolution of demand vs. supply in the Amazon MTurk marketplace. We define $Demand$ as the number of new tasks published on the platform by the requesters. In addition, we compute the average reward of the tasks that were posted. Conversely, we define $Supply$ as the workforce that the crowd is providing concretized as the number of tasks that got completed in a given time window by the workers. Again, we compute the average reward of the completed tasks.
 
-An initial behavior that we observe is the strong weekly periodicity that the demand exhibits, which is reflected by the autocorrelation that we compute on the number of available HITs as reported by Amazon Mturk (See Figure \ref{fig:autocorrelation1}).
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/autocorrelation_plot}
@@ -29,12 +24,10 @@ There is a significant correlation that lasts 7-10 days (see left part of the gr
 	\caption{Supply (left) and Demand (right) versus price.}
 	\label{fig:dsup}
 \end{figure}
-In Figure \ref{fig:scatter_matrix}, we compare the following variables: number of HITs published on the platform, average reward for such HITs, and number of HITs completed. An observation can be made about the correlation between the rewards of the number of HITs completed and those published.
-The results suggest that crowd workers are sensitive to newly posted tasks, and that they are constantly monitoring for new and fresh tasks.
-It must be noted that some workers might not be actively completing HITs on the platform but rather looking for HITs to work on by reading Web forums where other workers shared HITs. In that sense, new HITs attract new workers to the platform.
-This supplements our finding from Section \ref{sec:throughput}, where we showed that $Start\_time$ is an important feature contributing to the throughput of a batch.
+In Figure \ref{fig:scatter_matrix}, we compare the following variables: number of HITs published on the platform, average reward for such HITs, and number of HITs completed. An observation can be made about the correlation between the rewards of the number of HITs completed and those published. The results suggest that crowd workers are sensitive to newly posted tasks, and that they are constantly monitoring for new and fresh tasks. It must be noted that some workers might not be actively completing HITs on the platform but rather looking for HITs to work on by reading Web forums where other workers shared HITs. In that sense, new HITs attract new workers to the platform. This supplements our finding from Section \ref{sec:throughput}, where we showed that $Start\_time$ is an important feature contributing to the throughput of a batch.  
 
-Figure \ref{fig:dsup} (right) shows the expected relationship between demand and price: The higher the demand, the lower the price evolves. On the other hand, Figure \ref{fig:dsup} (left)  does not match the typical supply curve (``higher prices drive higher supply''). Instead, the demand seems to be tied to the supply (i.e., the number of new HITs completed). A possible explanation for this is the lack of bidding (or negotiation) mechanisms available to the workers; such mechanisms are not available on the current platform though they could help workers drive the prices up. 
+Figure \ref{fig:dsup} (left) shows the expected relationship between supply and price: The larger the supply, the lower the price evolves, which is the usual behaviour. On the other hand, Figure \ref{fig:dsup} (right) does not match the typical demand curve (“the higher the demand the lower the price evolves”).
+Instead, the demand seems to be tied to the supply (i.e., the number of new HITs completed). A possible explanation for this is the lack of bidding (or negotiation) mechanisms available to the workers; such mechanisms are not available on the current platform though they could help workers drive the prices up. 
 
 \paragraph{New Workers Complete More Tasks}
 \begin{figure}[tb]
@@ -43,12 +36,12 @@ Figure \ref{fig:dsup} (right) shows the expected relationship between demand and
 	\caption{The effect of new arrived HITs on the work  supplied.}
 	\label{fig:perc_hits_completed}
 \end{figure}
-Along the same lines, the results detailed in Figure \ref{fig:perc_hits_completed} indicate that, as more HITs are published on the platform, a higher percentage of the available work gets done. In detail, when many HITs arrive to the platform, the overall percentage of HITs completed on the platform tends to slightly increase. As more HITs are available on the platform, an higher overall percentage indicates that many HITs are being completed.
-This clearly indicates that the arrival of new work also attracts new workers
-to the market, who also seem to spill over to other tasks (i.e., they are not just working on the fresh HITs).
+Along the same lines, the results detailed in Figure \ref{fig:perc_hits_completed} indicate that, as more HITs are published on the platform, a higher percentage of the available work gets done. In detail, when many HITs arrive to the platform, the overall percentage of HITs completed on the platform tends to slightly increase. As more HITs are available on the platform, an higher overall percentage indicates that many HITs are being completed. This clearly indicates that the arrival of new work also attracts new workers to the market, who also seem to spill over to other tasks (i.e., they are not just working on the fresh HITs). 
 
 \paragraph{Weekly Periodicity}
-Figure \ref{fig:mac} shows the weekly moving average convergence divergence (MACD) of the reward attached to completed HITs. To check for seasonality effects in the amount of distributed reward we computer an autocorrelation on the time series. Figure \ref{fig:autocorrelation2} shows that there is a strong \emph{weekly} seasonality effect as we observe high values in the range 0-250 hours.
+Another behavior that we observe is the strong weekly periodicity that the demand exhibits, which is reflected by the autocorrelation that we compute on the number of available HITs as reported by Amazon Mturk (See Figure \ref{fig:autocorrelation1}). 
+Figure \ref{fig:mac} shows the weekly moving average convergence divergence (MACD) of the reward attached to completed HITs. To check for periodicity effects in the amount of distributed reward we computer an autocorrelation on the time series. Figure \ref{fig:autocorrelation2} shows that there is a strong weekly periodicity effect as we observe high values in the range 0-250 hours. 
+
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/mac}
