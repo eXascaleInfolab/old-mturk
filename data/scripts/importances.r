@@ -1,7 +1,7 @@
 library(ggplot2)
 library(reshape2)
 library(scales)
-data <- read.csv(file = '/Users/pirroh/exascale-mturk/data/raw/importances.csv', header=T, sep=',')
+data <- read.csv(file = '../raw/importances.csv', header=T, sep=',')
 data$title <- NULL
 data$description <- NULL
 data$keywords <- NULL
@@ -39,4 +39,4 @@ scale_colour_brewer(palette="Set1")+ ylab("Importance %") + xlab("Time Delta Con
 theme_bw() + scale_y_continuous(labels = percent) + scale_x_continuous(labels = rnd15) +
 theme(legend.position="none", axis.text.x = element_text(angle = 90, hjust = 1, vjust =0.5)) + stat_smooth()
 
-ggsave("/Users/pirroh/exascale-mturk/paper/figures/importances.pdf", width=8, height=6)
+ggsave("../../paper/figures/importances.pdf", width=8, height=6)

@@ -7,14 +7,14 @@ Finally, we study the evolution of demand vs. supply in the Amazon MTurk marketp
 \paragraph{New Tasks Attract New Workers}
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.48\textwidth]{figures/scattermatrix}
+		\includegraphics[width=0.48\textwidth]{figures/scatter}
 	\caption{Scatter matrix comparing the different parameters in the demand and supply.}
 	\label{fig:scatter_matrix}
 \end{figure}
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.48\textwidth]{figures/supply_demand}
-	\caption{Supply (left) and Demand (right) versus price.}
+		\includegraphics[width=0.48\textwidth]{figures/ds}
+	\caption{Supply (right) and Demand (left) quantity (as number of HITs) versus price.}
 	\label{fig:dsup}
 \end{figure}
 In Figure \ref{fig:scatter_matrix}, we compare the following variables: number of HITs published on the platform, average reward for such HITs, and number of HITs completed. An observation can be made about the correlation between the rewards of the number of HITs completed and those published. The results suggest that crowd workers are sensitive to newly posted tasks, and that they are constantly monitoring for new and fresh tasks. It must be noted that some workers might not be actively completing HITs on the platform but rather looking for HITs to work on by reading Web forums where other workers shared HITs. In that sense, new HITs attract new workers to the platform. This supplements our finding from Section \ref{sec:throughput}, where we showed that $start\_time$ is an important feature contributing to the throughput of a batch.  
@@ -25,7 +25,7 @@ Instead, the demand seems to be tied to the supply (i.e., the number of new HITs
 \paragraph{New Workers Complete More Tasks}
 \begin{figure}[tb]
 	\centering
-		\includegraphics[width=0.48\textwidth]{figures/percHitsCompleted}
+		\includegraphics[width=0.48\textwidth]{figures/percHitsCompleted.pdf}
 	\caption{The effect of new arrived HITs on the work  supplied.}
 	\label{fig:perc_hits_completed}
 \end{figure}
@@ -47,10 +47,10 @@ Figure \ref{fig:mac} shows the weekly moving average convergence divergence (MAC
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/out1}
-        \caption{Autocorrelation.}
+        \caption{Autocorrelation onr HITs available.}
         \label{fig:three sin x}
     \end{subfigure}
-    \hfill
+    \hfill 
     \caption{Autocorrelation of the number of HITs available on MTurk time series. There is a significant correlation that lasts 7-10 days (see left part of the graph 0-250 Hours).}
 	\label{fig:autocorrelation1}
 \end{figure}
@@ -68,7 +68,7 @@ Figure \ref{fig:mac} shows the weekly moving average convergence divergence (MAC
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/macac}
-        \caption{Autocorrelation.}
+        \caption{Autocorrelation on rewards completed.}
         \label{fig:macac}
     \end{subfigure}
     \hfill
