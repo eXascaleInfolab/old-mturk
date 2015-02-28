@@ -31,12 +31,52 @@ Note that the score is relatively low for batches with low throughput. The predi
 
 
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Computed feature importance when considering larger training sets for the prediction.}
 	\label{fig:importances}
 \end{figure}
+
+
+\begin{table}[ht]
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Feature              & mean      & stddev    & slope     & intercept \\
+\hline
+hits\_available      & 29.8606 & 13.4247 & -0.0257 & 34.4940 \\
+ageminutes           & 12.9087 &  8.1967 & -0.0050 & 13.8181 \\
+leftminutes          &  8.7300 &  5.5530 & 0.0061 & 7.6290 \\
+requester\_id        &  6.2147 &  5.2943 & -0.0011 & 6.4305 \\
+title                &  5.6441 &  4.2604 & -0.0033 & 6.2519 \\
+description          &  4.8823 &  3.8975 & -0.0065 & 6.0617 \\
+keywords             &  4.3765 &  3.3860 & -0.0074 & 5.7095 \\
+time\_alloted        &  3.7994 &  3.6820 & -0.0010 & 3.9965 \\
+reward               &  3.5439 &  2.7426 & -0.0011 & 3.7458 \\
+totalapproved        &  2.5259 &  3.5108 & 0.0033 & 1.9311 \\
+tasktype             &  2.1370 &  2.2673 & -0.0008 & 2.2986 \\
+start\_time          &  1.2257 &  1.4123 & 0.0049 & 0.3325 \\
+hitsAvailableUI      &  1.1428 &  1.2062 & 0.0039 & 0.4380 \\
+diffHitsUI           &  1.0557 &  1.1237 & 0.0038 & 0.3568 \\
+hitGroupsAvailableUI &  1.0438 &  1.0219 & 0.0034 & 0.4169 \\
+diffGroupsUI         &  1.0408 &  1.0658 & 0.0030 & 0.4835 \\
+master               &  0.9943 &  2.3816 & -0.0012 & 1.2134 \\
+diffGroups           &  0.9660 &  0.9349 & 0.0032 & 0.3863 \\
+rewardsArrived       &  0.9543 &  1.0710 & 0.0032 & 0.3698 \\
+hitsCompleted        &  0.9293 &  0.9453 & 0.0031 & 0.3593 \\
+percHitsCompleted    &  0.8974 &  0.8548 & 0.0030 & 0.3543 \\
+location             &  0.8957 &  1.7592 & 0.0004 & 0.8184 \\
+diffRewards          &  0.8920 &  0.8967 & 0.0023 & 0.4622 \\
+rewardsCompleted     &  0.8890 &  0.8896 & 0.0026 & 0.4056 \\
+percHitsPosted       &  0.8462 &  0.9552 & 0.0021 & 0.4618 \\
+diffHits             &  0.8462 &  0.7514 & 0.0024 & 0.3972 \\
+hitsArrived          &  0.7562 &  0.7946 & 0.0021 & 0.3760 \\
+approvalrate         &  0.0000 &  0.0000 & 0 & 0 \\
+\hline
+\end{tabular}
+\end{table}
+
 
 
 In order to better grasp the characteristics of our throughput prediction, we examine the feature importance. Figure \ref{fig:importances} shows the  contribution of each feature and how it varies  when we increase the training time-frame.
