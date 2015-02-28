@@ -1,29 +1,15 @@
 %!TEX root = ../dynamics.tex
 \section{Related Work}\label{sec:relwork}
 
+The general idea behind this work is to understand and characterise how a micro-task crowdsourcing platform behaves as a marketplace. Thus, we first start by reviewing related work on human computation and micro-task crowdsourcing, a related market analysis and other propositions on how to improve and/or build future platoforms.
+
+
 \paragraph{Micro-task Crowdsourcing}
-Crowdsourcing is a recent approach, which is defined as the  outsourcing of tasks  to a crowd of individuals over the Web. Crowdsourcing has  been used for a variety of purposes, from innovation to software development \cite{platforms}.
+Crowdsourcing is a recent approach, which is defined as the outsourcing of tasks  to a crowd of individuals over the Web. Crowdsourcing has been used for a variety of purposes, from innovation to software development \cite{platforms}. 
+
+In this work, we are interested in \emph{paid micro-task crowdsourcing}, where the crowd is asked to perform short tasks, also known as Human Intelligence Tasks (HITs), in exchange for a small monetary reward per unit. Examples of such tasks include: spell checking, sentiment analysis of tweets, sanitize product reviews, or transcription of scanned shopping receipts.
 % 
-In this work, we specifically focus on micro-task crowdsourcing and analyze the dynamics of a  very popular  platform for this purpose: \amt{}. This platform provides access to a crowd of workers distributed worldwide but mainly composed of people based in the US and India \cite{mturk}.
-
-Many \amt{} workers share their experience about HITs and requesters through dedicated web forums and ad-hoc websites \cite{turkopticon}. Requester `reviews' serve as a way to measure the reputation of the requesters among workers and it is assumed to influence the latency of the tasks published \cite{TOreputation}, as workers are naturally more attracted by HITs published by  requesters with a good reputation.
-% 
-In this work, we experimentally analyze the effect of different dimensions on the efficiency of the crowdsourcing platform.
-
-%domains
-In the case of large enterprises,  knowledge is often distributed across a number of employees. Crowdsourcing within an enterprise (i.e., when the crowd is composed by company employees) is  becoming popular and can benefit from the fact that employees are domain experts and can solve tasks better and faster than anonymous crowds. In this case, crowdsourcing can be used, for example, to efficiently find solutions to operational issues  \cite{enterprisecrowdsourcing}. 
-% 
-Crowdsourcing has also been used in the biomedical domain where, for example,  ontological relations among diseases can be validated by the crowd \cite{bioonto,biomedical}.
-
-Because of the complex mechanisms existing between the workers, the requesters, and the platform itself, characterizing the dynamics and evolution of micro-task crowdsourcing platforms is key in order to understand the impact of the various components and to design better human computation systems.
-
-\paragraph{Market Analysis}
-An initial work analyzing \amt{} market was done in \cite{mturk}, this paper extends on this work by considering the time dimension and analyze long term trend changes.
-Faradani et al. \cite{faradani2011s} proposed a model to predict the completion time of a batch. Our prediction endeavor is however different, in the sense that we try to predict the immediate throughput based on current market condition and try to understand what features are having more impact than others.
-
-\paragraph{Human Computation}
-Micro-task crowdsourcing is often used to improve the quality of machine-run algorithms in order to combine both the scalability of machines over large amounts of data as well as the quality of human intelligence in processing and understanding data.
-Many examples of such hybrid human-machine approaches exist.
+Micro-task crowdsourcing is often used to improve the quality of machine-run algorithms in order to combine both the scalability of machines over large amounts of data as well as the quality of human intelligence in processing and understanding data. Many examples of such hybrid human-machine approaches exist.
 % 
 Crowd-powered databases \cite{crowddb} leverage crowdsourcing to deal with problems like  data incompleteness,  data integration, graph search, and joins \cite{crowder,graphsearch,crowdjoins}.
 % 
@@ -33,42 +19,49 @@ Information Retrieval systems have used crowdsourcing for evaluation purposes \c
 % 
 Models and paradigm for hybrid human-machine systems have been proposed on top of crowdsourcing platforms \cite{crowdcomputer}, also including the design of hybrid workflows \cite{workflows}.
 
-%problems
-When creating systems that build on top of crowdsourcing platforms, two main challenges have to be dealt with: optimizing the \emph{effectiveness} and the \emph{efficiency}  of the crowd. When compared to machine-based algorithms, human workers perform several orders of magnitude slower. On the other hand, human individuals are capable of data processing that machines cannot do. Ensuring the quality of the answers coming from the crowd is also a concern: human workers can make mistakes and some of them intentionally do not complete HITs properly with the sole intent of obtaining the monetary reward attached to the HIT. Next, we discuss works on improving both crowdsourcing effectiveness and efficiency.
+In this work, we specifically focus on micro-task crowdsourcing and analyze the dynamics of a  very popular  platform for this purpose: \amt{}. This platform provides access to a crowd of workers distributed worldwide but mainly composed of people based in the US and India \cite{mturk}. Many \amt{} workers share their experience about HITs and requesters through dedicated web forums and ad-hoc websites \cite{turkopticon}. Requester `reviews' serve as a way to measure the reputation of the requesters among workers and it is assumed to influence the latency of the tasks published \cite{TOreputation}, as workers are naturally more attracted by HITs published by  requesters with a good reputation.
 
 
+%%problems
+%When creating systems that build on top of crowdsourcing platforms, two main challenges have to be dealt with: optimizing the \emph{effectiveness} and the \emph{efficiency}  of the crowd. When compared to machine-based algorithms, human workers perform several orders of magnitude slower. On the other hand, human individuals are capable of data processing that machines cannot do. Ensuring the quality of the answers coming from the crowd is also a concern: human workers can make mistakes and some of them intentionally do not complete HITs properly with the sole intent of obtaining the monetary reward attached to the HIT. Next, we discuss works on improving both crowdsourcing effectiveness and efficiency.
 
 
+%%domains
+%In the case of large enterprises,  knowledge is often distributed across a number of employees. Crowdsourcing within an enterprise (i.e., when the crowd is composed by company employees) is  becoming popular and can benefit from the fact that employees are domain experts and can solve tasks better and faster than anonymous crowds. In this case, crowdsourcing can be used, for example, to efficiently find solutions to operational issues  \cite{enterprisecrowdsourcing}. 
+%% 
+%Crowdsourcing has also been used in the biomedical domain where, for example,  ontological relations among diseases can be validated by the crowd \cite{bioonto,biomedical}.
 
-\paragraph{Crowdsourcing Effectiveness}
-%aggregation
-A very important dimension for crowdsourcing effectiveness is \emph{answer aggregation}: After assigning the same HIT to multiple workers in the crowd, one needs to effectively aggregate their answers into a final result that is sent back from the crowdsourcing platform to the system leveraging human computation. Multiple approaches have been proposed for this aspect of crowdsourcing quality (e.g.,
-\cite{Venanzi:2014:CBA:2566486.2567989,square,zencrowd,Hosseini:2012:ALM:2260641.2260661}).
-% 
-A recent approach that results in effective aggregation of crowd answers is \cite{Venanzi:2014:CBA:2566486.2567989}, where authors propose methods to detect communities of workers with similar answering patterns in order to re-weight their answers even when little evidence on the individual worker quality is available (i.e., just few HITs have been completed).
+Because of the complex mechanisms existing between the workers, the requesters, and the platform itself, characterizing the dynamics and evolution of micro-task crowdsourcing platforms is key in order to understand the impact of the various components and to design better human computation systems.
 
-%expert finding
-More than just aggregating their answers,  being able to identify the best workers in the crowd is a different means to obtain quality answers from the crowd \cite{pickacrowd,bozzon}. 
-% 
-Recent approaches aim at predicting work quality looking at worker activities over time  \cite{Jung14-hcomp}.
-% 
-This leads to \emph{task allocation} or \emph{routing} approaches that aim at assigning HITs to  workers currently available on the platform \cite{goel2014mechanism,crowdstar}.
+\paragraph{Market Analysis}
+An initial work analyzing \amt{} market was done in \cite{mturk}, this paper extends on this work by considering the time dimension and analyze long term trend changes.
+Faradani et al. \cite{faradani2011s} proposed a model to predict the completion time of a batch. Our prediction endeavor is however different, in the sense that we try to predict the immediate throughput based on current market condition and try to understand what features are having more impact than others.
 
-%spam
-On the other hand, workers producing low-quality results should also be identified and filtered out from the crowdsourcing process.
-Detecting malicious workers who aim at gaining the monetary reward without honestly  completing the HITs is also an active domain of research \cite{collusion}.
+%\paragraph{Crowdsourcing Effectiveness}
+%%aggregation
+%A very important dimension for crowdsourcing effectiveness is \emph{answer aggregation}: After assigning the same HIT to multiple workers in the crowd, one needs to effectively aggregate their answers into a final result that is sent back from the crowdsourcing platform to the system leveraging human computation. Multiple approaches have been proposed for this aspect of crowdsourcing quality (e.g.,
+%\cite{Venanzi:2014:CBA:2566486.2567989,square,zencrowd,Hosseini:2012:ALM:2260641.2260661}).
+%% 
+%A recent approach that results in effective aggregation of crowd answers is \cite{Venanzi:2014:CBA:2566486.2567989}, where authors propose methods to detect communities of workers with similar answering patterns in order to re-weight their answers even when little evidence on the individual worker quality is available (i.e., just few HITs have been completed).
+%
+%%expert finding
+%More than just aggregating their answers,  being able to identify the best workers in the crowd is a different means to obtain quality answers from the crowd \cite{pickacrowd,bozzon}. 
+%% 
+%Recent approaches aim at predicting work quality looking at worker activities over time  \cite{Jung14-hcomp}.
+%% 
+%This leads to \emph{task allocation} or \emph{routing} approaches that aim at assigning HITs to  workers currently available on the platform \cite{goel2014mechanism,crowdstar}.
+%
+%%spam
+%On the other hand, workers producing low-quality results should also be identified and filtered out from the crowdsourcing process.
+%Detecting malicious workers who aim at gaining the monetary reward without honestly  completing the HITs is also an active domain of research \cite{collusion}.
 
 
-
-
-
-
-\paragraph{Crowdsourcing Efficiency}
-While humans are not able to process data as fast as machines, different techniques and incentives can be used to improve work efficiency in a crowdsourcing setting.
-% 
-One way to improve human computation efficiency is by supporting workers in being more efficient while working on HITs. For example, workers spend way too much time in searching for HITs to work on \cite{Kucherbaev:2014:TET:2598153.2602249}. Thus, the task allocation and routing approaches described above can be beneficial for efficiency as well.
-% 
-Another angle on crowdsourcing efficiency is the use of HIT \emph{pricing schemes}. For example, in \cite{finishthem} authors propose models to set the HIT reward given some latency and budget constrains. In \cite{scaleup}, we studied how worker retention can improve the latency of a batch by leveraging varying bonus schemes.
+%\paragraph{Crowdsourcing Efficiency}
+%While humans are not able to process data as fast as machines, different techniques and incentives can be used to improve work efficiency in a crowdsourcing setting.
+%% 
+%One way to improve human computation efficiency is by supporting workers in being more efficient while working on HITs. For example, workers spend way too much time in searching for HITs to work on \cite{Kucherbaev:2014:TET:2598153.2602249}. Thus, the task allocation and routing approaches described above can be beneficial for efficiency as well.
+%% 
+%Another angle on crowdsourcing efficiency is the use of HIT \emph{pricing schemes}. For example, in \cite{finishthem} authors propose models to set the HIT reward given some latency and budget constrains. In \cite{scaleup}, we studied how worker retention can improve the latency of a batch by leveraging varying bonus schemes.
 
 \paragraph{Improving Crowdsourcing Platforms}
 In \cite{Kittur:2013:FCW:2441776.2441923} authors provide their own view on how the crowdsourcing market should evolve in the future, specifically focusing on how to  support full-time crowd workers. Similarly to them, our goal is to identify ways of improving crowdsourcing marketplaces by understanding the dynamics of such platforms---based on historical data and models.
