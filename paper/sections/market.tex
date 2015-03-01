@@ -30,9 +30,9 @@ Next, We also analyze how the market reacts when new tasks arrive in the
 market, to understand whether there is elasticity of supply. If the
 supply of work is inelastic, the amount of work done over time should
 be independent of the demand for work. So, if the amount of tasks
-available in the market ("demand") increases, then the percentage of
+available in the market (``demand'') increases, then the percentage of
 work that gets completed in the market should drop, as the same of
-amount of "work done" gets split among higher number of tasks. To
+amount of ``work done" gets split among higher number of tasks. To
 understand the elasticity of supply, we regressed the percentage of
 work done in every time period (measured as the percentage of HITs
 that are completed) against the number of new HITs that are posted in
@@ -41,12 +41,12 @@ that period. Figure \ref{fig:perc_hits_completed} shows the scatterplot for thes
 Our data reveal that an increase in the number of arrived HITs is
 positively associated with a higher percentage of completed HITs. This
 result provides evidence that the new work that is posted is more
-attractive than the tasks available in the market, and attracts "new
+attractive than the tasks available in the market, and attracts ``new
 work supply".\footnote{Whether the supply comes from more distinct
 workers, from workers that were idle, or from increased productivity
 of existing workers is not possible to tell from our data.}
 
-Our regression of the "Percent Completed" against "Hits Arrived (in
+Our regression\footnote{Ordinary Least Squares (OLS)} of the ``Percent Completed" against ``Hits Arrived (in
 1000's)", indicates an intercept of 2.5 and a slope of 0.05. To put
 these numbers in context: On average, in the market there are 300K
 HITs available, at any given time, and on average 10K new HITs arrive
@@ -63,7 +63,7 @@ workers than the work that is available on the website.
 
 \begin{figure}[t!]
 	\centering
-		\includegraphics[width=0.48\textwidth]{figures/percent.pdf}
+	\includegraphics[width=0.48\textwidth]{figures/percent.pdf}
 	\caption{The effect of new arrived HITs on the work  supplied.}
 	\label{fig:perc_hits_completed}
 \end{figure}
