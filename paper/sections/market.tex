@@ -8,7 +8,7 @@ In this section we use hourly collected data for the time period between June-Oc
 First, we check whether supply and demand, in the context of Amazon MTurk marketplace, exhibit the standard behavior and relationship.
 Figure \ref{fig:dsup} (right) shows the expected relationship between supply and price: The larger the supply, the lower the price evolves, which is the usual behaviour. On the other hand, Figure \ref{fig:dsup} (left) demand does not match the typical ascending demand curve (``the higher the demand the higher the price evolves''). Instead, the demand seems to be tied to the supply (i.e., the number of new HITs completed).
 
-\begin{figure}[tb]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/ds}
 	\caption{The supply and demand for HITs versus the average HIT price.}
@@ -19,7 +19,7 @@ Figure \ref{fig:dsup} (right) shows the expected relationship between supply and
 
 Now, we examine how the supply attracts new workers. First, we compare the three following variables: number of HITs published on the platform, number of HITs completed, and the average reward per HIT of both published and completed tasks. The results are depicted in Figure \ref{fig:scatter_matrix}. The apparent correlation between the rewards of the HITs completed and those published, and also among their quantities, gives us a first intuition that the crowd workers are sensitive to newly posted tasks, especially for those with higher prices.
 
-\begin{figure}[tb]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/scatter}
 	\caption{Scatter matrix comparing the different parameters in the demand and supply.}
@@ -37,6 +37,7 @@ understand the elasticity of supply, we regressed the percentage of
 work done in every time period (measured as the percentage of HITs
 that are completed) against the number of new HITs that are posted in
 that period. Figure \ref{fig:perc_hits_completed} shows the scatterplot for these two variables.
+
 Our data reveal that an increase in the number of arrived HITs is
 positively associated with a higher percentage of completed HITs. This
 result provides evidence that the new work that is posted is more
@@ -45,7 +46,22 @@ work supply".\footnote{Whether the supply comes from more distinct
 workers, from workers that were idle, or from increased productivity
 of existing workers is not possible to tell from our data.}
 
-\begin{figure}[tb]
+Our regression of the "Percent Completed" against "Hits Arrived (in
+1000's)", indicates an intercept of 2.5 and a slope of 0.05. To put
+these numbers in context: On average, in the market there are 300K
+HITs available, at any given time, and on average 10K new HITs arrive
+every hour. The intercept of 2.5 means that 2.5\% of these 300K HITs
+(i.e., 7.5K per hour) get completed, as a baseline, assuming that no
+new HITs get posted. The slope is 0.05, meaning that if 10K new HITs
+arrive within an hour, then the completion percentage increases by
+0.5\%, to 3\% (i.e., 9K HITs per hour). When 50K new HITs arrive within
+an hour, then the completion percentage increases to 5\% indicating
+that 15K to 20K HITs get completed. In other words, approximately 20\%
+of the *new* demand gets completed within an hour of being posted,
+indicating that new work has almost 10x higher attractiveness for the
+workers than the work that is available on the website.
+
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/percHitsCompleted.pdf}
 	\caption{The effect of new arrived HITs on the work  supplied.}
@@ -59,7 +75,7 @@ First, we observe that the demand exhibits a strong weekly periodicity, which is
 
 Conversely, and to check for periodicity in the supply, we compute an autocorrelation on the weekly moving average convergence of the reward attached to completed HITs. Figure \ref{fig:mac} and \ref{fig:acmac} shows that there is a strong weekly periodicity effect as we observe high values in the range 0-250 hours.
 
-\begin{figure*}[tb]
+\begin{figure*}[t!]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering

@@ -20,7 +20,7 @@ Note that the score is relatively low for batches with low throughput.
 
 Our prediction results (when using 4hours window) versus actual throughput values are shown in Figure \ref{fig:pred}. The prediction works best for larger batches having a large momentum as the Figure suggests.
 
-\begin{figure}[tb]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/ML_accuracy}
 	\caption{Score ($R^2$) of the throughput prediction when considering larger time spans as training sets. The red dots are average values, while the boxes represents the median, first and third quartiles. N.B., the implementation of the score function used in our experiments allows for negative values.}
@@ -28,7 +28,7 @@ Our prediction results (when using 4hours window) versus actual throughput value
 \end{figure}
 \footnotetext{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}
 
-\begin{figure}[tb]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/predictions_3}
 	\caption{Prediction vs actual throughput values. Prediction is more accurate for larger throughput values. This suggests that the throughput will remain high until the batch gets smaller.}
@@ -41,7 +41,7 @@ In order to better grasp the characteristics of the batch throughput, we examine
 Figure \ref{fig:importances} shows the  contribution of the top 4 features and how it varies  when we increase the training time-frame. The rest of the features importances are listed in Table \ref{table:feats}, their slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
 The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, but, most importantly, because of other features like $age\_minutes$ and $left\_minutes$, which encode additional facts and suggest that the crowd is sensitive to the newly posted HITs, or how \emph{fresh} the HITs are. To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the the platform in the next section.
 
-\begin{figure}[htb]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
 	\caption{Computed feature importance when considering larger training sets for the prediction.}
@@ -49,7 +49,7 @@ The most important feature is $HIT\_Available$, that is, the current size of the
 \end{figure}
 
 
-\begin{table}[ht]
+\begin{table}[t!]
 \scriptsize
 \begin{tabular}{|c|c|c|c|c|}
 \hline
