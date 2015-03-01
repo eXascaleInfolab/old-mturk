@@ -92,6 +92,8 @@ F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
 \newblock Scikit-learn: Machine learning in python.
 \newblock {\em J. Mach. Learn. Res.}, 12:2825--2830, Nov. 2011.
 
+\balancecolumn
+
 \bibitem{crowdmap}
 C.~Sarasua, E.~Simperl, and N.~F. Noy.
 \newblock Crowdmap: Crowdsourcing ontology alignment with microtasks.
@@ -103,6 +105,17 @@ C.~Sarasua, E.~Simperl, and N.~F. Noy.
 M.~S. Silberman, L.~Irani, and J.~Ross.
 \newblock Ethics and tactics of professional crowdwork.
 \newblock {\em XRDS}, 17(2):39--43, Dec. 2010.
+
+\bibitem{vonAhn:2008:DGP:1378704.1378719}
+L.~von Ahn and L.~Dabbish.
+\newblock Designing games with a purpose.
+\newblock {\em Commun. ACM}, 51(8):58--67, Aug. 2008.
+
+\bibitem{vonAhn:2006:PGL:1124772.1124782}
+L.~von Ahn, R.~Liu, and M.~Blum.
+\newblock Peekaboom: a game for locating objects in images.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '06, pages 55--64, New York, NY, USA, 2006. ACM.
 
 \bibitem{platforms}
 M.~Vukovic.
