@@ -6,28 +6,28 @@ While general data availability increases, its quality is not necessarily perfec
 To this end, outsourcing  data-processing tasks like, for example, image tagging, audio transcription, translation, etc. to a large crowd of individuals on the Web has become more popular over time.
 
 %micro-task Crowdsourcing platform
-To perform such Human Intelligence Tasks (HITs), crowdsourcing platforms have been developed. Such platforms serve as a place where the crowd (\emph{workers}) willing to perform small tasks (so called \emph{micro-tasks}) in exchange of a small monetary reward, and work providers (also known as \emph{requesters}) meet. 
+To perform such Human Intelligence Tasks (HITs), crowdsourcing platforms have been developed. Such platforms serve as a place where the crowd (\emph{workers}) willing to perform small tasks (so called \emph{micro-tasks}) in exchange of a small monetary reward and work providers (also known as \emph{requesters}) meet. 
 
 The micro-task crowdsourcing market has seen a rapid growth in the last five years. This is also explained by the fact that large amounts of data are today available in companies, which are increasingly seen as a key asset for optimizing all business processes.
 
 % crowdsourcing process of publishing tasks, completing task, getting results, rewarding}
-The  micro-task crowdsourcing process works as follows. First the requester designs the HIT based on their data and required task. Next, they publish batches of HITs onto the crowdsourcing platform specifying their requirements and the monetary amount rewarded to workers in exchange of the completion of each HIT. Next, those workers willing to perform the published HITs complete the tasks and submit their results back to the requester who will obtain the desired data and pay workers accordingly.
+The  micro-task crowdsourcing process works as follows. First, the requesters design the HIT based on their data and required task. Next, they publish batches of HITs on the crowdsourcing platform specifying their requirements and the monetary amount rewarded to workers in exchange of the completion of each HIT. Then, the workers willing to perform the published HITs complete the tasks and submit their work back to the requester who obtains the desired results and pays workers accordingly.
 
 %s
 In this paper, we analyze the evolution of a very popular micro-task crowdsourcing platform (i.e., \amt{}\footnote{\url{http://mturk.com}}) over a  five-year time span and report key findings about how
 the market behaves with regards to demand and supply.
 % 
-Using features derived from a large-scale analysis of the platform logs, we propose methods to predict the throughput of the crowdsourcing platform for a batch of HITs published by a certain requester at a certain point in time. This prediction is based on different features including the current platform load, task types, etc. Using this prediction method, we try to understand the impact of each feature that we consider, and its scope over time.
+Using features derived from a large-scale analysis of the platform logs, we propose methods to predict the throughput of the crowdsourcing platform for a batch of HITs published by a given requester at a certain point in time. This prediction is based on different features including the current platform load, the task type, etc. Using this prediction method, we try to understand the impact of each feature that we consider, and its scope over time.
 
 % summarize main findings}
-The main findings of our analysis are: 1) the type of tasks published on the platform has changed over time with content creation HITs being the most popular today; 2) the HIT pricing approach evolved towards larger and higher paid HITs to better attract workers in a competitive market; 3) geographical restriction are applied to certain task types (e.g., surveys for US workers); 4) we observe an organic growth in the number of new requesters who use the platform, which is a sign of a healthy market; 5) we identify \emph{size of the batch} as the main feature that impacts the progress of a given batch; 6) we observe that supply (workforce) has little control over driving the price of demand.
+The main findings of our analysis are: 1) the type of tasks published on the platform has changed over time with content creation HITs being the most popular today; 2) the HIT pricing approach evolved towards larger and higher paid HITs to better attract workers in a competitive market; 3) geographical restriction are applied to certain task types (e.g., surveys for US workers); 4) we observe an organic growth in the number of new requesters who use the platform, which is a sign of a healthy market; 5) we identify \emph{size of the batch} as the main feature that impacts the progress of a given batch; 6) we observe that supply (the workforce) has little control over driving the price of demand.
 
 In summary, the main contributions of this paper are:
 \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
 
 	\item An analysis of the evolution of a popular micro-task crowdsourcing platform looking at dimensions like topics, reward, worker location, task types, and platform throughput.
 
-	\item A large-scale classification of 2.5M HITs types published on \amt{}.
+	\item A large-scale classification of 2.5M HIT types published on \amt{}.
 
 	\item A predictive analysis of HIT batch progress using more than 28 different features.
 	
@@ -39,9 +39,9 @@ In summary, the main contributions of this paper are:
 The rest of the paper is structured as follows.
 In Section \ref{sec:relwork}, we overview recent work on micro-task crowdsourcing specifically focusing on how  efficiency and effectiveness  of crowdsourcing platforms are addressed.
 Section \ref{sec:stats} presents how \amt{} has evolved over time in terms of topics, reward, and requesters.
-Section \ref{sec:type} summarizes the results of a large-scale analysis of which types of HIT has been requested and completed over time.
-Based on the previous findings, Section \ref{sec:throughput} presents our approach to predicting the throughput of the crowdsourcing platform for a batch of published HITs.
-Section \ref{sec:market} studies the \amt{} market and how different events correlate (e.g., new HITs attracting more workers to the platform).
-We resume our main findings and provide a discussion in \ref{sec:discuss}. 
-Finally, Section \ref{sec:conc} has concluding remarks and future work.
+Section \ref{sec:type} summarizes the results of a large-scale analysis on the types of HIT that have been requested and completed over time.
+Based on the previous findings, Section~\ref{sec:throughput} presents our approach to predicting the throughput of the crowdsourcing platform for a batch of published HITs.
+Section~\ref{sec:market} studies the \amt{} market and how different events correlate (e.g., new HITs attracting more workers to the platform).
+We discuss our main findings in Section~\ref{sec:discuss} before concluding in 
+Section~\ref{sec:conc}.
 
