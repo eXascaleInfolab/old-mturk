@@ -75,6 +75,7 @@ Workers, when not searching for tasks using specific keywords, are presented wit
 On the demand side, we often observe some requesters frequently posting new batches of recurrent tasks. Hence, we are interested in the periodicity of such demand in the marketplace and the supply it drives. For that, we consider both the time-series of available HITs and the rewards completed over the period of three months. 
 
 First, we observe that the demand exhibits a strong weekly periodicity, which is reflected by the autocorrelation that we compute the number of available HITs on Amazon Mturk (See Figure \ref{fig:hitav} and \ref{fig:achitav}). The market seems to have a significant memory that lasts for approximately 7-10 days.
+This indicates that future transactions are highly predictable using simple algorithms \cite{marketmemory}.
 
 Conversely, and to check for periodicity in the supply, we compute an autocorrelation on the weekly moving average convergence of the reward attached to completed HITs. Figure \ref{fig:mac} and \ref{fig:acmac} shows that there is a strong weekly periodicity effect as we observe high values in the range 0-250 hours.
 
