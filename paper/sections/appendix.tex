@@ -4,34 +4,35 @@
 \label{ap:feats}
 \section{Machine Learning Features Used to Predict Throughput}
 The following is the list of features associated to each batch. We used these features in our machine learning approach to predict batches throughput for the next observation (see Section \ref{sec:throughput}):
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-\item[+] hits\_available:  Number of available HITs in the batch.
-\item[+] start\_time:  The time of an observation.
-\item[+] reward: HIT Reward in USD.
-\item[+] description:  String length of the batch's description.
-\item[+] title: String length of the batch's title.
-\item[+] keywords : Keywords (space separated).
-\item[+] requester\_id:   ID of the requester.
-\item[+] time\_alloted : Time allotted per task.
-\item[+] tasktype : Task class (as per our classification in \ref{sec:type}).
-\item[+] ageminutes : Age since the Batch was posted (minutes).
-\item[+] leftminutes: Time left before expiration (minutes).
-\item[+] location: The requested worker's Location (e.g. US).
-\item[+] totalapproved: Batch requirement on \#total approved HITs.
-\item[+] approvalrate : Batch requirement on the \%of worker's approvals.
-\item[+] master : Worker is a master.
-\item[+] hitGroupsAvailableUI: Number of batches as reported on Mturk dashboard.
-\item[+] hitsAvailableUI : Number of HITs available as reported on Mturk dashboard.
-\item[+] hitsArrived : Number of new hits arrived.
-\item[+] hitsCompleted : Number of hits completed.
-\item[+] rewardsArrived : Sum of rewards associated with the HITs arrived.
-\item[+] rewardsCompleted : Sum of rewards associated with the HITs completed.
-\item[+] percHitsCompleted : Ratio of HITs completed and total hits available.
-\item[+] percHitsPosted : Ratio of new HITs arrived and total hits available.
-\item[+] diffHits : hitsCompleted-hitsArrived.
-\item[+] diffHitsUI : Difference in HITs observed from Mturk dashboard.
-\item[+] diffGroups  : Computed difference in number of completed and arrived batches.
-\item[+] diffGroupsUI : Difference in number of completed and arrived batches observed from Mturk dashboard.
-\item[+] diffRewards : Difference in rewards = (rewardsArrived-rewardsCompleted).
-\item[+] DIFF\_HIT:  (Target Class) Number of HITs completed since the last observation.
+\begin{itemize}[noitemsep]
+\item \textbf{hits\_available:} Number of available HITs in the batch.
+\item \textbf{start\_time:} The time of an observation.
+\item \textbf{reward:} HIT Reward in USD.
+\item \textbf{description:} String length of the batch's description.
+\item \textbf{title:} String length of the batch's title.
+\item \textbf{keywords:}Keywords (space separated).
+\item \textbf{requester\_id:} ID of the requester.
+\item \textbf{time\_alloted:} Time allotted per task.
+\item \textbf{tasktype:} Task class (as per our classification in \ref{sec:type}).
+\item \textbf{ageminutes:} Age since the Batch was posted (minutes).
+\item \textbf{leftminutes:} Time left before expiration (minutes).
+\item \textbf{location:} The requested worker's Location (e.g. US).
+\item \textbf{totalapproved:} Batch requirement on the number of total approved HITs.
+\item \textbf{approvalrate:} Batch requirement on the percentage of workers approval.
+\item \textbf{master:} Worker is a master.
+\item \textbf{hitGroupsAvailableUI:}Number of batches as reported on Mturk dashboard.
+\item \textbf{hitsAvailableUI:} Number of HITs available as reported on Mturk dashboard.
+\item \textbf{hitsArrived:} Number of new hits arrived.
+\item \textbf{hitsCompleted:} Number of hits completed.
+\item \textbf{rewardsArrived:} Sum of rewards associated with the HITs arrived.
+\item \textbf{rewardsCompleted:} Sum of rewards associated with the HITs completed.
+\item \textbf{percHitsCompleted:} Ratio of HITs completed and total hits available.
+\item \textbf{percHitsPosted:} Ratio of new HITs arrived and total hits available.
+\item \textbf{diffHits:} hitsCompleted-hitsArrived.
+\item \textbf{diffHitsUI:} Difference in HITs observed from Mturk dashboard.
+\item \textbf{diffGroups:} Computed difference in number of completed and arrived batches.
+\item \textbf{diffGroupsUI:} Difference in number of completed and arrived batches observed from Mturk dashboard.
+\item \textbf{diffRewards:} Difference in rewards = (rewardsArrived-rewardsCompleted).
+\item \textbf{DIFF\_HIT:} Number of HITs completed since the last observation.
 \end{itemize}
+\pagebreak

@@ -10,7 +10,7 @@ Specifically, we model this task as a regression problem using 29 features; some
 \subsection{Experimental Setup}
 
 To predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are   considering directly prior to time $T$. The rational behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
-The research question we tackle in this context is:\\ \emph{``How much historical data does one need to consider to predict the throughput effectively?"}. \\ To answer this, we proceed by varying $\delta$.
+The research question we tackle in this context is:\emph{``How much historical data does one need to consider to predict the throughput effectively?"}. \\ To answer this, we proceed by varying $\delta$.
 To evaluate the effectiveness of $\delta$ values, we compute the coefficient of determination $R^2$ \cite{sklearnweb, sklearn}. We note that the implementation we used in our experiments allows for negative score values\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}.
 In this experiment, we considered  data from June to October 2014 and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. Finally, for each time point we considered a training time frame $\delta$ ranging from 1 hour to 24 hours. 
 
@@ -30,7 +30,7 @@ Our prediction results (when using 4hours window) versus actual throughput value
 
 \begin{figure}[t!]
 	\centering
-		\includegraphics[width=0.48\textwidth]{figures/predictions_3}
+		\includegraphics[width=0.45\textwidth]{figures/predictions_3}
 	\caption{Prediction vs actual throughput values. Prediction is more accurate for larger throughput values. This suggests that the throughput remains high until the batch gets smaller.}
 	\label{fig:pred}
 \end{figure}
