@@ -55,32 +55,19 @@ of existing workers is not possible to tell from our data.}
 \subsection{Demand and Supply Periodicity}
 On the demand side, we often observe some requesters frequently posting new batches of recurrent tasks. Hence, we are interested in the periodicity of such demand in the marketplace and the supply it drives. For that, we consider both the time-series of available HITs and the rewards completed over the period of three months. 
 
-First, we observe that the demand exhibits a strong weekly periodicity, which is reflected by the autocorrelation that we compute the number of available HITs on Amazon Mturk (See Figure \ref{fig:autocorrelation1}). The market seems to have a significant memory that lasts for approximately 7-10 days.
+First, we observe that the demand exhibits a strong weekly periodicity, which is reflected by the autocorrelation that we compute the number of available HITs on Amazon Mturk (See Figure \ref{fig:hitav} and \ref{fig:achitav}). The market seems to have a significant memory that lasts for approximately 7-10 days.
 
-\begin{figure}[tb]
+Conversely, and to check for periodicity in the supply, we compute an autocorrelation on the weekly moving average convergence of the reward attached to completed HITs. Figure \ref{fig:mac} and \ref{fig:acmac} shows that there is a strong weekly periodicity effect as we observe high values in the range 0-250 hours.
+
+\begin{figure*}[tb]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/out}
         \caption{HITs Available.}
-        \label{fig:y equals x}
+        \label{fig:hitav}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/out1}
-        \caption{Autocorrelation onr HITs available.}
-        \label{fig:three sin x}
-    \end{subfigure}
-    \hfill 
-    \caption{Autocorrelation of the number of HITs available on MTurk time series. There is a significant correlation that lasts 7-10 days (see left part of the graph 0-250 Hours).}
-	\label{fig:autocorrelation1}
-\end{figure} 
-
-Conversely, and to check for periodicity in the supply, we compute an autocorrelation on the weekly moving average convergence of the reward attached to completed HITs. Figure \ref{fig:autocorrelation2} shows that there is a strong weekly periodicity effect as we observe high values in the range 0-250 hours.
-
-\begin{figure}[tb]
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/mac}
@@ -90,11 +77,18 @@ Conversely, and to check for periodicity in the supply, we compute an autocorrel
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/macac}
-        \caption{Autocorrelation on rewards completed.}
-        \label{fig:macac}
+        \includegraphics[width=\textwidth]{figures/out1}
+        \caption{Autocorrelation on HITs available.}
+        \label{fig:achitav}
     \end{subfigure}
     \hfill
-	\caption{Autocorrelation computed on the weekly rewards moving average. Again we see a weekly periodicity (0-250 Hours).}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/macac}
+        \caption{Autocorrelation on moving average of rewards completed.}
+        \label{fig:acmac}
+    \end{subfigure}
+       
+	\caption{Computed autocorrelation on the number of HITs available and on the weekly moving average of the completed reward (N.B., autocorrelation's Lag is computed in Hours). In both cases, we clearly see a weekly periodicity (0-250 Hours).}
 	\label{fig:autocorrelation2}
-\end{figure}
+\end{figure*}
