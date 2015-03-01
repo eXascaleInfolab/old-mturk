@@ -6,15 +6,15 @@ In this section, we start by describing our datasets and extract some key inform
 
 \subsection{Crowdsourcing Platform Dataset}
 \label{sec:tracker}
-Over the past five years, we have periodically collected data about HITs being published on \amt{}.
-Real-time data that we collected from the platform is available at \url{http://mturk-tracker.com/}. In this work, we consider hourly aggregated data that includes the available HIT batches and their metadata (tittle, description, rewards, required qualifications, etc.), in addition to their progress over time, that is, the temporal variation of the set of HITs available. In fact, one of the main metrics that we leverage (see Section \ref{sec:throughput}) is the throughput of a batch, i.e., how many HITs  get completed between two successive observations; Our initial intuition in this context, backed by Figure \ref{fig:motiv}, is that the throughput of a batch is heavily tied to its number of HITs that are currently available to workers.\\
+Over the past five years, we have periodically collected data about HITs published on \amt{}.
+Real-time data that we collect from the platform is available at \url{http://mturk-tracker.com/}. In this work, we consider hourly aggregated data that includes the available HIT batches and their metadata (title, description, rewards, required qualifications, etc.), in addition to their progress over time, that is, the temporal variation of the set of HITs available. In fact, one of the main metrics that we leverage (see Section \ref{sec:throughput}) is the throughput of a batch, i.e., how many HITs  get completed between two successive observations; Our initial intuition in this context, backed by Figure \ref{fig:motiv}, is that the throughput of a batch is heavily tied to its number of HITs that are currently available to workers.\\
 In total, our dataset covers more than 2.5M different batches with over 130M HITs.
 We note that the tracker reports data periodically only and does not reflect fine-grained information (e.g., variations at each second). We believe however that it captures enough information to perform meaningful, long-term trend analyses and to understand the dynamics and interactions within the crowdsourcing platform.\\
 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/motiv_mturk}
-	\caption{Batch throughput versus the number of HITs available in the batch. The red line corresponds to the maximum throughput we could have observed due to the tracker periodicity constraints.\protect\footnotemark}
+	\caption{Batch throughput versus number of HITs available in the batch. The red line corresponds to the maximum throughput we could have observed due to the tracker periodicity constraints.\protect\footnotemark}
 	\label{fig:motiv}
 \end{figure}
 \begin{figure}[tb]
@@ -27,20 +27,20 @@ We note that the tracker reports data periodically only and does not reflect fin
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/map}
 		\includegraphics[width=0.43\textwidth]{figures/countriesTime}
-	\caption{HITs with specific country requirements. On the left-hand side, the countries with most HITs dedicated to them. On the right-hand side, the time evolution (x-axis) of country-specific HITs with volume (y-axis) and reward (size of data point) information.}
+	\caption{HITs with specific country requirements. On the left-hand side, the countries with the most HITs dedicated to them. On the right-hand side, the time evolution (x-axis) of country-specific HITs with volume (y-axis) and reward (size of data point) information.}
 	\label{fig:country}
 \end{figure*}
 
 \subsection{A Data-driven Analysis of Platform Evolution}
-First, we identify the trends obtained from aggregated information over time, keywords or countries associated with the published HITs.  Each of the following analyses is also available as an interactive visualization over the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
+First, we identify trends obtained from aggregated information over time, keywords, and countries associated to the published HITs.  Each of the following analyses is also available as an interactive visualization over the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
 \paragraph{Topics  Over Time}
 First we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
-In order to do this analysis, we look at the keywords associated with published HITs. We observe the evolution of keyword popularity and associated reward on \amt{}. 
+In order to run this analysis, we look at the keywords associated with published HITs. We observe the evolution of keyword popularity and associated reward on \amt{}. 
 %plot explanation
 Figure \ref{fig:tagEvolution} shows this behavior. Each point in the plot represents a keyword associated to the HITs with its frequency (i.e., number of HITs with this keyword) on the x-axis, and the average reward in a given year on the y-axis. The path connecting data points indicates the time evolution, starting in 2009, with one point representing the keyword usage over one year.
 
 % observations
-We observe that the `audio' and `transcription' keywords (i.e., blue and red paths from left to right) have substantially increased in frequency over time. They have become the most popular keywords in the last two years and are paid more than \$1 on average.
+We observe that the frequency of the `audio' and `transcription' keywords (i.e., blue and red paths from left to right) have substantially increased over time. They have become the most popular keywords in the last two years and are paid more than \$1 on average.
 HITs with the `video' tag have also increased in number with a reward that has reached a peak in 2012 and decreased after that.
 HITs tagged as `categorization' have been paid consistently in the range of \$0.10-\$0.30 on average, except in 2009 where they were rewarded less than \$0.10 each.
 HITs tagged as `tweet' have not increased in number but have been paid more over the years, reaching \$0.9 on average in 2014: This can be explained by more complex tasks being offered to workers, such as sentiment classification or writing tweets.
