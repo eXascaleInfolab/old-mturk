@@ -10,7 +10,7 @@ We briefly describe the six top-level classes introduced by \cite{Gadiraju:2014:
 
 	\item Information Finding (IF): Searching the Web to answer a certain information need. For example, ``Find the cheapest hotel with ocean view in Monterey Bay, CA''.
 	
-	\item Verification and Validation (VV): Verifying certain information or confirming the validity of a piece of content. Examples include checking Twitter accounts for spamming behaviors.
+	\item Verification and Validation (VV): Verifying certain information or confirming the validity of a piece of information. Examples include checking Twitter accounts for spamming behaviors.
 
 	\item Interpretation and Analysis (IA): Interpreting Web content. For example, ``Categorize product pictures in a predefined set of categories'', or ``Classify the sentiment of a tweet''.
 	
@@ -23,20 +23,20 @@ We briefly describe the six top-level classes introduced by \cite{Gadiraju:2014:
 \end{itemize}
 
 \subsection{Supervised HIT Type Classification}
-Using the various definitions of HIT types given above, we trained a supervised machine learning model to classify HIT types based on their metadata. The features we used to train a Support Vector Machine (SVM) model are: HIT title, description, keywords, reward, date, allocated time, and batch size.
+Using the various definitions of HIT types given above, we trained a supervised machine learning model to classify HIT types based on their metadata. The features we used to train the Support Vector Machine (SVM) model are: HIT title, description, keywords, reward, date, allocated time, and batch size.
 
 % labelling setup
-To train and evaluate the supervised model, we created labelled data: We uniformly sampled 5'000 HITs over the entire five-years dataset and manually labelled their type by means of crowdsourcing. In detail, we asked workers on MTurk to assign each HIT to one of the predefined classes by presenting them with the title, description, keywords, reward, date, allocated time, and batch size for the HIT. The instructions also contained the definition and examples for each task type. Workers could label tasks as `Others' when unsure or when the HIT did not fit in any of the available options.
+To train and evaluate the supervised model, we created labelled data: We uniformly sampled 5'000 HITs over the entire five-year dataset and manually labelled their type by means of crowdsourcing. In detail, we asked workers on MTurk to assign each HIT to one of the predefined classes by presenting them with the title, description, keywords, reward, date, allocated time, and batch size for the HIT. The instructions also contained the definition and examples for each task type. Workers could label tasks as `Others' when unsure or when the HIT did not fit in any of the available options.
 
 % labelled data
-After assigning each labelling HIT to three different workers in the crowd, a consensus on the task type label was reached in $89\%$ of the cases (i.e., 551 cases with no clear majority). A consensus was reached when at least two out of three workers agreed on a HIT type label. The other cases, that is, when the workers provided different labels or when they where not sure about the HIT type have been removed from our labelled dataset.
+After assigning each labelling HIT to three different workers in the crowd, a consensus on the task type label was reached in $89\%$ of the cases (leaving 551 cases with no clear majority). A consensus was reached when at least two out of three workers agreed on a HIT type label. The other cases, that is, when the workers provided different labels or when they where not sure about the HIT type, have then been removed from our labelled dataset.
 
 % classification evaluation
-Using the labelled dataset, we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-folds cross validation over the labelled dataset. Overall, the trained classifier obtained a Precision of $0.895$, a Recall of $0.899$, and an F-Measure of $0.895$. Most of the classifier errors (i.e., 66 cases) were caused by incorrectly classifying IA instances as CC jobs.
+Using the labelled data, we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-fold cross validation over the labelled dataset. Overall, the trained classifier obtained a Precision of $0.895$, a Recall of $0.899$, and an F-Measure of $0.895$. Most of the classifier errors (i.e., 66 cases) were caused by incorrectly classifying IA instances as CC jobs.
 
 % top features
-Performing feature selection for the HIT type classification problem, we observed that the best features according to information gains are the HIT allotted time and reward: This indicates that HITs of different types are associated with different levels of reward as well as different task durations (i.e., longer and better paid tasks versus shorter and paid worse). 
-The most distinctive keywords for identifying HIT type are `transcribe', `audio', and `survey', which clearly identify CC and SU HITs.
+Performing feature selection for the HIT type classification problem, we observed that the best features related to information gains are the HIT allotted time and reward: This indicates that HITs of different types are associated with different levels of reward as well as different task durations (i.e., longer and better paid tasks versus shorter and paid worse). 
+The most distinctive keywords for identifying HIT types are `transcribe', `audio', and `survey', which clearly identify CC and SU HITs.
  
 % classification at scale
 Using the classifier trained over the entire labelled dataset, we then performed a large-scale classification of the types for all 2.5M HITs in our collection. This allows us to study the evolution of the task types over time on the \amt{} platform, which we describe next.
@@ -49,7 +49,7 @@ We can observe that, in general, the most popular type of task is Content Creati
 % 
 In terms of observable trends, we note that--while there is a general increase in the volume of tasks on the platform---CA tasks have been decreasing over time. This can be explained  by the enforcement of \amt{} terms of service, which state that workers should not be asked to create accounts on external websites or be identified by the requester.
 % 
-In the last three years, SU and IA tasks have had the biggest increase.
+In the last three years, SU and IA tasks have seen the biggest increase.
 
 \begin{figure}[tb]
 	\centering
