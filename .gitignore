@@ -21,3 +21,5 @@
 *.lb
 *.fls
 *.fdb_latexmk
+
+paper/dynamics.tmproj
