@@ -1,13 +1,13 @@
 %!TEX root = ../dynamics.tex
 \section{Related Work}\label{sec:relwork}
 
-The objective of this work is to understand and characterize how a micro-task crowdsourcing platform behaves as a marketplace. Thus, we first start by reviewing related work on human computation and micro-task crowdsourcing, related market analysis work and other propositions on how to improve and build future platforms.
+The objective of this piece of work is to understand and characterize how a micro-task crowdsourcing platform behaves as a marketplace. Thus, we first start by reviewing related work on human computation and micro-task crowdsourcing, before turning to related work on market analysis and on how to improve crowdsourcing platforms.
 
 \paragraph{Micro-task Crowdsourcing}
 Crowdsourcing is defined as the outsourcing of tasks to a crowd of individuals over the Web. Crowdsourcing has been used for a variety of purposes, from innovation to software development \cite{platforms}. 
 % 
 Early crowdsourcing examples leveraged the fun or community belonging incentives (e.g., Wikipedia) rather than the monetary one.
-Examples systems based on gamification include the ESP game \cite{vonAhn:2008:DGP:1378704.1378719} where players must agree on tags to use for a picture without possibility to interact with each other. 
+Examples systems based on gamification include the ESP game \cite{vonAhn:2008:DGP:1378704.1378719} where players must agree on tags to use for a picture without the possibility to interact with each other. 
 % 
 An extension of the ESP game is Peekaboom: a game that asks players to annotate specific objects within an image \cite{vonAhn:2006:PGL:1124772.1124782}.
 
@@ -15,7 +15,7 @@ In this work, we focus on \emph{paid micro-task crowdsourcing}, where the crowd 
 
 Micro-task crowdsourcing is often used to improve the quality of machine-run algorithms in order to combine both the scalability of machines over large amounts of data as well as the quality of human intelligence in processing and understanding data \cite{vonAhn:2008:DGP:1378704.1378719}. Many examples of such hybrid human-machine approaches exist.
 % 
-Crowd-powered databases \cite{crowddb} leverage crowdsourcing to deal with problems like  data incompleteness,  data integration, graph search, and joins \cite{crowder,graphsearch,crowdjoins}.
+Crowd-powered databases \cite{crowddb} leverage crowdsourcing to deal with problems like  data incompleteness, data integration, graph search, and joins \cite{crowder,graphsearch,crowdjoins}.
 % 
 Semantic Web systems leverage the crowd for tasks like schema matching \cite{crowdmap}, entity linking \cite{zencrowd}, and ontology engineering \cite{bioonto}.
 % 
@@ -35,11 +35,11 @@ In this work, we specifically focus on micro-task crowdsourcing and analyze the 
 %% 
 %Crowdsourcing has also been used in the biomedical domain where, for example,  ontological relations among diseases can be validated by the crowd \cite{bioonto,biomedical}.
 
-Because of the complex mechanisms existing between the workers, the requesters, and the platform itself, characterizing the dynamics and evolution of micro-task crowdsourcing platforms is key in order to understand the impact of the various components and to design better human computation systems. The goal of our work is to understand the evolution over time of a micro-task crowdsourcing platform and to identify key properties that can be used as future platform requirements.
+Because of the complex mechanisms connecting the workers to the requesters and to the platform itself, characterizing the dynamics and evolution of micro-task crowdsourcing platforms is key in order to understand the impact of the various components and to design better human computation systems. The goal of our work is to understand the evolution of a micro-task crowdsourcing platform over time and to identify key properties of the platform.
 
 \paragraph{Market Analysis}
-An initial work analyzing \amt{} market was done in \cite{mturk}, our paper extends on this work by considering the time dimension and analyze long term trends and changes.
-Faradani et al. \cite{faradani2011s} proposed a model to predict the completion time of a batch. Our prediction endeavor is however different, in the sense that we aim at predicting the immediate throughput based on current market condition and  to understand what features are having more impact than others.
+An initial work analyzing \amt{} market was done in \cite{mturk}. Our paper extends this work by considering the time dimension and analyzing long term trends and changes.
+Faradani et al. \cite{faradani2011s} proposed a model to predict the completion time of a batch. Our prediction endeavor is however different, in the sense that we aim at predicting the immediate throughput based on current market conditions and to understand what features are having more impact than others.
 
 %\paragraph{Crowdsourcing Effectiveness}
 %%aggregation
@@ -67,18 +67,18 @@ Faradani et al. \cite{faradani2011s} proposed a model to predict the completion 
 %% 
 %Another angle on crowdsourcing efficiency is the use of HIT \emph{pricing schemes}. For example, in \cite{finishthem} authors propose models to set the HIT reward given some latency and budget constrains. In \cite{scaleup}, we studied how worker retention can improve the latency of a batch by leveraging varying bonus schemes.
 
-\paragraph{Improving Future Crowdsourcing Platforms}
-In \cite{Kittur:2013:FCW:2441776.2441923} authors provide their view on how the crowdsourcing market should evolve in the future, specifically focusing on how to support full-time crowd workers. 
+\paragraph{Improving Crowdsourcing Platforms}
+In \cite{Kittur:2013:FCW:2441776.2441923} authors give their view on how the crowdsourcing market should evolve in the future, specifically focusing on how to support full-time crowd workers. 
 Likewise, our goal is to identify ways of improving crowdsourcing marketplaces by understanding the dynamics of such platforms---based on historical data and models.
 % final remark
 
-Work on novel crowdsourcing platforms has  proposed methods for identifying the best workers in the crowd for specific tasks \cite{pickacrowd,bozzon}. Given the diverse task types being published in micro-task crowdsourcing platforms, such functionalities could be used to improve the work experience of the crowd and the quality of results obtained by requesters.
+Recent contributions on novel crowdsourcing platforms have proposed methods for identifying the best workers in the crowd for specific tasks \cite{pickacrowd,bozzon}. Given the diverse task types being published on micro-task crowdsourcing platforms, such functionalities could be used to improve the work experience of the crowd and the quality of the results returned to the requesters.
 
-A way to improve crowdsourcing efficiency is the use custom HIT \emph{pricing schemes}. For example, in \cite{finishthem} authors propose models to set the HIT reward given some latency and budget constrains. In \cite{scaleup}, we studied how worker retention can improve the latency of a batch by leveraging varying bonus schemes.
+One way to improve the efficiency of the crowdsourcing process is to use custom HIT \emph{pricing schemes}. For example, in \cite{finishthem} authors propose models to set the HIT reward given some latency and budget constrains. In \cite{scaleup}, we studied how worker retention can improve the latency of a batch by leveraging varying bonus schemes.
 
 Our work is complementary to existing work as we present a data-driven study of the evolution of micro-task crowdsourcing over five years.
 %Our findings can be used as support evidence to the ongoing efforts in improving crowdsourcing quality and efficiency that are described above.
-Our work can be also used to support requesters in publishing HITs on these platforms and getting results more efficiently.
+Our work can be also used to support requesters in publishing HITs on these platforms and getting results more rapidly.
 
 
 
