@@ -3,22 +3,18 @@
 \label{sec:throughput}
 Next, we turn our attention to analyzing the factors that influence the progress (or the pace) of a batch, how those factors influence each other and how their importance changes over time. 
 
-%In order to conduct this analysis, we try to predict the throughput of a batch of tasks (i.e., how many HITs get completed in the next time frame). 
-The value we aim to predict is the batch \emph{throughput}, that is, the numbers of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is a target class).
+In order to conduct this analysis, we carry out a prediction experiment of the batch \emph{throughput}, that is, the numbers of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is a target class).
 Specifically, we model this task as a regression problem using 29 features; some of them were used in the previous section to classify HIT type; We describe the remaining ones in Appendix A.
 
 \subsection{Experimental Setup}
 
 To predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are   considering directly prior to time $T$. The rationale behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
-The research question we tackle in this context is:\emph{``How much historical data does one need to consider to predict the throughput effectively?"}. \\ To answer this, we proceed by varying $\delta$.
-To evaluate the effectiveness of $\delta$ values, we compute the coefficient of determination $R^2$ \cite{sklearnweb, sklearn}. We note that the implementation we used in our experiments allows for negative score values\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}.
-In this experiment, we considered  data from June to October 2014 and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. Finally, for each time point we considered a training time frame $\delta$ ranging from 1 hour to 24 hours. 
+The research question we tackle in this context is:~\emph{``How much historical data does one need to consider to predict the throughput effectively?"}.
+ 
+To answer this, we proceed by varying $\delta$. In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. 
+We also varied the training time frame from 1 hour to 24 hours for each tested time point. 
 
-\subsection{Prediction}
-In Figure \ref{fig:accuracy}, we observe that the computed evaluation score reaches its highest values when using the latest 4 hours as training time-frame, then decreases when we increase the training time-frame, to finally again increase and stabilize when we use up to 24 hours training data.
-Note that the score is relatively low for batches with low throughput. 
-
-Our prediction results (when using 4hours window) versus actual throughput values are shown in Figure \ref{fig:pred}. The prediction works best for larger batches having a large momentum as the Figure suggests.
+The best performing results in terms of $R^2$~\cite{sklearnweb, sklearn} were obtained using 4 hours window. Our prediction results versus actual throughput values for that window are shown in Figure \ref{fig:pred}. In this case, the prediction works best for larger batches having a large momentum as the Figure suggests.
 
 %\begin{figure}[t!]
 %	\centering
@@ -31,13 +27,13 @@ Our prediction results (when using 4hours window) versus actual throughput value
 \begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.45\textwidth]{figures/predictions_3}
-	\caption{Prediction vs actual throughput values. Prediction is more accurate for larger throughput values. This suggests that the throughput remains high until the batch gets smaller.}
+	\caption{Predicted vs actual throughput values.}
 	\label{fig:pred}
 \end{figure}
 
 \subsection{Features Importance}
 In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the prediction's features~\cite{breiman}.
-Figure \ref{fig:importances} shows the  contribution of the top 4 features and how it varies  when we increase the training time-frame. The rest of the features importances are listed in Table \ref{table:feats}, their slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
+Figure \ref{fig:importances} shows the  contribution of the top 4 features and how it varies  when we increase the training time-frame. Those features are again listed in Table \ref{table:feats}, their slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
 The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, but, most importantly, because of other features like $age\_minutes$ and $left\_minutes$, which encode additional facts and suggest that the crowd is sensitive to newly posted HITs, or how \emph{fresh} the HITs are. To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the the platform in the next section.
 
 \begin{figure}[t!]
@@ -53,7 +49,7 @@ The most important feature is $HIT\_Available$, that is, the current size of the
 \caption {Importances of the top 4 features used in the prediction experiment. A large mean indicates a better overall contribution to the prediction. A positive slope indicates that the feature is gaining in importance when the considered time window increases.}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Feature              & mean      & stddev    & slope     & intercept \\
+Feature              & mean      & stderr    & slope     & intercept \\
 \hline
 hits\_available      & 29.8606 & 13.4247 & -0.0257 & 34.4940 \\
 ageminutes           & 12.9087 &  8.1967 & -0.0050 & 13.8181 \\
