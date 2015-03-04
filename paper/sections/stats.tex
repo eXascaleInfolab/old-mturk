@@ -53,7 +53,7 @@ Figure \ref{fig:country} shows the requirements set by requesters with respect t
 The plot shows the number of HITs with a certain country requirement (on the y-axis) and its time evolution (on the x-axis) with yearly steps. The size of the data points indicates the total reward associated to those HITs.
 
 We observe that US-only HITs dominate, both in terms of their sheer number as well as in terms of the reward associated to them. 
-Interestingly, we notice how HITs for workers based in India have been decreasing over time. This can be explained by \amt{} restrictions on accepting new workers on the platform.
+Interestingly, we notice how HITs for workers based in India have been decreasing over time. This can be explained by \amt{} restrictions on accepting new workers outside of the US on the platform.
 On the other hand, HITs for workers based in Canada have been increasing over time, becoming in 2014 larger than those exclusively available to workers based in India.  We also see that the reward associated to them is smaller than the budget for India-only HITs.
 As of 2014, both HITs for workers based in Canada or UK are more numerous that those for workers based in India.
 Overall, 88.5\% of the HIT batches that were posted in the considered time period did not require any specific worker location. 86\% of those which did imposed a constraint requesting US-based workers.
@@ -86,7 +86,7 @@ Figure \ref{fig:reward_year} shows the most frequent rewards assigned to HITs ov
 
 
 \paragraph{Requester Analysis}
-In order to be sustainable, a crowdsourcing platform needs to retain requesters over time or get new requesters to replace those who do not publish HITs anymore. Figure \ref{fig:requesters_reward} shows the number of new requesters who used \amt{} and the overall number of active requesters at a certain point in time. We can observe an increasing number of active requesters over time and a constant number of new requesters who join the platform (at a rate of 1'000/month over the last two years).
+In order to be sustainable, a crowdsourcing platform needs to retain requesters over time or get new requesters to replace those who do not publish HITs anymore. Figure \ref{fig:requesters_reward} shows the number of new requesters who used \amt{} and the overall number of active requesters at a certain point in time. We can observe an increasing number of active requesters over time and a constant number of new requesters who join the platform (at a rate of 1,000/month over the last two years).
 
 \begin{figure}[tb]
 	\centering
@@ -99,8 +99,18 @@ It is also interesting to look at the overall amount of reward for HITs publishe
 
 
 \paragraph{HIT Batch Size Analysis}
-When a lot of data needs to be crowdsourced (like when many images are being tagged), multiple  tasks containing similar HITs can be published together. We define a batch of HITs as a set of similar HITs published by a requester at a certain point in time. Figure \ref{fig:batch_size} shows how batch size has changed over time.
-We observe that while, on average, batches have been getting smaller, in 2014 very large batches have appeared on \amt{}, indicating a clear business interest for micro-task crowdsourcing.
+When a lot of data needs to be crowdsourced (e.g., when many images needs to be tagged), multiple  tasks containing similar HITs can be published together. We define a batch of HITs as a set of similar HITs published by a requester at a certain point in time. 
+
+Figure \ref{fig:batch_size_pow} shows the distribution of batch sizes per year from 2009 to 2014. We can observe that most of the batches are of size 1, followed by a long tail of larger, but less frequent, batch sizes.
+
+Figure \ref{fig:batch_size} shows how batch size has changed over time. We observe that the average batch size have slightly decreased. The monthly median is 1 (due to the heavily skewed distribution). Another observation that can be made is that in 2014 very large batches containing more that 200,000 HITs have appeared on \amt{}.
+
+\begin{figure}[tb]
+	\centering
+		\includegraphics[width=0.5\textwidth]{figures/batch_size}
+	\caption{The yearly distribution of batch sizes.}
+	\label{fig:batch_size_pow}
+\end{figure}
 
 \begin{figure}[tb]
 	\centering
