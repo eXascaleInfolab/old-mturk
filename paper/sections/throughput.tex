@@ -11,10 +11,10 @@ Specifically, we model this task as a regression problem using 29 features; some
 To predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are   considering directly prior to time $T$. The rationale behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
 The research question we tackle in this context is:~\emph{``How much historical data does one need to consider to predict the throughput effectively?"}.
  
-To answer this, we proceed by varying $\delta$. In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. 
+To answer this question, we proceed by varying $\delta$. In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. 
 We also varied the training time frame from 1 hour to 24 hours for each tested time point. 
 
-The best performing results in terms of $R^2$~\cite{sklearnweb, sklearn} were obtained using 4 hours window. Our prediction results versus actual throughput values for that window are shown in Figure \ref{fig:pred}. In this case, the prediction works best for larger batches having a large momentum as the Figure suggests.
+The best performing results in terms of $R^2$~\cite{sklearnweb, sklearn} were obtained using 4 hours window. Our prediction results versus actual throughput values for that window are shown in Figure \ref{fig:pred}. In this case, the prediction works best for larger batches having a large momentum as the figure suggests.
 
 %\begin{figure}[t!]
 %	\centering
