@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{breiman}
-{Random Forests}.
-\newblock
-  \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm}.
-\newblock Accessed: 2015-03-04.
-
 \bibitem{mizzaroalonso}
 O.~Alonso and S.~Mizzaro.
 \newblock Using crowdsourcing for {TREC} relevance assessment.
@@ -16,6 +10,13 @@ A.~Bozzon, M.~Brambilla, S.~Ceri, M.~Silvestri, and G.~Vesci.
 \newblock Choosing the right crowd: Expert finding in social networks.
 \newblock In {\em Proceedings of the 16th International Conference on Extending
   Database Technology}, EDBT '13, pages 637--648, New York, NY, USA, 2013. ACM.
+
+\bibitem{breiman}
+L.~Breiman and A.~Cutler.
+\newblock {Random Forests}.
+\newblock
+  \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm}.
+\newblock Accessed: 2015-03-04.
 
 \bibitem{cleveland1992local}
 W.~S. Cleveland, E.~Grosse, and W.~M. Shyu.

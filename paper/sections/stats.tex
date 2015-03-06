@@ -2,7 +2,7 @@
 \section{The Evolution of Amazon MTurk From 2009 to 2014}
 \label{sec:stats}
 
-In this section, we start by describing our datasets and extract some key information and statistics that we will use in the rest of the paper.
+In this section, we start by describing our dataset and extract some key information and statistics that we will use in the rest of the paper.
 
 \subsection{Crowdsourcing Platform Dataset}
 \label{sec:tracker}
@@ -23,7 +23,7 @@ We note that the tracker reports data periodically only and does not reflect fin
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.45\textwidth]{figures/tagEvolution}
-	\caption{The use of keywords to annotate HITs. $frequency$ corresponds to how many times a keyword was used, and $reward\_avg$ corresponds to the average monetary reward of batches that listed the keyword.}
+	\caption{The use of keywords to annotate HITs. $Frequency$ corresponds to how many times a keyword was used, and $Average Reward$ corresponds to the average monetary reward of batches that listed the keyword.}
 	\label{fig:tagEvolution}
 \end{figure}
 \begin{figure*}[tb]
@@ -37,7 +37,7 @@ We note that the tracker reports data periodically only and does not reflect fin
 \subsection{A Data-driven Analysis of Platform Evolution}
 First, we identify trends obtained from aggregated information over time, keywords, and countries associated to the published HITs.  Each of the following analyses is also available as an interactive visualization over the historical data on \url{http://xi-lab.github.io/mturk-mrkt/}.
 \paragraph{Topics  Over Time}
-First we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
+First, we want to understand how different topics have been addressed by means of micro-task crowdsourcing over time.
 In order to run this analysis, we look at the keywords associated with published HITs. We observe the evolution of keyword popularity and associated reward on \amt{}. 
 %plot explanation
 Figure \ref{fig:tagEvolution} shows this behavior. Each point in the plot represents a keyword associated to the HITs with its frequency (i.e., number of HITs with this keyword) on the x-axis, and the average reward in a given year on the y-axis. The path connecting data points indicates the time evolution, starting in 2009, with one point representing the keyword usage over one year.
@@ -46,13 +46,13 @@ Figure \ref{fig:tagEvolution} shows this behavior. Each point in the plot repres
 We observe that the frequency of the `audio' and `transcription' keywords (i.e., blue and red paths from left to right) have substantially increased over time. They have become the most popular keywords in the last two years and are paid more than \$1 on average.
 HITs with the `video' tag have also increased in number with a reward that has reached a peak in 2012 and decreased after that.
 HITs tagged as `categorization' have been paid consistently in the range of \$0.10-\$0.30 on average, except in 2009 where they were rewarded less than \$0.10 each.
-HITs tagged as `tweet' have not increased in number but have been paid more over the years, reaching \$0.90 on average in 2014: This can be explained by more complex tasks being offered to workers, such as sentiment classification or writing tweets.
+HITs tagged as `tweet' have not increased in number but have been paid more over the years, reaching \$0.90 on average in 2014: This can be explained by more complex tasks being offered to workers, such as sentiment classification or writing of tweets.
 
 \paragraph{Preferred Countries by Requesters Over Time}
 Figure \ref{fig:country} shows the requirements set by requesters with respect to the countries they wish to select workers from. The left part of Figure \ref{fig:country} shows that most HITs are to be completed exclusively by workers located in the US, India, or Canada. The right part of Figure \ref{fig:country} shows the evolution over time of the country requirement phenomenon.
 The plot shows the number of HITs with a certain country requirement (on the y-axis) and its time evolution (on the x-axis) with yearly steps. The size of the data points indicates the total reward associated to those HITs.
 
-We observe that US-only HITs dominate, both in terms of their sheer number as well as in terms of the reward associated to them. 
+We observe that US-only HITs dominate, both in terms of their large number as well as in terms of the reward associated to them. 
 Interestingly, we notice how HITs for workers based in India have been decreasing over time. %This can be explained by \amt{} restrictions on accepting new workers outside of the US on the platform.
 On the other hand, HITs for workers based in Canada have been increasing over time, becoming in 2014 larger than those exclusively available to workers based in India.  We also see that the reward associated to them is smaller than the budget for India-only HITs.
 As of 2014, both HITs for workers based in Canada or UK are more numerous that those for workers based in India.
@@ -74,7 +74,7 @@ We also note that US-only HITs are most commonly tagged with `survey'.
 % \subsection{Does reputation Improve Throughput?}
 
 \paragraph{HIT Reward Analysis}
-Figure \ref{fig:reward_year} shows the most frequent rewards assigned to HITs over time.\footnote{Data for 2014 has been omitted as it is not comparable with other year values.} We observe that while in 2011 the most popular reward was \$0.01, recently HITs paid \$0.05 are getting more frequent. This can be explained both by how workers search for HITs on \amt{} and by the \amt{} fee scheme. Requesters now prefer to publish more complex HITs possibly with multiple questions in them and grant a higher reward: This also attracts those workers who are not willing to complete a HIT for small rewards and reduces the fees paid to \amt{}, which are computed based on the number of HITs published on the platform.
+Figure \ref{fig:reward_year} shows the most frequent rewards assigned to HITs over time.\footnote{Data for 2014 has been omitted as it was not comparable with other year values.} We observe that while in 2011 the most popular reward was \$0.01, recently HITs paid \$0.05 are getting more frequent. This can be explained both by how workers search for HITs on \amt{} and by the \amt{} fee scheme. Requesters now prefer to publish more complex HITs possibly with multiple questions in them and grant a higher reward: This also attracts those workers who are not willing to complete a HIT for small rewards and reduces the fees paid to \amt{}, which are computed based on the number of HITs published on the platform.
 
 \begin{figure}[tb]
 	\centering
