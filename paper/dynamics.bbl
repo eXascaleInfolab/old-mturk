@@ -1,10 +1,10 @@
 \begin{thebibliography}{10}
 
-\bibitem{sklearnweb}
-{Scikit Learn: Random Forest Regressor}.
+\bibitem{breiman}
+{Random Forests}.
 \newblock
-  \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html}.
-\newblock Accessed: 2014-11-10.
+  \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm}.
+\newblock Accessed: 2015-03-04.
 
 \bibitem{mizzaroalonso}
 O.~Alonso and S.~Mizzaro.
@@ -116,13 +116,6 @@ J.~Mortensen, M.~A. Musen, and N.~F. Noy.
 A.~Parameswaran, A.~D. Sarma, H.~Garcia-Molina, N.~Polyzotis, and J.~Widom.
 \newblock Human-assisted graph search: It's okay to ask questions.
 \newblock {\em Proc. VLDB Endow.}, 4(5):267--278, Feb. 2011.
-
-\bibitem{sklearn}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
-\newblock Scikit-learn: Machine learning in python.
-\newblock {\em J. Mach. Learn. Res.}, 12:2825--2830, Nov. 2011.
 
 \bibitem{crowdmap}
 C.~Sarasua, E.~Simperl, and N.~F. Noy.
