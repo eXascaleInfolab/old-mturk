@@ -29,13 +29,13 @@ Using the various definitions of HIT types given above, we trained a supervised 
 To train and evaluate the supervised model, we created labelled data: We uniformly sampled 5,000 HITs over the entire five-year dataset and manually labelled their type by means of crowdsourcing. In detail, we asked workers on MTurk to assign each HIT to one of the predefined classes by presenting them with the title, description, keywords, reward, date, allocated time, and batch size for the HIT. The instructions also contained the definition and examples for each task type. Workers could label tasks as `Others' when unsure or when the HIT did not fit in any of the available options.
 
 % labelled data
-After assigning each labelling HIT to three different workers in the crowd, a consensus on the task type label was reached in $89\%$ of the cases (leaving 551 cases with no clear majority). A consensus was reached when at least two out of three workers agreed on a HIT type label. The other cases, that is, when the workers provided different labels or when they where not sure about the HIT type, have then been removed from our labelled dataset.
+After assigning each labelling HIT to three different workers in the crowd, a consensus on the task type label was reached in $89\%$ of the cases (leaving 551 cases with no clear majority). A consensus was reached when at least two out of three workers agreed on the same HIT type label. The other cases, that is, when the workers provided different labels or when they where not sure about the HIT type, have then been removed from our labelled dataset.
 
 % classification evaluation
 Using the labelled data, we trained a multi-class SVM classifier for the 6 different task types and evaluated its quality with 10-fold cross validation over the labelled dataset. Overall, the trained classifier obtained a Precision of $0.895$, a Recall of $0.899$, and an F-Measure of $0.895$. Most of the classifier errors (i.e., 66 cases) were caused by incorrectly classifying IA instances as CC jobs.
 
 % top features
-Performing feature selection for the HIT type classification problem, we observed that the best features related to information gains are the HIT allotted time and reward: This indicates that HITs of different types are associated with different levels of reward as well as different task durations (i.e., longer and better paid tasks versus shorter and paid worse). 
+Performing feature selection for the HIT type classification problem, we observed that the best features based on information gain are the HIT allotted time and reward: This indicates that HITs of different types are associated with different levels of reward as well as different task durations (i.e., longer and better paid tasks versus shorter and paid worse). 
 The most distinctive keywords for identifying HIT types are `transcribe', `audio', and `survey', which clearly identify CC and SU HITs.
  
 % classification at scale

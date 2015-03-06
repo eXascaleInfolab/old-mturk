@@ -3,7 +3,7 @@
 \label{sec:throughput}
 Next, we turn our attention to analyzing the factors that influence the progress (or the pace) of a batch, how those factors influence each other and how their importance changes over time. 
 
-In order to conduct this analysis, we carry out a prediction experiment on the batch's \emph{throughput}, that is, the number of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is a target class).
+In order to conduct this analysis, we carry out a prediction experiment on the batch's \emph{throughput}, that is, the number of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is the target class).
 Specifically, we model this task as a regression problem using 29 features; some of them were used in the previous section to classify the HIT type; we describe the remaining ones in Appendix A.
 
 \subsection{Throughput Prediction}
@@ -18,18 +18,18 @@ Our prediction results versus actual throughput values for $\delta=4hours$ are s
 %
 The figure suggests that the prediction works best for larger batches having a large momentum.
 
-In order to understand which feature contributes significantly to our prediction model, we proceed by feature ablation. For this experiment, we computed the prediction score, R-squared \footnote{\url{http://scikit-learn.org/stable/modules/generated/ sklearn.metrics.r2_score.html}}, of 1,000 randomly sampled time points and kept those where the prediction worked reasonably, i.e., having $R^2>0$, that is 327 samples. Next, we rerun the prediction on the same samples by removing one feature at a time. The results revealed that the features $HIT\_available$ and $Age\_minutes$ were the only ones having a statistically significant impact on the prediction score with $p\_value < 0.05$ and $p\_value < 0.01$ respectively. 
+In order to understand which features contribute significantly to our prediction model, we proceed by feature ablation. For this experiment, we computed the prediction evaluation score (i.e., R-squared\footnote{\url{http://scikit-learn.org/stable/modules/generated/ sklearn.metrics.r2_score.html}}), for 1,000 randomly sampled time points and kept those where the prediction worked reasonably, i.e., having $R^2>0$, that is 327 samples. Next, we rerun the prediction on the same samples by removing one feature at a time. The results revealed that the features $HIT\_available$ (i.e., the number of tasks in the batch) and $Age\_minutes$ (i.e., how long ago the batch was created) were the only ones having a statistically significant impact on the prediction score with $p < 0.05$ and $p < 0.01$ respectively. 
 
 \begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.45\textwidth]{figures/predictions_3}
-	\caption{Predicted vs actual throughput values.}
+	\caption{Predicted vs actual batch throughput values for $\delta=4hours$.}
 	\label{fig:pred}
 \end{figure}
 
 \subsection{Features Importance}
 
-In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the prediction's features~\cite{breiman}. 
+In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the  features~\cite{breiman}. 
 For that, we varied the training time frame $\delta$ from 1 hour to 24 hours for each tested time point. 
 Figure \ref{fig:importances} shows the contribution of our 2 top features (as concluded from the previous experiment, i.e., $HIT\_available$ and $Age\_minutes$) and how their importances varied when we increased the training time-frame. These features are again listed in Table \ref{table:feats}, the slope indicates whether the feature is gaining importance over time (positive value) or decreasing in importance (negative value).
 
@@ -40,14 +40,14 @@ To better understand this phenomenon, we conduct an analysis on what attracts th
 \begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/importances}
-	\caption{Computed feature importance when considering larger training sets for the prediction.}
+	\caption{Computed feature importance when considering a larger training window for batch throughput prediction.}
 	\label{fig:importances}
 \end{figure}
 
 \begin{table}[t!]
 \begin{center}
 \scriptsize
-\caption {Importances of the top 2 features used in the prediction experiment. A large mean indicates a better overall contribution to the prediction. A positive slope indicates that the feature is gaining in importance when the considered time window increases.}
+\caption {Gini importance of the top 2 features used in the prediction experiment. A large mean indicates a better overall contribution to the prediction. A positive slope indicates that the feature is gaining in importance when the considered time window is larger.}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Feature              & mean      & stderr    & slope     & intercept \\
