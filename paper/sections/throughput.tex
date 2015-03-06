@@ -31,11 +31,11 @@ In order to understand which feature contributes significantly to our prediction
 
 In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the prediction's features~\cite{breiman}. 
 For that, we varied the training time frame $\delta$ from 1 hour to 24 hours for each tested time point. 
-Figure \ref{fig:importances} shows the contribution of our 2 top features (as concluded from the previous experiment, i.e., $HIT\_available$ and $Age\_minutes$) and how their importances varied when we increased the training time-frame. This features are again listed in Table \ref{table:feats}, the slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
+Figure \ref{fig:importances} shows the contribution of our 2 top features (as concluded from the previous experiment, i.e., $HIT\_available$ and $Age\_minutes$) and how their importances varied when we increased the training time-frame. These features are again listed in Table \ref{table:feats}, the slope indicates whether the feature is gaining importance over time (positive value) or decreasing in importance (negative value).
 
 The most important feature is $HIT\_available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, and because other features start to encode additional facts.
 On the other hand, $Age\_minutes$ importance suggests that the crowd is sensitive to newly posted HITs, or how \emph{fresh} the HITs are. 
-To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the the platform in the next section.
+To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the platform in the next section.
 
 \begin{figure}[t!]
 	\centering
@@ -53,7 +53,7 @@ To better understand this phenomenon, we conduct an analysis on what attracts th
 Feature              & mean      & stderr    & slope     & intercept \\
 \hline
 HIT\_available      & 29.8606 & 13.4247 & -0.0257 & 34.4940 \\
-ageminutes           & 12.9087 &  8.1967 & -0.0050 & 13.8181 \\
+Age_minutes           & 12.9087 &  8.1967 & -0.0050 & 13.8181 \\
 %leftminutes          &  8.7300 &  5.5530 & 0.0061 & 7.6290 \\
 %requester\_id        &  6.2147 &  5.2943 & -0.0011 & 6.4305 \\
 %title                &  5.6441 &  4.2604 & -0.0033 & 6.2519 \\
