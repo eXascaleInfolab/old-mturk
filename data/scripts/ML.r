@@ -1,5 +1,5 @@
 library(ggplot2)
-data <-read.csv('/Users/Djellel/Dropbox/repositories/mturk/data/raw/ML.tsv', header=T, sep='\t')
+data <-read.csv('/Users/xi/repositories/exascale-mturk/data/raw/ML.tsv', header=T, sep='\t')
 attach(data)
 
 # Accuracy

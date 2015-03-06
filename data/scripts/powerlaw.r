@@ -15,7 +15,8 @@ ggplot(data, aes(x = batch_size, y = instances)) +
   scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
                    labels = trans_format("log10", math_format(10^.x)))+
   theme_bw() + annotation_logticks() +
-  theme(legend.position="none", axis.text.x = element_text(angle = 90, hjust = 1, vjust =0.5))
+  theme(legend.position="none", axis.text.x = element_text(angle = 90, hjust = 1, vjust =0.5)) +
+# stat_smooth(method=lm)
 
 ggsave("/Users/xi/repositories/exascale-mturk/paper/figures/powerlaw.pdf", width=6, height=4)
 
