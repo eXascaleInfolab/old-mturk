@@ -3,26 +3,22 @@
 \label{sec:throughput}
 Next, we turn our attention to analyzing the factors that influence the progress (or the pace) of a batch, how those factors influence each other and how their importance changes over time. 
 
-In order to conduct this analysis, we carry out a prediction experiment of the batch \emph{throughput}, that is, the numbers of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is a target class).
-Specifically, we model this task as a regression problem using 29 features; some of them were used in the previous section to classify HIT type; We describe the remaining ones in Appendix A.
+In order to conduct this analysis, we carry out a prediction experiment on the batch's \emph{throughput}, that is, the number of HITs that  will be completed for a given batch within the next time frame of 1 hour (i.e.,  the $DIFF\_HIT$ feature is a target class).
+Specifically, we model this task as a regression problem using 29 features; some of them were used in the previous section to classify the HIT type; we describe the remaining ones in Appendix A.
 
-\subsection{Experimental Setup}
+\subsection{Throughput Prediction}
 
-To predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are   considering directly prior to time $T$. The rationale behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
-The research question we tackle in this context is:~\emph{``How much historical data does one need to consider to predict the throughput effectively?"}.
- 
-To answer this question, we proceed by varying $\delta$. In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes. 
-We also varied the training time frame from 1 hour to 24 hours for each tested time point. 
+To predict the throughput of a batch at time $T$, we train a Random Forest Regression model with samples taken in the range $[T-\delta, T)$ where $\delta$ is the size of the time window that we are considering directly prior to time $T$. 
+%
+The rationale behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
 
-The best performing results in terms of $R^2$~\cite{sklearnweb, sklearn} were obtained using 4 hours window. Our prediction results versus actual throughput values for that window are shown in Figure \ref{fig:pred}. In this case, the prediction works best for larger batches having a large momentum as the figure suggests.
+In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes.
+%
+Our prediction results versus actual throughput values for $\delta=4hours$ are shown in Figure \ref{fig:pred}. 
+%
+The figure suggests that the prediction works best for larger batches having a large momentum.
 
-%\begin{figure}[t!]
-%	\centering
-%		\includegraphics[width=0.48\textwidth]{figures/ML_accuracy}
-%	\caption{Score ($R^2$) of the throughput prediction when considering larger time spans as training sets. The red dots are average values, while the boxes represents the median, first and third quartiles.}
-%	\label{fig:accuracy}
-%\end{figure}
-
+In order to understand which feature contributes significantly to our prediction model, we proceed by feature ablation. For this experiment, we computed the prediction score, R-squared \footnote{\url{http://scikit-learn.org/stable/modules/generated/ sklearn.metrics.r2_score.html}}, of 1,000 randomly sampled time points and kept those where the prediction worked reasonably, i.e., having $R^2>0$, that is 327 samples. Next, we rerun the prediction on the same samples by removing one feature at a time. The results revealed that the features $HIT\_available$ and $Age\_minutes$ were the only ones having a statistically significant impact on the prediction score with $p\_value < 0.05$ and $p\_value < 0.01$ respectively. 
 
 \begin{figure}[t!]
 	\centering
@@ -32,9 +28,14 @@ The best performing results in terms of $R^2$~\cite{sklearnweb, sklearn} were ob
 \end{figure}
 
 \subsection{Features Importance}
-In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the prediction's features~\cite{breiman}.
-Figure \ref{fig:importances} shows the  contribution of the top 4 features and how it varies  when we increase the training time-frame. Those features are again listed in Table \ref{table:feats}, their slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
-The most important feature is $HIT\_Available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, but, most importantly, because of other features like $age\_minutes$ and $left\_minutes$, which encode additional facts and suggest that the crowd is sensitive to newly posted HITs, or how \emph{fresh} the HITs are. To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the the platform in the next section.
+
+In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the prediction's features~\cite{breiman}. 
+For that, we varied the training time frame $\delta$ from 1 hour to 24 hours for each tested time point. 
+Figure \ref{fig:importances} shows the contribution of our 2 top features (as concluded from the previous experiment, i.e., $HIT\_available$ and $Age\_minutes$) and how their importances varied when we increased the training time-frame. This features are again listed in Table \ref{table:feats}, the slope indicates whether the feature is gaining importance overtime (positive value) or decreasing in importance (negative value).
+
+The most important feature is $HIT\_available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, and because other features start to encode additional facts.
+On the other hand, $Age\_minutes$ importance suggests that the crowd is sensitive to newly posted HITs, or how \emph{fresh} the HITs are. 
+To better understand this phenomenon, we conduct an analysis on what attracts the workforce to the the platform in the next section.
 
 \begin{figure}[t!]
 	\centering
@@ -46,15 +47,15 @@ The most important feature is $HIT\_Available$, that is, the current size of the
 \begin{table}[t!]
 \begin{center}
 \scriptsize
-\caption {Importances of the top 4 features used in the prediction experiment. A large mean indicates a better overall contribution to the prediction. A positive slope indicates that the feature is gaining in importance when the considered time window increases.}
+\caption {Importances of the top 2 features used in the prediction experiment. A large mean indicates a better overall contribution to the prediction. A positive slope indicates that the feature is gaining in importance when the considered time window increases.}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Feature              & mean      & stderr    & slope     & intercept \\
 \hline
-hits\_available      & 29.8606 & 13.4247 & -0.0257 & 34.4940 \\
+HIT\_available      & 29.8606 & 13.4247 & -0.0257 & 34.4940 \\
 ageminutes           & 12.9087 &  8.1967 & -0.0050 & 13.8181 \\
-leftminutes          &  8.7300 &  5.5530 & 0.0061 & 7.6290 \\
-requester\_id        &  6.2147 &  5.2943 & -0.0011 & 6.4305 \\
+%leftminutes          &  8.7300 &  5.5530 & 0.0061 & 7.6290 \\
+%requester\_id        &  6.2147 &  5.2943 & -0.0011 & 6.4305 \\
 %title                &  5.6441 &  4.2604 & -0.0033 & 6.2519 \\
 %description          &  4.8823 &  3.8975 & -0.0065 & 6.0617 \\
 %keywords             &  4.3765 &  3.3860 & -0.0074 & 5.7095 \\
