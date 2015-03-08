@@ -12,25 +12,23 @@ To predict the throughput of a batch at time $T$, we train a Random Forest Regre
 %
 The rationale behind this approach is that the throughput should be directly correlated to the current and recent market situations. 
 
-In this experiment, we considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 time points for evaluation purposes.
-%
-Our prediction results versus actual throughput values for $\delta=4hours$ are shown in Figure \ref{fig:pred}. 
+We considered  data from June to October 2014, and hourly observations (see Section \ref{sec:tracker}), from which we uniformly sampled 50 test time points for evaluation purposes. In our experiments, the best prediction results, in terms of R-squared\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}, were obtained using $\delta=4hours$. For that window, our predicted versus actual throughput values are shown in Figure \ref{fig:pred}. 
 %
 The figure suggests that the prediction works best for larger batches having a large momentum.
 
-In order to understand which features contribute significantly to our prediction model, we proceed by feature ablation. For this experiment, we computed the prediction evaluation score (i.e., R-squared\footnote{\url{http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html}}), for 1,000 randomly sampled time points and kept those where the prediction worked reasonably, i.e., having $R^2>0$, that is 327 samples. Next, we rerun the prediction on the same samples by removing one feature at a time. The results revealed that the features $HIT\_available$ (i.e., the number of tasks in the batch) and $Age\_minutes$ (i.e., how long ago the batch was created) were the only ones having a statistically significant impact on the prediction score with $p < 0.05$ and $p < 0.01$ respectively. 
+In order to understand which features contribute significantly to our prediction model, we proceed by feature ablation. For this experiment, we computed the prediction evaluation score R-squared, for 1,000 randomly sampled test time points and kept those where the prediction worked reasonably, i.e., having R-squared$>0$, that is 327 samples. Next, we rerun the prediction on the same samples by removing one feature at a time. The results revealed that the features $HIT\_available$ (i.e., the number of tasks in the batch) and $Age\_minutes$ (i.e., how long ago the batch was created) were the only ones having a statistically significant impact on the prediction score with $p < 0.05$ and $p < 0.01$ respectively.
 
 \begin{figure}[t!]
 	\centering
-		\includegraphics[width=0.45\textwidth]{figures/predictions_3}
-	\caption{Predicted vs actual batch throughput values for $\delta=4hours$.}
+		\includegraphics[width=0.5\textwidth]{figures/predictions_3}
+	\caption{Predicted vs actual batch throughput values for $\delta=4hours$. The prediction works best for larger batches having a large momentum.}
 	\label{fig:pred}
 \end{figure}
 
 \subsection{Features Importance}
 
 In order to better grasp the characteristics of the batch throughput, we examine the computed Gini importance of the  features~\cite{breiman}. 
-For that, we varied the training time frame $\delta$ from 1 hour to 24 hours for each tested time point. 
+In this experiment, we varied the training time frame $\delta$ from 1 hour to 24 hours for each tested time point. 
 Figure \ref{fig:importances} shows the contribution of our 2 top features (as concluded from the previous experiment, i.e., $HIT\_available$ and $Age\_minutes$) and how their importances varied when we increased the training time-frame. These features are again listed in Table \ref{table:feats}, the slope indicates whether the feature is gaining importance over time (positive value) or decreasing in importance (negative value).
 
 The most important feature is $HIT\_available$, that is, the current size of the batch. Indeed, as observed by previous work, larger batches tend to attract more workers \cite{mturk,crowddb}. This feature becomes less important when we consider longer periods, partly because of noise, and because other features start to encode additional facts.

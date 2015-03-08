@@ -1,5 +1,5 @@
 library(ggplot2)
-data <-read.csv('/Users/xi/repositories/exascale-mturk/data/raw/ML.tsv', header=T, sep='\t')
+data <-read.csv('../raw/ML.tsv', header=T, sep='\t')
 attach(data)
 
 # Accuracy
@@ -11,7 +11,7 @@ theme_bw() +
 theme(legend.position="none") +
 stat_summary(fun.y=mean, colour="darkred", geom="point", 
                shape=18, size=3,show_guide = FALSE)
-ggsave("/Users/Djellel/Dropbox/repositories/mturk/paper/figures/ML_accuracy.pdf", width=9, height=5.5)
+ggsave("../../paper/figures/ML_accuracy.pdf", width=8, height=6)
 
 # MAE
 ggplot(data, aes(x=Frame, y=MAE)) + 

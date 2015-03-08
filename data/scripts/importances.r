@@ -41,11 +41,11 @@ geom_point(size=1) +
 geom_boxplot(aes(group=FRAME),outlier.shape=NA) + 
 facet_wrap(~ variable, ncol=2, scales="fixed") +
 scale_colour_brewer(palette="Set1") +
-ylab("Importance %") +
+ylab("Feature Importance %") +
 xlab("Time Delta Considered (Hours)") +
 scale_y_continuous(labels = percent) +
 theme_bw() +
 theme(legend.position="none", axis.text.x = element_text(angle = 90, hjust = 1, vjust =0.5)) +
 stat_smooth()
 
-ggsave("/Users/xi/repositories/exascale-mturk/paper/figures/importances.pdf", width=8, height=6)
+ggsave("../../paper/figures/importances.pdf", width=6, height=4)

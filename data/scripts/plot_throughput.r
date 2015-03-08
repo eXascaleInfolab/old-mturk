@@ -1,6 +1,6 @@
 library(scales)
 library(ggplot2)
-data <- read.csv(file = '/Users/pirroh/exascale-mturk/data/raw/throughput_5cent_price_3months_final.txt', header=T, sep='\t')
+data <- read.csv(file = '../raw/throughput_5cent_price_3months_final.txt', header=T, sep='\t')
 data <- data[-sample(1:1915573, 1815573, replace=F), ]
 attach(data)
 p <- ggplot(data.frame(x=hits, y=throughput), aes(x = x, y = y)) +  
@@ -15,4 +15,4 @@ p <- ggplot(data.frame(x=hits, y=throughput), aes(x = x, y = y)) +
                      labels = trans_format("log10", math_format(10^.x))) +
    xlab("HIT_available (log)") + ylab("Throughput HITs/Minute (log)") + 
    theme_bw() + theme(legend.position="none")
-ggsave("motiv_mturk.pdf", width=6, height=4)
+ggsave("motiv_mturk.pdf", width=6, height=5)

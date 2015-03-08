@@ -12,24 +12,24 @@ The data that we collect from the platform is available at \url{http://mturk-tra
 In this work, we consider hourly aggregated data that includes the available HIT batches and their metadata (title, description, rewards, required qualifications, etc.), in addition to their progress over time, that is, the temporal variation of the set of HITs available. In fact, one of the main metrics that we leverage (see Section \ref{sec:throughput}) is the throughput of a batch, i.e., how many HITs get completed between two successive observations. In Figure \ref{fig:motiv}, we plot the number of HITs available in a given batch versus its throughput. An interesting observation that can be made is that large batches can achieve high throughput (thousands of HITs per minute).
 
 In total, our dataset covers more than 2.5M different batches with over 130M HITs.
-We note that the tracker reports data periodically only and does not reflect fine-grained information (e.g., variations at each second). We believe however that it captures enough information to perform meaningful, long-term trend analyses and to understand the dynamics and interactions within the crowdsourcing platform.\\
+We note that the tracker reports data periodically only and does not reflect fine-grained information (e.g., real-time variations). We believe however that it captures enough information to perform meaningful, long-term trend analyses and to understand the dynamics and interactions within the crowdsourcing platform.\\
 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.48\textwidth]{figures/motiv_mturk}
-	\caption{Batch throughput versus number of HITs available in the batch. The red line corresponds to the maximum throughput we could have observed due to the tracker periodicity constraints. For readability, this graph represents a subset of 3 months (January-March 2014).}
+	\caption{Batch throughput versus number of HITs available in the batch. The red line corresponds to the maximum throughput we could have observed due to the tracker periodicity constraints. For readability, this graph represents a subset of 3 months (January-March 2014), and HITs with rewards \$0.05 and less.}
 	\label{fig:motiv}
 \end{figure}
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.45\textwidth]{figures/tagEvolution}
-	\caption{The use of keywords to annotate HITs. $Frequency$ corresponds to how many times a keyword was used, and $Average Reward$ corresponds to the average monetary reward of batches that listed the keyword.}
+	\caption{The use of keywords to annotate HITs. $Frequency$ corresponds to how many times a keyword was used, and $Average Reward$ corresponds to the average monetary reward of batches that listed the keyword. The size of the bubbles indicates the average batch size.}
 	\label{fig:tagEvolution}
 \end{figure}
 \begin{figure*}[tb]
 	\centering
-		\includegraphics[width=0.52\textwidth]{figures/map}
-		\includegraphics[width=0.47\textwidth]{figures/countriesTime}
+		\includegraphics[width=0.47\textwidth]{figures/map}
+		\includegraphics[width=0.46\textwidth]{figures/countriesTime}
 	\caption{HITs with specific country requirements. On the left-hand side, the countries with the most HITs dedicated to them. On the right-hand side, the time evolution (x-axis) of country-specific HITs with volume (y-axis) and reward (size of data point) information.}
 	\label{fig:country}
 \end{figure*}
@@ -92,7 +92,7 @@ In order to be sustainable, a crowdsourcing platform needs to retain requesters 
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/requesters_reward}
-	\caption{Requester activity and total reward on the platform over time. The line over the data shows local polynomial regression fitting \cite{cleveland1992local}.}
+	\caption{Requester activity and total reward on the platform over time.}
 	\label{fig:requesters_reward}
 \end{figure}
 
@@ -116,7 +116,7 @@ Figure \ref{fig:batch_size} shows how batch size has changed over time. We obser
 \begin{figure}[tb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{figures/batch_size}
-	\caption{Average and maximum batch size per month. The monthly median is 1. The line over the data shows local polynomial regression fitting \cite{cleveland1992local}.}
+	\caption{Average and maximum batch size per month. The monthly median is 1.}
 	\label{fig:batch_size}
 \end{figure}
 
